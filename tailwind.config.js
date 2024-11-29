@@ -11,6 +11,11 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        Roboto: ["Roboto", "sans-serif"],
+        Space: ["Space Grotesk", "sans-serif"],
+        DMSans: ["DM Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],
