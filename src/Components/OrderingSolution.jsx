@@ -26,16 +26,16 @@ const OrderingSolution = () => {
       image: "/grubly/Image-1.png",
     },
     {
-      title: "Easy Online Ordering",
+      title: "Branded Ordering Site",
       description:
-        "Create an easy online ordering experience for your customers with just a few clicks.",
-      image: "/grubly/Image-1.png",
+        "Build and customize your own site for a consistent brand experience.",
+      image: "/grubly/branded.png",
     },
     {
-      title: "Advanced Analytics",
+      title: "Real-Time Order Management",
       description:
-        "Track and optimize your business performance with powerful analytics.",
-      image: "/grubly/Image-1.png",
+        "Keep track of every order across platforms with real-time updates.",
+      image: "/grubly/RealTime.png",
     },
   ];
 

@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        footer: "url('/grubly/FooterImage.svg')",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

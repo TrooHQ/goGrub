@@ -46,12 +46,12 @@ const Savings = () => {
                 </p>
               </div>
             </div>
-            <p className="bg-[#5955B3] inline text-white px-[24px] py-[10px] rounded-[4px] font-[700] hover:bg-[#4200FF] transition">
+            <p className="bg-[#5955B3] text-[16px] inline text-white px-[16px] py-[8px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition">
               Start your free trial
             </p>
           </div>
 
-          <div className=" order-1 md:order-2">
+          <div className=" order-1 md:order-2 ">
             <Image
               src="/grubly/Image1.png"
               alt="Image"

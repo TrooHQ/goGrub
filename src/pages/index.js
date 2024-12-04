@@ -3,7 +3,7 @@ import LandingPage from "./LandingPage";
 
 const Home = () => {
   return (
-    <div className=" font-Space">
+    <div className=" font-DMSans">
       <LandingPage />
     </div>
   );

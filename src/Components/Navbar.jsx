@@ -20,13 +20,13 @@ const Navbar = () => {
 
   return (
     <div className="bg-white sticky top-0 z-50 shadow-sm border-b">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+      <div className="container max-w-6xl mx-[10px] lg:mx-auto flex items-center justify-between  py-3 px-4">
         <Link href="/">
           <Image
             src="/grubly/Logo.svg"
             alt="Logo"
-            width={100}
-            height={100}
+            width={150}
+            height={150}
             className="cursor-pointer"
           />
         </Link>
@@ -40,10 +40,10 @@ const Navbar = () => {
             <li key={path}>
               <Link
                 href={path}
-                className={`text-[16px] font-Roboto ${
+                className={`text-[16px]  ${
                   router.pathname === path
                     ? "text-[#5855B3] font-[500]"
-                    : "text-[#000000]"
+                    : "text-[#25244B] font-[400]"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
