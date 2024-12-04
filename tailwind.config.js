@@ -15,7 +15,6 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        Roboto: ["Roboto", "sans-serif"],
         DMSans: ["DM Sans", "sans-serif"],
       },
     },
