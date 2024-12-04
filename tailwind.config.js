@@ -16,7 +16,6 @@ module.exports = {
       },
       fontFamily: {
         Roboto: ["Roboto", "sans-serif"],
-        Space: ["Space Grotesk", "sans-serif"],
         DMSans: ["DM Sans", "sans-serif"],
       },
     },
