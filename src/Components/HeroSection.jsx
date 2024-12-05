@@ -1,20 +1,16 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaWhatsapp,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 
 const HeroSection = () => {
   const [currentSocial, setCurrentSocial] = useState(0);
 
   const socials = [
-    { icon: <FaInstagram />, name: "Instagram" },
-    { icon: <FaFacebookF />, name: "Facebook" },
-    { icon: <FaWhatsapp />, name: "WhatsApp" },
-    { icon: <FaTwitter />, name: "Twitter" },
+    { icon: <FaInstagram />, name: "Instagram", color: "#E4405F" },
+    { icon: <FaFacebook />, name: "Facebook", color: "#1877F2" },
+    { icon: <FaWhatsapp />, name: "WhatsApp", color: "#2AA234" },
+    { icon: <BsTwitterX />, name: "Twitter", color: "#111122" },
   ];
 
   useEffect(() => {
@@ -37,15 +33,30 @@ const HeroSection = () => {
             Your link to sell better with
           </p>
 
-          <div className="font-[600] text-[40px] lg:text-[48px] text-[#5955B3]">
+          <div
+            className="font-[600] text-[40px] lg:text-[48px] overflow-hidden h-[48px]"
+            style={{ display: "inline-block" }}
+          >
             <div
-              className="animate-slideDown "
-              style={{ display: "inline-block", height: "48px" }}
+              className="transition-transform duration-500 ease-in-out"
+              style={{
+                transform: `translateY(-${currentSocial * 48}px)`,
+              }}
             >
-              <div className="flex items-center space-x-2">
-                {socials[currentSocial].icon}
-                <span>{socials[currentSocial].name}</span>
-              </div>
+              {socials.map((social, index) => (
+                <div
+                  key={index}
+                  className="flex items-center space-x-2"
+                  style={{
+                    color: social.color,
+                    height: "48px",
+                    display: "flex",
+                  }}
+                >
+                  {social.icon}
+                  <span>{social.name}</span>
+                </div>
+              ))}
             </div>
           </div>
 
