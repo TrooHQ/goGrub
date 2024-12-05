@@ -21,6 +21,7 @@ const Faq = () => {
       answer:
         "Grubly supports cash payments and online payments with various payment gateways. You can choose the one that suits you best.",
     },
+
     {
       question: "Q5: Can I customize my site on Grubly?",
       answer:
