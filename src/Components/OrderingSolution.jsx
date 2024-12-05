@@ -40,7 +40,10 @@ const OrderingSolution = () => {
   ];
 
   return (
-    <div className="font-DMSans max-w-5xl mx-[10px] lg:mx-auto py-[10%] relative">
+    <div
+      className="font-DMSans max-w-5xl mx-[10px] lg:mx-auto py-[10%] relative"
+      id="features"
+    >
       <div className="max-w-[708px] mx-auto text-center">
         <p className="text-[#414141] text-[16px] font-[500]">
           Focus on what's important-- your business

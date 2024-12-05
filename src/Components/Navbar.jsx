@@ -12,10 +12,10 @@ const Navbar = () => {
 
   const navLinks = [
     { path: "/", label: "Home" },
-    { path: "/features", label: "Features" },
-    { path: "/how-it-works", label: "How It Works" },
-    { path: "/faq", label: "FAQ" },
-    { path: "/contact", label: "Contact Us" },
+    { path: "#features", label: "Features" },
+    { path: "#how-it-works", label: "How It Works" },
+    { path: "#faq", label: "FAQ" },
+    { path: "#contact", label: "Contact Us" },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <Link href="/start-trial">
+        <Link href="/">
           <p className="hidden lg:block bg-[#5955B3] text-white px-[24px] py-[10px] rounded-md font-[700] hover:bg-[#3a00e0] transition">
             Start your free trial
           </p>
@@ -69,7 +69,7 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="mt-4 lg:hidden flex justify-center">
-          <Link href="/start-trial">
+          <Link href="/">
             <p className="bg-[#5855B3] text-white px-6 py-2 rounded-md font-[700] hover:bg-[#3a00e0] transition">
               Start your free trial
             </p>

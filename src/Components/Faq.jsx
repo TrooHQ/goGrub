@@ -35,7 +35,10 @@ const Faq = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-[10px] lg:mx-auto px-[10px] mt-[50px] lg:mt-[100px]">
+    <div
+      className="max-w-6xl mx-[10px] lg:mx-auto px-[10px] mt-[50px] lg:mt-[100px]"
+      id="faq"
+    >
       <div className="max-w-[900px] mx-auto">
         <p className="font-[600] text-[30px] lg:text-[40px] text-center mb-[40px]">
           Frequently Asked Questions
