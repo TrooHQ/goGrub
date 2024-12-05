@@ -1,13 +1,13 @@
-import Benefits from "@/components/Benefits";
-import BoostBusiness from "@/components/BoostBusiness";
-import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
-import GetStarted from "@/components/GetStarted";
-import HeroSection from "@/components/HeroSection";
-import HowItWorks from "@/components/HowItWorks";
-import Navbar from "@/components/Navbar";
-import OrderingSolution from "@/components/OrderingSolution";
-import Savings from "@/components/Savings";
+import Benefits from "@/Components/Benefits";
+import BoostBusiness from "@/Components/BoostBusiness";
+import Faq from "@/Components/Faq";
+import Footer from "@/Components/Footer";
+import GetStarted from "@/Components/GetStarted";
+import HeroSection from "@/Components/HeroSection";
+import HowItWorks from "@/Components/HowItWorks";
+import Navbar from "@/Components/Navbar";
+import OrderingSolution from "@/Components/OrderingSolution";
+import Savings from "@/Components/Savings";
 import React from "react";
 
 const LandingPage = () => {
