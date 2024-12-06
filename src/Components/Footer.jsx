@@ -88,11 +88,6 @@ const Footer = () => {
                 Online Ordering
               </p>
             </Link>
-            <Link href="/">
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">
-                Online Food Vendors
-              </p>
-            </Link>
             <Link
               href="https://troohq.com/products/payments-processing"
               target="blank"
