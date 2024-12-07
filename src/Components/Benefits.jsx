@@ -14,7 +14,9 @@ const Benefits = () => {
       <div className="font-DMSans max-w-5xl mx-[10px] lg:mx-auto py-[10%] relative">
         <div className="mt-[24px] md:mt-[40px]">
           <div className="max-w-[708px] mx-auto text-center space-y-[54px]">
-            <p className="text-[#414141] text-[16px] font-[500]">Benefits</p>
+            <p className="text-[#414141] text-[16px] font-[500] hidden">
+              Benefits
+            </p>
             <p className="max-w-[708px] w-full text-[#112] font-[600] text-[30px] lg:text-[40px]">
               Why Choose Grubly?
             </p>
