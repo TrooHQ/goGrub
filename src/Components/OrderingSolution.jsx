@@ -49,7 +49,7 @@ const OrderingSolution = () => {
           Focus on what's important-- your business
         </p>
         <p className="max-w-[708px] w-full text-[#112] font-[600] text-[30px] lg:text-[40px]">
-          Ordering solution with integrated back office built to scale your
+          Ordering solution with intergrated back office built to scale your
           business
         </p>
       </div>

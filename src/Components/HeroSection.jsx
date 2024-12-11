@@ -2,16 +2,17 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import { Typewriter } from "react-simple-typewriter";
 
 const HeroSection = () => {
-  const [currentSocial, setCurrentSocial] = useState(0);
-
   const socials = [
     { icon: <FaInstagram />, name: "Instagram", color: "#E4405F" },
     { icon: <FaFacebook />, name: "Facebook", color: "#1877F2" },
     { icon: <FaWhatsapp />, name: "WhatsApp", color: "#2AA234" },
     { icon: <BsTwitterX />, name: "Twitter", color: "#111122" },
   ];
+
+  const [currentSocial, setCurrentSocial] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,45 +30,54 @@ const HeroSection = () => {
             Food vendors, Caterers & Restaurants
           </p>
 
-          <p className="font-[600] text-[40px] lg:text-[48px] text-[#111122]">
-            Your link to sell better with
-          </p>
+          <div className=" space-y-[40px]">
+            <div>
+              <p className="font-[600] text-[40px] lg:text-[48px] text-[#111122]">
+                Your link to sell better
+              </p>
+              <div className="flex items-center gap-[10px]">
+                <p className="font-[600] text-[40px] lg:text-[48px] text-[#111122]">
+                  with
+                </p>
 
-          <div
-            className="font-[600] text-[40px] lg:text-[48px] overflow-hidden h-[48px]"
-            style={{ display: "inline-block" }}
-          >
-            <div
-              className="transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateY(-${currentSocial * 48}px)`,
-              }}
-            >
-              {socials.map((social, index) => (
                 <div
-                  key={index}
-                  className="flex items-center space-x-2"
-                  style={{
-                    color: social.color,
-                    height: "48px",
-                    display: "flex",
-                  }}
+                  className="font-[600] text-[40px] lg:text-[48px] flex items-center space-x-2"
+                  style={{ display: "inline-block" }}
                 >
-                  {social.icon}
-                  <span>{social.name}</span>
+                  <span
+                    className="text-[48px]"
+                    style={{ color: socials[currentSocial]?.color }}
+                  >
+                    {socials[currentSocial]?.icon}
+                  </span>
+                  <span
+                    className="text-[48px]"
+                    style={{ color: socials[currentSocial]?.color }}
+                  >
+                    <Typewriter
+                      words={[socials[currentSocial]?.name]}
+                      loop
+                      cursor
+                      cursorStyle="|"
+                    />
+                  </span>
                 </div>
-              ))}
+              </div>
+            </div>
+
+            <div>
+              <p className="font-[500] text-[14px] lg:text-[20px] text-[#414141] max-w-[460px] w-full ">
+                Get your own branded site to easily manage orders, menu and
+                customers — all in one place.
+              </p>
+            </div>
+
+            <div>
+              <p className="bg-[#5955B3] text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition">
+                Start your free trial
+              </p>
             </div>
           </div>
-
-          <p className="font-[500] text-[14px] lg:text-[16px] text-[#414141] max-w-[460px] w-full my-[14px]">
-            Your own branded site to easily manage orders, menu and customers—
-            all in one place
-          </p>
-
-          <p className="bg-[#5955B3] text-[16px] inline text-white px-[16px] py-[8px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition">
-            Start your free trial
-          </p>
         </div>
 
         <div className="hidden lg:block rounded-[8px] overflow-hidden">
