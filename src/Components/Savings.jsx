@@ -1,74 +1,91 @@
 import Image from "next/image";
 import React from "react";
-import { FaCheck } from "react-icons/fa";
-
+import Icon from "../../public/goGrub/GoGrubLOGOicon.svg";
+import { FaCheckCircle } from "react-icons/fa";
 const Savings = () => {
   return (
-    <div className=" bg-[#eeeeee]">
-      <div className=" font-DMSans max-w-5xl mx-[10px] md:mx-auto py-[10%]">
-        <div className=" grid gap-[20px] place-items-center md:flex items-start md:justify-between ">
-          <div className=" max-w-[700px]  order-2 md:order-1">
-            <p className=" max-w-[383px] font-[600] text-[30px] lg:text-[40px] text-[#111122]">
-              Level Up, Save More.
+    <div className="bg-[#FFF5F1]  font-Gilroy">
+      <div className="max-w-6xl mx-[10px] lg:mx-auto py-[10%] px-[10px] ">
+        <div className="grid gap-[20px] place-items-center lg:flex items-center lg:justify-between">
+          <div className="max-w-[700px]">
+            <p className="text-[16px] md:text-[24px] font-[300] text-[#0A191E]   rounded-[4px] font-GeneralSans">
+              Focus on what's important-- your business
             </p>
-            <p className=" font-[500] text-[14px] lg:text-[20px] text-[#414141] max-w-[460px] w-full my-[24px]">
-              Say goodbye to costly commissions and start saving thousands every
-              month.
-            </p>
-            <div className=" my-[40px] space-y-[16px]">
-              <div className=" flex items-center gap-[8px]">
-                <div className="  text-[#5955B3]">
-                  <FaCheck />
-                </div>
-                <p className=" font-[400] text-[16px] text-[#111122]">
-                  Get your own branded online ordering site with QR code
+
+            <div className="space-y-[24px]">
+              <div>
+                <p className="font-[800] text-[40px] lg:text-[64px] text-[#606060]">
+                  Ordering solution with intergrated back office built to <br />
+                  <span className=" text-[#FF4F00]">scale your business</span>
                 </p>
               </div>
-              <div className=" flex items-center gap-[8px]">
-                <div className="  text-[#5955B3]">
-                  <FaCheck />
-                </div>
-                <p className=" font-[400] text-[16px] text-[#111122]">
-                  Customers to collect orders online
-                </p>
-              </div>
-              <div className=" flex items-center gap-[8px]">
-                <div className="  text-[#5955B3]">
-                  <FaCheck />
-                </div>
-                <p className=" font-[400] text-[16px] text-[#111122]">
-                  Accept Cash and Online Payments
-                </p>
-              </div>
-              <div className=" flex items-center gap-[8px]">
-                <div className="  text-[#5955B3]">
-                  <FaCheck />
-                </div>
-                <p className=" font-[400] text-[16px] text-[#111122]">
-                  Get Instant Order Notifications
-                </p>
-              </div>
-              <div className=" flex items-center gap-[8px]">
-                <div className="  text-[#5955B3]">
-                  <FaCheck />
-                </div>
-                <p className=" font-[400] text-[16px] text-[#111122]">
-                  Collect Feedback and Stay Connected
+
+              <div>
+                <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition">
+                  Start your free trial
                 </p>
               </div>
             </div>
-            <p className="bg-[#5955B3] text-[16px] inline text-white px-[16px] py-[8px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition">
-              Start your free trial
-            </p>
           </div>
 
-          <div className=" order-1 md:order-2 ">
+          <div className="hidden lg:block rounded-[8px] overflow-hidden">
             <Image
-              src="/grubly/Image1.png"
+              src="/goGrub/OderingSolutionImg.svg"
               alt="Image"
               width={500}
               height={500}
             />
+          </div>
+        </div>
+      </div>
+
+      <div className=" flex items-start">
+        <div className=" max-w-[700px] w-full">
+          <Image src={Icon} alt="" />
+        </div>
+        <div className="font-Gilroy">
+          <p className=" font-[800] text-[64px] text-[#FF4F00]">
+            What We Offer
+          </p>
+
+          <div className=" space-y-[40px]">
+            <div className="">
+              <div className=" flex items-center gap-[16px]">
+                <FaCheckCircle size={24} className=" text-[#FF4F00]" />
+                <p className=" font-[800] text-[32px] text-[#0A191E]">
+                  Branded Ordering Site
+                </p>
+              </div>
+              <p className=" font-[300] text-[#000000] text-[24px]">
+                Build and customize your own site for a consistent brand
+                experience.
+              </p>
+            </div>
+
+            <div className="">
+              <div className=" flex items-center gap-[16px]">
+                <FaCheckCircle size={24} className=" text-[#FF4F00]" />
+                <p className=" font-[800] text-[32px] text-[#0A191E]">
+                  Real-Time Order Management
+                </p>
+              </div>
+              <p className=" font-[300] text-[#000000] text-[24px]">
+                Keep track of every order across platforms with real-time
+                updates.
+              </p>
+            </div>
+            <div className="">
+              <div className=" flex items-center gap-[16px]">
+                <FaCheckCircle size={24} className=" text-[#FF4F00]" />
+                <p className=" font-[800] text-[32px] text-[#0A191E]">
+                  Social Media Integration
+                </p>
+              </div>
+              <p className=" font-[300] text-[#000000] text-[24px]">
+                Accept Orders directly from Instagram, Facebook, WhatsApp,
+                Twitter and Tiktok.
+              </p>
+            </div>
           </div>
         </div>
       </div>

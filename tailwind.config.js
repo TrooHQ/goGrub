@@ -13,12 +13,14 @@ module.exports = {
         footer: "url('/grubly/FooterImage.svg')",
       },
       colors: {
+        primary: "#FF4F00",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        DMSans: ["DM Sans", "sans-serif"],
-        GeneralSans: ["General Sans", "sans-serif"],
+        DMSans: ['"DM Sans"', "sans-serif"],
+        GeneralSans: ['"General Sans"', "sans-serif"],
+        Gilroy: ["Gilroy", "sans-serif"],
       },
     },
   },

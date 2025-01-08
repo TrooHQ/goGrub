@@ -23,7 +23,7 @@ const GetStarted = () => {
           </p>
 
           <div className="mt-[30px]">
-            <p className="bg-[#5955B3] text-[16px] inline text-white px-[16px] py-[8px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition ">
+            <p className="bg-primary text-[16px] inline text-white px-[16px] py-[8px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition ">
               Request a demo
             </p>
           </div>

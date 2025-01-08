@@ -19,11 +19,11 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="bg-white sticky top-0 z-50 shadow-sm border-b">
+    <div className="bg-white sticky top-0 z-50 ">
       <div className="container max-w-6xl mx-[10px] lg:mx-auto flex items-center justify-between  py-3 px-4">
         <Link href="/">
           <Image
-            src="/grubly/Logo.svg"
+            src="/goGrub/goGrub Logo.svg"
             alt="Logo"
             width={150}
             height={150}
@@ -42,8 +42,8 @@ const Navbar = () => {
                 href={path}
                 className={`text-[16px]  ${
                   router.pathname === path
-                    ? "text-[#5855B3] font-[500]"
-                    : "text-[#25244B] font-[400]"
+                    ? "text-[#171717] font-[300]"
+                    : "text-[#171717] font-[300]"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -54,7 +54,7 @@ const Navbar = () => {
         </ul>
 
         <Link href="/">
-          <p className="hidden lg:block bg-[#5955B3] text-white px-[24px] py-[10px] rounded-md font-[700] hover:bg-[#3a00e0] transition">
+          <p className="hidden lg:block bg-primary text-white px-[24px] py-[10px] rounded-md font-[700]  transition">
             Start your free trial
           </p>
         </Link>
@@ -70,7 +70,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="mt-4 lg:hidden flex justify-center">
           <Link href="/">
-            <p className="bg-[#5855B3] text-white px-6 py-2 rounded-md font-[700] hover:bg-[#3a00e0] transition">
+            <p className=" bg-primary text-white px-6 py-2 rounded-md font-[700]  transition">
               Start your free trial
             </p>
           </Link>

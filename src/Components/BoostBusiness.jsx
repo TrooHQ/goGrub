@@ -1,33 +1,115 @@
 import Image from "next/image";
 import React from "react";
-
+import IconRight from "../../public/goGrub/Vector 4.svg";
+import IconLeft from "../../public/goGrub/Vector 3.svg";
+import { FaCheckCircle } from "react-icons/fa";
+import Logo from "../../public/goGrub/goGrubLOGO_.svg";
 const BoostBusiness = () => {
   return (
-    <div className=" font-GeneralSans max-w-5xl mx-[10px] lg:mx-auto py-[10%]">
-      <div className=" grid place-items-center items-start gap-[40px] md:grid-cols-2 lg:grid-cols-3">
-        <div className="  max-w-[356px] w-full space-y-[40px] flex flex-col items-center text-center">
-          <Image src="/grubly/bxs_store.svg" width={50} height={50} />
-          <p className=" font-[500] text-[24px] text-[#111122]">
-            Boost your business by promoting your store across every social
-            media channel.
-          </p>
+    <div
+      className=" font-GeneralSans "
+      style={{
+        backgroundImage: "url('/goGrub/ImageOverlay.png')",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className=" bg-black bg-opacity-15 py-[40px]">
+        <div className="grid gap-[20px] md:place-items-center items-start md:flex max-w-6xl mx-[10px] lg:mx-auto">
+          <div className="max-w-[384px] w-full space-x-[16px] flex items-start">
+            <Image
+              src="/goGrub/mdi_tick-circle-outline.svg"
+              width={50}
+              height={50}
+              alt="icon"
+            />
+            <p className="font-[500] text-[14px] md:text-[24px] text-[#FFFFFF]">
+              Boost your business by promoting your store across every social
+              media channel.
+            </p>
+          </div>
+          <div className="max-w-[461px] w-full space-x-[16px] flex items-start">
+            <Image
+              src="/goGrub/mdi_tick-circle-outline.svg"
+              width={50}
+              height={50}
+              alt="icon"
+            />
+            <p className="font-[500] text-[14px] md:text-[24px] text-[#FFFFFF]">
+              Get flexible with your menu pricing, increase repeat businesses
+              and easily manage your customers.
+            </p>
+          </div>
+          <div className="max-w-[402px] w-full space-x-[16px] flex items-start">
+            <Image
+              src="/goGrub/mdi_tick-circle-outline.svg"
+              width={50}
+              height={50}
+              alt="icon"
+            />
+            <p className="font-[500] text-[14px] md:text-[24px] text-[#FFFFFF]">
+              Take orders directly, skip commissions and keep more earnings.
+            </p>
+          </div>
         </div>
-        <div className=" max-w-[356px] w-full space-y-[40px] flex flex-col items-center text-center">
-          <Image src="/grubly/bxs_food-menu.svg" width={50} height={50} />
-          <p className=" font-[500] text-[24px] text-[#111122]">
-            Get flexible with your menu pricing, increase repeat businesses and
-            easily manage your customers
-          </p>
-        </div>
-        <div className=" max-w-[356px] w-full space-y-[40px] flex flex-col items-center text-center">
-          <Image
-            src="/grubly/material-symbols_orders-rounded.svg"
-            width={50}
-            height={50}
-          />
-          <p className=" font-[500] text-[24px] text-[#111122]">
-            Take orders directly, skip commissions and keep more earnings.
-          </p>
+      </div>
+
+      <div className=" ">
+        <div className="max-w-[1000px] mx-auto space-y-[100px] ">
+          <div className="  flex items-start ">
+            <Image src={IconRight} alt="icon-right" />
+            <div className=" max-w-[650px] mx-auto w-full text-center">
+              <p className=" font-[800] text-[24px] md:text-[54px] text-[#FFFFFF]">
+                Level Up, Save More
+              </p>
+              <p className=" font-[500] text-[16px] md:text-[32px] text-white">
+                Say goodbye to costly commissions and start saving thousands
+                every month.
+              </p>
+            </div>
+            <Image src={IconLeft} alt="icon-right" />
+          </div>
+          <div className="  grid gap-[20px] md:grid-cols-2 items-start md:gap-[44px]">
+            <div className="gap-[16px] flex items-center ">
+              <FaCheckCircle size={24} className=" text-[#22FF6D]" />
+
+              <p className=" font-[500] text-[14px] md:text-[24px] text-[#fff]">
+                Get your own branded online ordering site with QR code
+              </p>
+            </div>
+            <div className="gap-[16px] flex items-center ">
+              <FaCheckCircle size={24} className=" text-[#22FF6D]" />
+
+              <p className=" font-[500] text-[14px] md:text-[24px] text-[#fff]">
+                Get Instant Order Notifications
+              </p>
+            </div>
+            <div className="gap-[16px] flex items-center ">
+              <FaCheckCircle size={24} className=" text-[#22FF6D]" />
+
+              <p className=" font-[500] text-[14px] md:text-[24px] text-[#fff]">
+                Customers to collect orders online
+              </p>
+            </div>{" "}
+            <div className="gap-[16px] flex items-center ">
+              <FaCheckCircle size={24} className=" text-[#22FF6D]" />
+
+              <p className=" font-[500] text-[14px] md:text-[24px] text-[#fff]">
+                Customers to collect orders online
+              </p>
+            </div>{" "}
+            <div className="gap-[16px] flex items-center ">
+              <FaCheckCircle size={24} className=" text-[#22FF6D]" />
+
+              <p className=" font-[500] text-[14px] md:text-[24px] text-[#fff]">
+                Accept Cash and Online Payments
+              </p>
+            </div>
+          </div>
+
+          <div className=" w-full max-w-[200px] lg:max-w-[600px] mx-auto  ">
+            <Image src={Logo} alt="" />
+          </div>
         </div>
       </div>
     </div>
