@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="mx-[10px] md:mx-[40px] 2xl:mx-[158px] mt-[83px] mb-[55px]  md:border-r md:border-l border-[#606060] ">
         <div className=" md:border-b border-[#606060] pb-[32px] px-[16px]">
           <Image
-            src="/grubly/trooLogoGrey.svg"
+            src="/goGrub/goGrubLOGOWhite.svg"
             height={200}
             width={200}
             alt=""
