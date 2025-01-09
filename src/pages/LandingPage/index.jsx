@@ -12,15 +12,15 @@ import React from "react";
 
 const LandingPage = () => {
   return (
-    <div className=" font-DMSans">
+    <div className=" bg-[#FFF5F1] font-DMSans">
       <Navbar />
       <HeroSection />
       <BoostBusiness />
       <Savings />
-      <OrderingSolution />
       <HowItWorks />
-      <Benefits />
+      <OrderingSolution />
       <GetStarted />
+      {/* <Benefits /> */}
       <Faq />
       <Footer />
     </div>

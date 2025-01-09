@@ -14,7 +14,7 @@ const Savings = () => {
 
             <div className="space-y-[24px]">
               <div>
-                <p className="font-[800] text-[40px] lg:text-[64px] text-[#606060]">
+                <p className="font-[800] text-[30px] lg:text-[64px] text-[#606060]">
                   Ordering solution with intergrated back office built to <br />
                   <span className=" text-[#FF4F00]">scale your business</span>
                 </p>
@@ -39,24 +39,24 @@ const Savings = () => {
         </div>
       </div>
 
-      <div className=" flex items-start">
-        <div className=" max-w-[700px] w-full">
+      <div className=" grid lg:flex items-start mx-[10px] md:mx-0">
+        <div className=" hidden lg:block max-w-[700px] w-full">
           <Image src={Icon} alt="" />
         </div>
-        <div className="font-Gilroy">
-          <p className=" font-[800] text-[64px] text-[#FF4F00]">
+        <div className="font-Gilroy ">
+          <p className=" font-[800] text-[30px] lg:text-[64px] text-[#FF4F00] my-[20px]">
             What We Offer
           </p>
 
-          <div className=" space-y-[40px]">
+          <div className=" space-y-[20px] lg:space-y-[40px]">
             <div className="">
               <div className=" flex items-center gap-[16px]">
                 <FaCheckCircle size={24} className=" text-[#FF4F00]" />
-                <p className=" font-[800] text-[32px] text-[#0A191E]">
+                <p className=" font-[800] text-[16px] md:text-[32px] text-[#0A191E]">
                   Branded Ordering Site
                 </p>
               </div>
-              <p className=" font-[300] text-[#000000] text-[24px]">
+              <p className=" font-[300] text-[#000000] text-[14px] lg:text-[24px]">
                 Build and customize your own site for a consistent brand
                 experience.
               </p>
@@ -65,11 +65,11 @@ const Savings = () => {
             <div className="">
               <div className=" flex items-center gap-[16px]">
                 <FaCheckCircle size={24} className=" text-[#FF4F00]" />
-                <p className=" font-[800] text-[32px] text-[#0A191E]">
+                <p className=" font-[800] text-[16px] md:text-[32px] text-[#0A191E]">
                   Real-Time Order Management
                 </p>
               </div>
-              <p className=" font-[300] text-[#000000] text-[24px]">
+              <p className=" font-[300] text-[#000000] text-[14px] lg:text-[24px]">
                 Keep track of every order across platforms with real-time
                 updates.
               </p>
@@ -77,11 +77,11 @@ const Savings = () => {
             <div className="">
               <div className=" flex items-center gap-[16px]">
                 <FaCheckCircle size={24} className=" text-[#FF4F00]" />
-                <p className=" font-[800] text-[32px] text-[#0A191E]">
+                <p className=" font-[800] text-[16px] md:text-[32px] text-[#0A191E]">
                   Social Media Integration
                 </p>
               </div>
-              <p className=" font-[300] text-[#000000] text-[24px]">
+              <p className=" font-[300] text-[#000000] text-[14px] lg:text-[24px]">
                 Accept Orders directly from Instagram, Facebook, WhatsApp,
                 Twitter and Tiktok.
               </p>

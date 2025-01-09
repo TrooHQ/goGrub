@@ -19,33 +19,32 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="bg-white sticky top-0 z-50 ">
-      <div className="container max-w-6xl mx-[10px] lg:mx-auto flex items-center justify-between  py-3 px-4">
+    <nav className="bg-white sticky top-0 z-50 shadow-md">
+      <div className="container mx-auto max-w-6xl px-4 lg:px-6 flex items-center justify-between py-4">
+        {/* Logo */}
         <Link href="/">
           <Image
             src="/goGrub/goGrub Logo.svg"
-            alt="Logo"
+            alt="GoGrub Logo"
             width={150}
-            height={150}
+            height={50}
             className="cursor-pointer"
           />
         </Link>
 
+        {/* Desktop Links */}
         <ul
-          className={`flex-col lg:flex-row items-center lg:flex gap-6 text-center absolute lg:static bg-white w-full lg:w-auto transition-all duration-300 ${
-            isOpen ? "flex top-[60px]" : "hidden lg:flex"
-          }`}
+          className={`hidden lg:flex gap-8 items-center text-[16px] font-medium`}
         >
           {navLinks.map(({ path, label }) => (
             <li key={path}>
               <Link
                 href={path}
-                className={`text-[16px]  ${
+                className={`transition ${
                   router.pathname === path
-                    ? "text-[#171717] font-[300]"
-                    : "text-[#171717] font-[300]"
-                }`}
-                onClick={() => setIsOpen(false)}
+                    ? "text-primary font-semibold"
+                    : "text-[#171717]"
+                } hover:text-primary`}
               >
                 {label}
               </Link>
@@ -53,30 +52,55 @@ const Navbar = () => {
           ))}
         </ul>
 
+        {/* Desktop Button */}
         <Link href="/">
-          <p className="hidden lg:block bg-primary text-white px-[24px] py-[10px] rounded-md font-[700]  transition">
+          <p className="hidden lg:block bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-opacity-90 transition">
             Start your free trial
           </p>
         </Link>
 
-        <div
-          className="lg:hidden text-2xl cursor-pointer ml-4"
+        {/* Mobile Menu Toggle */}
+        <button
+          className="lg:hidden text-2xl text-[#171717]"
           onClick={toggleMenu}
+          aria-label="Toggle Menu"
+          aria-expanded={isOpen}
         >
           {isOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-        </div>
+        </button>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="mt-4 lg:hidden flex justify-center">
-          <Link href="/">
-            <p className=" bg-primary text-white px-6 py-2 rounded-md font-[700]  transition">
-              Start your free trial
-            </p>
-          </Link>
+        <div className="lg:hidden bg-white shadow-md py-4">
+          <ul className="flex flex-col items-center gap-4">
+            {navLinks.map(({ path, label }) => (
+              <li key={path}>
+                <Link
+                  href={path}
+                  className={`block text-[16px] ${
+                    router.pathname === path
+                      ? "text-primary font-semibold"
+                      : "text-[#171717]"
+                  } hover:text-primary transition`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-4 text-center">
+            <Link href="/">
+              <p className="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-opacity-90 transition">
+                Start your free trial
+              </p>
+            </Link>
+          </div>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 
