@@ -2,28 +2,31 @@ import Image from "next/image";
 import React from "react";
 import Icon from "../../public/goGrub/GoGrubLOGOicon.svg";
 import { FaCheckCircle } from "react-icons/fa";
+import Link from "next/link";
 const Savings = () => {
   return (
-    <div className="bg-[#FFF5F1]  font-Gilroy">
+    <div className="bg-[#FFF5F1]  font-gilroy">
       <div className="max-w-6xl mx-[10px] lg:mx-auto py-[10%] px-[10px] ">
         <div className="grid gap-[20px] place-items-center lg:flex items-center lg:justify-between">
-          <div className="max-w-[700px]">
-            <p className="text-[16px] md:text-[24px] font-[300] text-[#0A191E]   rounded-[4px] font-GeneralSans">
+          <div className="max-w-[628px]">
+            <p className="text-[16px] md:text-[24px] font-[500] text-[#0A191E]   rounded-[4px] font-GeneralSans">
               Focus on what's important-- your business
             </p>
 
             <div className="space-y-[24px]">
               <div>
-                <p className="font-[800] text-[30px] lg:text-[64px] text-[#606060]">
+                <p className="font-[800] text-[30px] lg:text-[64px] text-[#606060] leading-[40px] md:leading-[76px]">
                   Ordering solution with intergrated back office built to <br />
                   <span className=" text-[#FF4F00]">scale your business</span>
                 </p>
               </div>
 
               <div>
-                <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition">
-                  Start your free trial
-                </p>
+                <Link href="https://trootab.com/business-profile?coming-from=goGrub">
+                  <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[8px] font-[500] hover:bg-[#4200FF] transition">
+                    Start your free trial
+                  </p>
+                </Link>
               </div>
             </div>
           </div>
@@ -43,7 +46,7 @@ const Savings = () => {
         <div className=" hidden lg:block max-w-[700px] w-full">
           <Image src={Icon} alt="" />
         </div>
-        <div className="font-Gilroy ">
+        <div className="font-gilroy max-w-[513px]">
           <p className=" font-[800] text-[30px] lg:text-[64px] text-[#FF4F00] my-[20px]">
             What We Offer
           </p>

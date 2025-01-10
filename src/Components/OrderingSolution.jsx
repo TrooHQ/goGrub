@@ -46,20 +46,19 @@ const OrderingSolution = () => {
 
   return (
     <div className="bg-[#FFF5F1] " id="features">
-      <div className=" font-DMSans max-w-5xl mx-[10px] lg:mx-auto py-[10%] relative ">
+      <div className=" font-DMSans max-w-6xl mx-[10px] lg:mx-auto py-[10%] relative ">
         <div className="max-w-[628px] text-start">
-          <p className="text-[#414141] text-[16px] font-[500]  font-GeneralSans">
+          <p className="text-[#414141] text-[16px] lg:text-[24px] font-[500]  font-GeneralSans">
             Focus on what's important-- your business
           </p>
-          <p className=" text-[#0A191E] font-[800] text-[30px] lg:text-[64px]">
+          <p className=" leading-[40px] lg:leading-[76px] text-[#0A191E] font-[800] text-[30px] lg:text-[64px] font-gilroy">
             Why Choose GoGrub?
           </p>
         </div>
 
-        <div className="mt-[36px]">
-          <div className="grid gap-[20px] md:grid-cols-3 md:gap-[30px]">
-            {/* Item 1 */}
-            <div className="bg-[#E10101] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-full">
+        <div className="mt-[36px] space-y-[15px]">
+          <div className=" grid md:flex items-start gap-[15px]">
+            <div className="bg-[#E10101] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-[616px] max-w-[481px] w-full">
               <div className="text-[#ffffff]">
                 <p className="font-[800] text-[32px]">Boost Sales</p>
                 <p className="font-[400] text-[24px]">
@@ -72,9 +71,8 @@ const OrderingSolution = () => {
               </div>
             </div>
 
-            {/* Item 2 (spanning 2 columns on desktop) */}
-            <div className="col-span-1 md:col-span-2 space-y-[16px]">
-              <div className="bg-[#FF4F00] py-[40px] px-[56px] rounded-[24px] flex items-center justify-between h-[300px]">
+            <div className=" space-y-[16px]">
+              <div className="bg-[#FF4F00] py-[40px] px-[56px] rounded-[24px] flex items-center justify-between h-[300px] max-w-[705px] md:w-[705px] w-full">
                 <div className="text-[#ffffff] max-w-[364px]">
                   <p className="font-[800] text-[32px]">Reduce Errors</p>
                   <p className="font-[400] text-[24px]">
@@ -85,11 +83,12 @@ const OrderingSolution = () => {
                   <Image src={Icon5} alt="alt" />
                 </div>
               </div>
-              <div className="bg-[#000000] py-[40px] px-[56px] rounded-[24px] flex items-center justify-between h-[300px]">
+              <div className="bg-[#000000] py-[40px] px-[56px] rounded-[24px] flex items-center justify-between h-[300px] max-w-[705px] md:w-[705px] w-full">
                 <div className="text-[#ffffff] max-w-[364px]">
-                  <p className="font-[800] text-[32px]">Reduce Errors</p>
+                  <p className="font-[800] text-[32px]">Save Time</p>
                   <p className="font-[400] text-[24px]">
-                    Real-time updates ensure everything is in sync.
+                    Automatically manage orders and inventory without juggling
+                    multiple systems.
                   </p>
                 </div>
                 <div>
@@ -97,9 +96,10 @@ const OrderingSolution = () => {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Item 3 */}
-            <div className="bg-[#FF4F00] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-full">
+          <div className=" place-items-center grid md:grid-cols-3 gap-[15px]">
+            <div className="bg-[#FF4F00] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-full md:max-w-[372px] w-full">
               <div className="text-[#ffffff]">
                 <p className="font-[800] text-[32px]">Menu</p>
                 <p className="font-[400] text-[24px]">
@@ -111,8 +111,7 @@ const OrderingSolution = () => {
               </div>
             </div>
 
-            {/* Item 4 */}
-            <div className="bg-[#E10101] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-full">
+            <div className="bg-[#E10101] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-full md:max-w-[372px] w-full">
               <div className="text-[#ffffff]">
                 <p className="font-[800] text-[32px]">QR Code</p>
                 <p className="font-[400] text-[24px]">
@@ -124,18 +123,17 @@ const OrderingSolution = () => {
               </div>
             </div>
 
-            {/* Item 5 */}
-            <div className="bg-[#FFFFFF] drop-shadow pb-[40px] px-[39px] rounded-[24px] flex flex-col justify-between h-full">
+            <div className="bg-[#FFFFFF] drop-shadow pb-[40px] px-[39px] rounded-[24px] flex flex-col justify-between h-full md:max-w-[372px] w-full">
               <div className="flex justify-end">
                 <Image src={Icon3} alt="alt" />
               </div>
               <div>
                 <p className="font-[800] text-[32px] text-[#0A191E]">
-                  Boost Sales
+                  Simplified Operations
                 </p>
                 <p className="font-[400] text-[24px] text-[#000000]">
-                  Capture more orders by integrating with popular social
-                  platforms.
+                  Manage all your orders from one central platform—no more
+                  manual tracking.
                 </p>
               </div>
             </div>

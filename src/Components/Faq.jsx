@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-
-import {
-  BiSolidChevronDownCircle,
-  BiSolidChevronRightCircle,
-} from "react-icons/bi";
+import { TbCircleChevronRight } from "react-icons/tb";
+import { BiSolidChevronDownCircle } from "react-icons/bi";
 const Faq = () => {
   const faqs = [
     {
@@ -57,18 +54,22 @@ const Faq = () => {
               onClick={() => toggleFaq(index)}
             >
               <div className="flex justify-between items-center text-[#FF4F00]x">
-                <p className="font-[500] text-[18px] lg:text-[22px] ">
+                <p
+                  className={`font-[500] text-[18px] lg:text-[22px] ${
+                    openIndex == index ? " text-[#FF4F00]" : " text-[#000000]"
+                  }`}
+                >
                   {" "}
                   {faq.question}
                 </p>
                 <span className=" ">
                   {openIndex === index ? (
-                    <BiSolidChevronRightCircle
+                    <BiSolidChevronDownCircle
                       size={30}
                       className=" text-[#FF4F00]"
                     />
                   ) : (
-                    <BiSolidChevronDownCircle
+                    <TbCircleChevronRight
                       size={30}
                       className=" text-[#FF4F00]"
                     />

@@ -1,18 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 const HeroSection = () => {
   const socials = [
-    { name: "Instagram", color: "#E4405F" },
-    { name: "Facebook", color: "#1877F2" },
-    { name: "WhatsApp", color: "#2AA234" },
-    { name: "Twitter", color: "#111122" },
+    { name: "Instagram" },
+    { name: "Facebook" },
+    { name: "WhatsApp" },
+    { name: "Twitter" },
   ];
 
   return (
-    <div className="bg-[#FFF5F1]">
-      <div className="max-w-6xl mx-[10px] lg:mx-auto py-[10%] px-[10px] ">
+    <div className="bg-[#FFF5F1] font-gilroy">
+      <div className="max-w-6xl mx-[10px] lg:ml-auto lg:mx-0 pt-[2%] px-[10px] lg:px-0 pb-[50px] md:pb-0">
         <div className="grid gap-[20px] place-items-center lg:flex items-center lg:justify-between">
           <div className="max-w-[700px]">
             <p className="text-[16px] font-[300] text-[#111122] bg-[#D9D9D93B] py-[9px] px-[22px] max-w-[325px] rounded-[4px]">
@@ -29,11 +30,8 @@ const HeroSection = () => {
                     with
                   </p>
 
-                  <div
-                    className="font-[600] text-[40px] lg:text-[64px] text-[#606060] flex items-center space-x-2"
-                    style={{ display: "inline-block" }}
-                  >
-                    <span className="text-[48px] text-[#606060]">
+                  <div className=" " style={{ display: "inline-block" }}>
+                    <span className="text-[48px] lg:text-[64px] font-[800] text-[#606060]">
                       <Typewriter
                         words={socials.map((social) => social.name)}
                         loop
@@ -46,16 +44,18 @@ const HeroSection = () => {
               </div>
 
               <div>
-                <p className="font-[300] text-[14px] lg:text-[20px] text-[#000000] max-w-[460px] w-full">
-                  Get your own branded site to easily manage orders, menu and
-                  customers — all in one place.
+                <p className="font-[300] text-[14px] lg:text-[20px] text-[#000000] max-w-[627px] w-full">
+                  Get your own branded site to easily manage orders, <br /> menu
+                  and customers — all in one place.
                 </p>
               </div>
 
               <div>
-                <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition">
-                  Start your free trial
-                </p>
+                <Link href="https://trootab.com/business-profile?coming-from=goGrub">
+                  <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] hover:bg-[#4200FF] transition font-gilroy">
+                    Start your free trial
+                  </p>
+                </Link>
               </div>
             </div>
           </div>

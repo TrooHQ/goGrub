@@ -19,9 +19,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white sticky top-0 z-50 shadow-md">
+    <nav className="bg-white sticky top-0 z-50 shadow-md font-gilroy">
       <div className="container mx-auto max-w-6xl px-4 lg:px-6 flex items-center justify-between py-4">
-        {/* Logo */}
         <Link href="/">
           <Image
             src="/goGrub/goGrub Logo.svg"
@@ -32,9 +31,8 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Links */}
         <ul
-          className={`hidden lg:flex gap-8 items-center text-[16px] font-medium`}
+          className={`hidden lg:flex gap-8 items-center text-[16px] font-[300]`}
         >
           {navLinks.map(({ path, label }) => (
             <li key={path}>
@@ -42,8 +40,8 @@ const Navbar = () => {
                 href={path}
                 className={`transition ${
                   router.pathname === path
-                    ? "text-primary font-semibold"
-                    : "text-[#171717]"
+                    ? "text-primary font-[500]"
+                    : "text-[#171717] font-[300]"
                 } hover:text-primary`}
               >
                 {label}
@@ -52,14 +50,12 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Desktop Button */}
-        <Link href="/">
-          <p className="hidden lg:block bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-opacity-90 transition">
+        <Link href="https://trootab.com/business-profile?coming-from=goGrub">
+          <p className="hidden font-GeneralSans lg:block bg-primary text-white px-6 py-2 rounded-md font-[500] hover:bg-opacity-90 transition">
             Start your free trial
           </p>
         </Link>
 
-        {/* Mobile Menu Toggle */}
         <button
           className="lg:hidden text-2xl text-[#171717]"
           onClick={toggleMenu}
@@ -70,7 +66,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden bg-white shadow-md py-4">
           <ul className="flex flex-col items-center gap-4">
@@ -80,8 +75,8 @@ const Navbar = () => {
                   href={path}
                   className={`block text-[16px] ${
                     router.pathname === path
-                      ? "text-primary font-semibold"
-                      : "text-[#171717]"
+                      ? "text-primary font-[500]"
+                      : "text-[#171717] font-[300]"
                   } hover:text-primary transition`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -92,8 +87,8 @@ const Navbar = () => {
           </ul>
 
           <div className="mt-4 text-center">
-            <Link href="/">
-              <p className="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-opacity-90 transition">
+            <Link href="https://trootab.com/business-profile?coming-from=goGrub">
+              <p className="bg-primary text-white px-6 py-2 rounded-md font-[500] font-GeneralSans hover:bg-opacity-90 transition">
                 Start your free trial
               </p>
             </Link>

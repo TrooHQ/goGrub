@@ -20,7 +20,7 @@ module.exports = {
       fontFamily: {
         DMSans: ['"DM Sans"', "sans-serif"],
         GeneralSans: ['"General Sans"', "sans-serif"],
-        Gilroy: ["Gilroy", "sans-serif"],
+        gilroy: ["Gilroy", "sans-serif"],
       },
     },
   },
