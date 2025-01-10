@@ -12,8 +12,8 @@ const Footer = () => {
             alt=""
             className=" "
           />
-          <p className=" text-white font-[400] text-[16px] md:hidden py-[4px]">
-            &copy; 2024 Troo Inc. All Rights Reserved.
+          <p className="text-white font-[400] text-[16px] md:hidden py-[4px]">
+            &copy; {new Date().getFullYear()} Troo Inc. All Rights Reserved.
           </p>
         </div>
         <div className="  md:border-b border-[#606060] grid sm:grid-cols-3 md:grid-cols-5 items-start justify-between">
@@ -132,7 +132,7 @@ const Footer = () => {
         </div>
         <div className="px-[16px] py-[29px] hidden md:block">
           <p className=" text-white font-[400] text-[16px]">
-            &copy; 2024 Troo Inc. All Rights Reserved.
+            &copy; {new Date().getFullYear()} Troo Inc. All Rights Reserved.
           </p>
         </div>
       </div>
