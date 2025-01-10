@@ -57,8 +57,8 @@ const OrderingSolution = () => {
         </div>
 
         <div className="mt-[36px] space-y-[15px]">
-          <div className=" grid md:flex items-start gap-[15px]">
-            <div className="bg-[#E10101] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-[616px] max-w-[481px] w-full">
+          <div className=" grid place-items-center lg:flex items-start gap-[15px]">
+            <div className="bg-[#E10101] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-[616px] md:max-w-[481px] w-full">
               <div className="text-[#ffffff]">
                 <p className="font-[800] text-[32px]">Boost Sales</p>
                 <p className="font-[400] text-[24px]">
@@ -72,7 +72,7 @@ const OrderingSolution = () => {
             </div>
 
             <div className=" space-y-[16px]">
-              <div className="bg-[#FF4F00] py-[40px] px-[56px] rounded-[24px] flex items-center justify-between h-[300px] max-w-[705px] md:w-[705px] w-full">
+              <div className="bg-[#FF4F00] py-[40px] px-[56px] rounded-[24px] flex items-center justify-between h-[300px] max-w-[705px] lg:max-w-[705px] w-full">
                 <div className="text-[#ffffff] max-w-[364px]">
                   <p className="font-[800] text-[32px]">Reduce Errors</p>
                   <p className="font-[400] text-[24px]">
@@ -83,7 +83,7 @@ const OrderingSolution = () => {
                   <Image src={Icon5} alt="alt" />
                 </div>
               </div>
-              <div className="bg-[#000000] py-[40px] px-[56px] rounded-[24px] flex items-center justify-between h-[300px] max-w-[705px] md:w-[705px] w-full">
+              <div className="bg-[#000000] py-[40px] px-[56px] rounded-[24px] flex items-center justify-between h-[300px] max-w-[705px] lg:w-[705px] w-full">
                 <div className="text-[#ffffff] max-w-[364px]">
                   <p className="font-[800] text-[32px]">Save Time</p>
                   <p className="font-[400] text-[24px]">
@@ -98,7 +98,7 @@ const OrderingSolution = () => {
             </div>
           </div>
 
-          <div className=" place-items-center grid md:grid-cols-3 gap-[15px]">
+          <div className=" place-items-center grid md:grid-cols-2 lg:grid-cols-3 gap-[15px]">
             <div className="bg-[#FF4F00] py-[40px] px-[56px] rounded-[24px] flex flex-col justify-between h-full md:max-w-[372px] w-full">
               <div className="text-[#ffffff]">
                 <p className="font-[800] text-[32px]">Menu</p>

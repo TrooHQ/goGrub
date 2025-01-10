@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   return (
     <div className="bg-[#FFF5F1] font-gilroy">
-      <div className="max-w-6xl mx-[10px] lg:ml-auto lg:mx-0 pt-[2%] px-[10px] lg:px-0 pb-[50px] md:pb-0">
+      <div className="max-w-6xl mx-[10px] lg:ml-auto lg:mx-0  px-[10px] lg:px-0 pt-[50px] sm:pt-0">
         <div className="grid gap-[20px] place-items-center lg:flex items-center lg:justify-between">
           <div className="max-w-[700px]">
             <p className="text-[16px] font-[300] text-[#111122] bg-[#D9D9D93B] py-[9px] px-[22px] max-w-[325px] rounded-[4px]">
@@ -60,7 +60,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block rounded-[8px] overflow-hidden">
+          <div className="block rounded-[8px] overflow-hidden">
             <Image
               src="/goGrub/Image.svg"
               alt="Image"
