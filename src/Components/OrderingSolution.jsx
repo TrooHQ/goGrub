@@ -49,7 +49,7 @@ const OrderingSolution = () => {
       <div className=" font-DMSans max-w-6xl mx-[10px] lg:mx-auto py-[10%] relative ">
         <div className="max-w-[628px] text-start">
           <p className="text-[#414141] text-[16px] lg:text-[24px] font-[500]  font-GeneralSans">
-            Focus on what's important-- your business
+            Focus on what's important— your business
           </p>
           <p className=" leading-[40px] lg:leading-[76px] text-[#0A191E] font-[800] text-[30px] lg:text-[64px] font-gilroy">
             Why Choose GoGrub?

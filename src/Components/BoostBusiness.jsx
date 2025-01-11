@@ -94,31 +94,31 @@ const BoostBusiness = () => {
             />
           </div>
           <div className="grid gap-[20px] md:grid-cols-2 items-start md:gap-[44px] mt-[56px]">
-            <div className="gap-[16px] flex items-start">
+            <div className="gap-[16px] flex items-center">
               <FaCheckCircle size={24} className="text-[#22FF6D]" />
               <p className="font-[500] text-[14px] md:text-[24px] text-[#fff]">
                 Get your own branded online ordering site with QR code
               </p>
             </div>
-            <div className="gap-[16px] flex items-start">
+            <div className="gap-[16px] flex items-center">
               <FaCheckCircle size={24} className="text-[#22FF6D]" />
               <p className="font-[500] text-[14px] md:text-[24px] text-[#fff]">
                 Get Instant Order Notifications
               </p>
             </div>
-            <div className="gap-[16px] flex items-start">
+            <div className="gap-[16px] flex items-center">
               <FaCheckCircle size={24} className="text-[#22FF6D]" />
               <p className="font-[500] text-[14px] md:text-[24px] text-[#fff]">
                 Customers to collect orders online
               </p>
             </div>
-            <div className="gap-[16px] flex items-start">
+            <div className="gap-[16px] flex items-center">
               <FaCheckCircle size={24} className="text-[#22FF6D]" />
               <p className="font-[500] text-[14px] md:text-[24px] text-[#fff]">
-                Customers to collect orders online
+                Collect Feedback and Stay Connected
               </p>
             </div>
-            <div className="gap-[16px] flex items-start">
+            <div className="gap-[16px] flex items-center">
               <FaCheckCircle size={24} className="text-[#22FF6D]" />
               <p className="font-[500] text-[14px] md:text-[24px] text-[#fff]">
                 Accept Cash and Online Payments

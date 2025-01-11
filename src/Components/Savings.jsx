@@ -10,7 +10,7 @@ const Savings = () => {
         <div className="grid gap-[20px] place-items-center lg:flex items-center lg:justify-between">
           <div className="max-w-[628px]">
             <p className="text-[16px] md:text-[24px] font-[500] text-[#0A191E]   rounded-[4px] font-GeneralSans">
-              Focus on what's important-- your business
+              Focus on what's important— your business
             </p>
 
             <div className="space-y-[24px]">
