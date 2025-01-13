@@ -6,24 +6,24 @@ const Faq = () => {
     {
       question: "What is GoGrub??",
       answer:
-        "GoGrub? is an online platform that helps restaurants manage orders, menus, and customers from social platforms and their own sites.",
+        "GoGrub is an online platform that helps restaurants manage orders, menus, and customers from social platforms and their own sites.",
     },
     {
       question: "How does the free trial work?",
       answer:
-        "The free trial gives you access to all GoGrub? features for a limited time without any charges. You can cancel anytime during the trial period.",
+        "The free trial gives you access to all GoGrub features for a limited time without any charges. You can cancel anytime during the trial period.",
     },
     {
       question: "Are there any setup fees?",
-      answer: "No, there are no setup fees for using GoGrub?.",
+      answer: "No, there are no setup fees for using GoGrub.",
     },
     {
       question: "What payment methods do you support?",
       answer:
-        "GoGrub? supports cash payments and online payments with various payment gateways. You can choose the one that suits you best.",
+        "GoGrub supports cash payments and online payments with various payment gateways. You can choose the one that suits you best.",
     },
     {
-      question: "Can I customize my site on GoGrub??",
+      question: "Can I customize my site on GoGrub?",
       answer:
         "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
     },
