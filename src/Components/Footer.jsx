@@ -132,7 +132,8 @@ const Footer = () => {
         </div>
         <div className="px-[16px] py-[29px] hidden md:block">
           <p className=" text-white font-[400] text-[16px]">
-            &copy; {new Date().getFullYear()} Troo Inc. All Rights Reserved.
+            &copy; {new Date().getFullYear()} GoGrub-Troo Inc. All Rights
+            Reserved.
           </p>
         </div>
       </div>
