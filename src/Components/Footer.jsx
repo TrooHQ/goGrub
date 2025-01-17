@@ -63,14 +63,28 @@ const Footer = () => {
 
           <div className="  flex flex-col gap-[16px]  md:border-l border-[#606060] py-[16px] px-[16px] h-full">
             <p className=" text-[16px] font-[500] text-white">Features</p>
-            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 1</p>
-            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 2</p>
 
-            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 3</p>
-
-            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 4</p>
-
-            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 5</p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
+              Online Ordering Link
+            </p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
+              Instant Notifications
+            </p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
+              Online Payments
+            </p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
+              Customer Support
+            </p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
+              Social Media Integration{" "}
+            </p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
+              Promotions and Offers
+            </p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
+              Feedback and Reviews
+            </p>
           </div>
 
           <div className=" md:border-l border-[#606060] py-[16px] px-[16px] flex flex-col gap-[16px] h-full">
