@@ -16,7 +16,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Troo Inc. All Rights Reserved.
           </p>
         </div>
-        <div className="  md:border-b border-[#606060] grid sm:grid-cols-3 md:grid-cols-5 items-start justify-between">
+        <div className="  md:border-b border-[#606060] grid sm:grid-cols-3 md:grid-cols-4 items-start justify-between">
           <div className=" py-[16px] px-[16px] flex flex-col gap-[16px] h-full ">
             <p className=" text-[16px] font-[500] text-white">Business Type</p>
             <Link href="https://troohq.com/services/restaurants" target="blank">
@@ -62,57 +62,17 @@ const Footer = () => {
           </div>
 
           <div className="  flex flex-col gap-[16px]  md:border-l border-[#606060] py-[16px] px-[16px] h-full">
-            <p className=" text-[16px] font-[500] text-white">Products</p>
-            <Link href="https://troohq.com/products/pos" target="blank">
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">POS</p>
-            </Link>
-            <Link
-              href="https://troohq.com/products/kitchen-display-system"
-              target="blank"
-            >
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">KDS</p>
-            </Link>
-            <Link
-              href="https://troohq.com/products/table-ordering"
-              target="blank"
-            >
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">
-                QR Code Ordering
-              </p>
-            </Link>
-            <Link
-              href="https://troohq.com/products/online-ordering"
-              target="blank"
-            >
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">
-                Online Ordering
-              </p>
-            </Link>
-            <Link
-              href="https://troohq.com/products/payments-processing"
-              target="blank"
-            >
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">
-                Payment Process
-              </p>
-            </Link>
+            <p className=" text-[16px] font-[500] text-white">Features</p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 1</p>
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 2</p>
+
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 3</p>
+
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 4</p>
+
+            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Feature 5</p>
           </div>
-          <div className=" flex flex-col gap-[16px] md:border-l border-[#606060] py-[16px] px-[16px] h-full">
-            <p className=" text-[16px] font-[500] text-white">
-              I want to know more
-            </p>
-            <Link href="https://troohq.com/request-demo" target="blank">
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">
-                Schedule a demo
-              </p>
-            </Link>
-            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
-              Whatsapp Sales
-            </p>
-            <p className=" font-[500] text-[14px] text-[#B6B6B6]">
-              Whatsapp Support
-            </p>
-          </div>
+
           <div className=" md:border-l border-[#606060] py-[16px] px-[16px] flex flex-col gap-[16px] h-full">
             <p className=" text-[16px] font-[500] text-white">Company</p>
             <p className=" font-[500] text-[14px] text-[#B6B6B6]">About us</p>
@@ -127,7 +87,6 @@ const Footer = () => {
             <p className=" font-[500] text-[14px] text-[#B6B6B6]">
               Terms and conditions
             </p>
-            <p className=" font-[500] text-[14px] text-[#B6B6B6]">Cookies</p>
           </div>
         </div>
         <div className="px-[16px] py-[29px] hidden md:block">
