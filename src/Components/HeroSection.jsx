@@ -62,7 +62,7 @@ const HeroSection = () => {
 
           <div className="block rounded-[8px] overflow-hidden">
             <Image
-              src="/goGrub/Image.svg"
+              src="/goGrub/HeroImage_.svg"
               alt="Image"
               width={500}
               height={500}
