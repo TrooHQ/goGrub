@@ -4,26 +4,41 @@ import { BiSolidChevronDownCircle } from "react-icons/bi";
 const Faq = () => {
   const faqs = [
     {
-      question: "What is GoGrub??",
+      question: "How does Grubly work?",
       answer:
         "GoGrub is an online platform that helps restaurants manage orders, menus, and customers from social platforms and their own sites.",
     },
     {
-      question: "How does the free trial work?",
+      question: "Do I need to sign a contract to use Grubly?",
       answer:
         "The free trial gives you access to all GoGrub features for a limited time without any charges. You can cancel anytime during the trial period.",
     },
     {
-      question: "Are there any setup fees?",
+      question: "What payment methods does Grubly accept?",
       answer: "No, there are no setup fees for using GoGrub.",
     },
     {
-      question: "What payment methods do you support?",
+      question: "Are there any commissions or hidden fees?",
       answer:
         "GoGrub supports cash payments and online payments with various payment gateways. You can choose the one that suits you best.",
     },
     {
-      question: "Can I customize my site on GoGrub?",
+      question: "Can Grubly integrate with my existing POS system?",
+      answer:
+        "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
+    },
+    {
+      question: "What kind of support does Grubly offer?",
+      answer:
+        "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
+    },
+    {
+      question: "How can Grubly help me grow my restaurant?",
+      answer:
+        "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
+    },
+    {
+      question: "How do I get started with Grubly?",
       answer:
         "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
     },

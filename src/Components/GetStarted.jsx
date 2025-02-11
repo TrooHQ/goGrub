@@ -18,7 +18,7 @@ const GetStarted = () => {
             Get Started Today!
           </p>
           <p className="font-[500] text-[16px] lg:text-[24px] text-[#0A191E]">
-            Transform your restaurant’s online sales with GoGrub. Start managing
+            Transform your restaurant’s online sales with Grubly. Start managing
             orders from social platforms and your own site today.
           </p>
 

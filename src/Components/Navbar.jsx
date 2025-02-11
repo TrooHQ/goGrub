@@ -38,11 +38,7 @@ const Navbar = () => {
             <li key={path}>
               <Link
                 href={path}
-                className={`transition ${
-                  router.pathname === path
-                    ? "text-primary font-[500]"
-                    : "text-[#171717] font-[300]"
-                } hover:text-primary`}
+                className={`transition text-[#171717] font-[300] hover:text-primary`}
               >
                 {label}
               </Link>

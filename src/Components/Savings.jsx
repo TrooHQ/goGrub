@@ -42,7 +42,7 @@ const Savings = () => {
         </div>
       </div>
 
-      <div className=" grid lg:flex items-start mx-[10px] md:mx-0">
+      <div className=" grid lg:flex items-start  2xl:justify-between mx-[10px] md:mx-0">
         <div className=" hidden lg:block max-w-[700px] w-full">
           <Image src={Icon} alt="" />
         </div>
@@ -85,8 +85,8 @@ const Savings = () => {
                 </p>
               </div>
               <p className=" font-[300] text-[#000000] text-[14px] lg:text-[24px]">
-                Accept Orders directly from Instagram, Facebook, WhatsApp,
-                Twitter and Tiktok.
+                Accept orders directly from Instagram, Facebook, WhatsApp,
+                Twitter, and TikTok.
               </p>
             </div>
           </div>

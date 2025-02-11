@@ -13,9 +13,9 @@ const HeroSection = () => {
 
   return (
     <div className="bg-[#FFF5F1] font-gilroy">
-      <div className="max-w-6xl mx-[10px] lg:ml-auto lg:mx-0  px-[10px] lg:px-0 pt-[50px] sm:pt-0">
+      <div className="max-w-6xl 2xl:max-w-[1400px] mx-[10px] lg:ml-auto lg:mx-0  px-[10px] lg:px-0 pt-[50px] sm:pt-0">
         <div className="grid gap-[20px] place-items-center lg:flex items-center lg:justify-between">
-          <div className="max-w-[700px]">
+          <div className="max-w-[700px] ">
             <p className="text-[16px] font-[300] text-[#111122] bg-[#D9D9D93B] py-[9px] px-[22px] max-w-[325px] rounded-[4px]">
               Food vendors, Caterers & Restaurants
             </p>
@@ -45,8 +45,8 @@ const HeroSection = () => {
 
               <div>
                 <p className="font-[300] text-[14px] lg:text-[20px] text-[#000000] max-w-[627px] w-full">
-                  Get your own branded site to easily manage orders, <br /> menu
-                  and customers — all in one place.
+                  Your own branded site to easily manage orders,
+                  <br /> menu and customers—all in one place.
                 </p>
               </div>
 
