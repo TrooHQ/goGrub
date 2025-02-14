@@ -104,7 +104,7 @@ const BoostBusiness = () => {
                   <Image
                     src="/goGrub/Success Icon (3).svg"
                     alt="IconCheck"
-                    className="w-6 h-6 md:w-8 md:h-8 bg-red-500"
+                    className="w-6 h-6 p-0 md:w-8 md:h-8 "
                   />
                   <p className="font-medium text-sm md:text-[24px] text-white">
                     {text}
