@@ -4,7 +4,6 @@ import IconRight from "../../public/goGrub/Vector 4.svg";
 import IconLeft from "../../public/goGrub/Vector 3.svg";
 import Logo from "../../public/goGrub/goGrubLOGO_.svg";
 import CheckIcon from "../../public/goGrub/mdi_tick-circle-outline.svg";
-import CheckCircle from "../../public/goGrub/Success Icon (3).svg";
 const BoostBusiness = () => {
   return (
     <div className="font-GeneralSans h-full relative">
@@ -100,15 +99,17 @@ const BoostBusiness = () => {
               "Collect Feedback and Stay Connected",
               "Accept Cash and Online Payments",
             ].map((text, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <Image
-                  src={CheckCircle}
-                  alt="IconCheck"
-                  className=" bg-red-500"
-                />
-                <p className="font-medium text-sm md:text-[24px] text-white">
-                  {text}
-                </p>
+              <div className="">
+                <div key={index} className="flex items-start gap-4">
+                  <Image
+                    src="/goGrub/Success Icon (3).svg"
+                    alt="IconCheck"
+                    className="w-6 h-6 md:w-8 md:h-8 bg-red-500"
+                  />
+                  <p className="font-medium text-sm md:text-[24px] text-white">
+                    {text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
