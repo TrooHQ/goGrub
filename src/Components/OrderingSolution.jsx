@@ -9,6 +9,7 @@ import Icon3 from "../../public/goGrub/gis_simplify.svg";
 import Icon4 from "../../public/goGrub/Group.svg";
 import Icon5 from "../../public/goGrub/lets-icons_reduce.svg";
 import Icon6 from "../../public/goGrub/timelapse.svg";
+
 const OrderingSolution = () => {
   const sliderRef = useRef(null);
 

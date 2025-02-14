@@ -38,9 +38,9 @@ const HowItWorks = () => {
               },
               {
                 step: "4",
-                title: "Track Sales & Inventory",
+                title: "Track Sales & Gain Insights",
                 description:
-                  "Use the back-office features to monitor sales and stock levels.",
+                  "Use the back-office features to monitor sales performance and trends.",
               },
             ].map(({ step, title, description }, index) => (
               <div
