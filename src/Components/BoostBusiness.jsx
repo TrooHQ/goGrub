@@ -101,11 +101,11 @@ const BoostBusiness = () => {
               "Collect Feedback and Stay Connected",
               "Accept Cash and Online Payments",
             ].map((text, index) => (
-              <div key={index} className="flex items-center gap-4">
+              <div key={index} className="flex items-start gap-4">
                 <Image
                   src={CheckCircle}
                   alt="IconCheck"
-                  className="w-6 h-6 md:w-8 md:h-8"
+                  className="w-6 h-6 md:w-8 md:h-8 bg-red-500"
                 />
                 <p className="font-medium text-sm md:text-[24px] text-white">
                   {text}
