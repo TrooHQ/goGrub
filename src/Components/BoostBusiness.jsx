@@ -106,7 +106,7 @@ const BoostBusiness = () => {
                     alt="IconCheck"
                     className="w-6 h-6 p-0 md:w-8 md:h-8 "
                   />
-                  <p className="font-medium text-sm md:text-[24px] text-white">
+                  <p className="font-medium text-sm md:text-[24px] text-white leading-[24px]">
                     {text}
                   </p>
                 </div>
