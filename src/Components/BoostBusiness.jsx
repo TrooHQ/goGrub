@@ -2,10 +2,9 @@ import Image from "next/image";
 import React from "react";
 import IconRight from "../../public/goGrub/Vector 4.svg";
 import IconLeft from "../../public/goGrub/Vector 3.svg";
-// import { FaCheckCircle } from "react-icons/fa";
 import Logo from "../../public/goGrub/goGrubLOGO_.svg";
 import CheckIcon from "../../public/goGrub/mdi_tick-circle-outline.svg";
-import CheckCircle from "../../public/goGrub/Success Icon (2).svg";
+import CheckCircle from "../../public/goGrub/Success Icon (3).svg";
 const BoostBusiness = () => {
   return (
     <div className="font-GeneralSans h-full relative">
@@ -105,7 +104,7 @@ const BoostBusiness = () => {
                 <Image
                   src={CheckCircle}
                   alt="IconCheck"
-                  className="w-6 h-6 md:w-8 md:h-8 bg-red-500"
+                  className=" bg-red-500"
                 />
                 <p className="font-medium text-sm md:text-[24px] text-white">
                   {text}
