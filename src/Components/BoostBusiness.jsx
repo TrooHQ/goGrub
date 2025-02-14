@@ -95,11 +95,11 @@ const BoostBusiness = () => {
           </div>
           <div className="grid gap-5 md:grid-cols-2 items-start md:gap-x-11 md:gap-y-8 mt-14">
             {[
-              "Your Branded Mobile Site with QR Code",
-              "Customers Order Online or Scan the QR Code",
-              "Accept Cash and Online Payments — No Fees",
+              "Get your own branded online ordering site with QR code",
               "Get Instant Order Notifications",
+              "Customers to collect orders online",
               "Collect Feedback and Stay Connected",
+              "Accept Cash and Online Payments",
             ].map((text, index) => (
               <div key={index} className="flex items-center gap-4">
                 <Image
@@ -107,7 +107,7 @@ const BoostBusiness = () => {
                   alt="IconCheck"
                   className="w-6 h-6 md:w-8 md:h-8"
                 />
-                <p className="font-medium text-sm md:text-xl text-white">
+                <p className="font-medium text-sm md:text-[24px] text-white">
                   {text}
                 </p>
               </div>
