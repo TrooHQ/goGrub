@@ -95,7 +95,7 @@ const BoostBusiness = () => {
           </div>
           <div className="grid gap-[20px] md:grid-cols-2 items-start md:gap-[44px] mt-[56px]">
             <div className="gap-[16px] flex items-start">
-              <Image src={CheckCircle} alt="IconCheck" width={32} height={32} />
+              <Image src={CheckCircle} alt="IconCheck" />
               {/* <FaCheckCircle size={24} className="text-[#22FF6D]" /> */}
               <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
                 Your Branded Mobile Site with QR Code
@@ -103,7 +103,7 @@ const BoostBusiness = () => {
             </div>
             <div className="gap-[16px] flex items-start">
               {/* <FaCheckCircle size={24} className="text-[#22FF6D]" /> */}
-              <Image src={CheckCircle} alt="IconCheck" width={32} height={32} />
+              <Image src={CheckCircle} alt="IconCheck" />
 
               <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
                 Customers Order Online or Scan the QR Code
@@ -111,7 +111,7 @@ const BoostBusiness = () => {
             </div>
             <div className="gap-[16px] flex items-start">
               {/* <FaCheckCircle size={24} className="text-[#22FF6D]" /> */}
-              <Image src={CheckCircle} alt="IconCheck" width={32} height={32} />
+              <Image src={CheckCircle} alt="IconCheck" />
 
               <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
                 Accept Cash and Online Payments — No Fees
@@ -119,7 +119,7 @@ const BoostBusiness = () => {
             </div>
             <div className="gap-[16px] flex items-start">
               {/* <FaCheckCircle size={24} className="text-[#22FF6D]" /> */}
-              <Image src={CheckCircle} alt="IconCheck" width={32} height={32} />
+              <Image src={CheckCircle} alt="IconCheck" />
 
               <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
                 Get Instant Order Notifications
@@ -127,7 +127,7 @@ const BoostBusiness = () => {
             </div>
             <div className="gap-[16px] flex items-start">
               {/* <FaCheckCircle size={24} className="text-[#22FF6D]" /> */}
-              <Image src={CheckCircle} alt="IconCheck" width={32} height={32} />
+              <Image src={CheckCircle} alt="IconCheck" />
 
               <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
                 Collect Feedback and Stay Connected
