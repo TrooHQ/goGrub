@@ -93,41 +93,25 @@ const BoostBusiness = () => {
               className="hidden md:block"
             />
           </div>
-          <div className="grid gap-[20px] md:grid-cols-2 items-start md:gap-[44px] mt-[56px]">
-            <div className="gap-[16px] flex items-center">
-              <Image src={CheckCircle} alt="IconCheck" />
-              <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
-                Your Branded Mobile Site with QR Code
-              </p>
-            </div>
-            <div className="gap-[16px] flex items-center">
-              <Image src={CheckCircle} alt="IconCheck" />
-
-              <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
-                Customers Order Online or Scan the QR Code
-              </p>
-            </div>
-            <div className="gap-[16px] flex items-center">
-              <Image src={CheckCircle} alt="IconCheck" />
-
-              <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
-                Accept Cash and Online Payments — No Fees
-              </p>
-            </div>
-            <div className="gap-[16px] flex items-center">
-              <Image src={CheckCircle} alt="IconCheck" />
-
-              <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
-                Get Instant Order Notifications
-              </p>
-            </div>
-            <div className="gap-[16px] flex items-center">
-              <Image src={CheckCircle} alt="IconCheck" />
-
-              <p className="font-[500] text-[14px] md:text-[24px] text-[#ffffff]">
-                Collect Feedback and Stay Connected
-              </p>
-            </div>
+          <div className="grid gap-5 md:grid-cols-2 items-start md:gap-x-11 md:gap-y-8 mt-14">
+            {[
+              "Your Branded Mobile Site with QR Code",
+              "Customers Order Online or Scan the QR Code",
+              "Accept Cash and Online Payments — No Fees",
+              "Get Instant Order Notifications",
+              "Collect Feedback and Stay Connected",
+            ].map((text, index) => (
+              <div key={index} className="flex items-center gap-4">
+                <Image
+                  src={CheckCircle}
+                  alt="IconCheck"
+                  className="w-6 h-6 md:w-8 md:h-8"
+                />
+                <p className="font-medium text-sm md:text-xl text-white">
+                  {text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
