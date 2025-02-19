@@ -23,10 +23,11 @@ const HeroSection = () => {
             <div className="space-y-[24px]">
               <div>
                 <p className="font-[300] text-[40px] lg:text-[48px] text-[#111122]">
-                  Your link to sell better
+                  Your link to sell better{" "}
+                  <span className=" md:hidden">with</span>
                 </p>
                 <div className="flex items-center gap-[10px]">
-                  <p className="font-[300] text-[40px] lg:text-[64px] text-[#111122]">
+                  <p className="font-[300] text-[40px] lg:text-[64px] text-[#111122] hidden md:block">
                     with
                   </p>
 

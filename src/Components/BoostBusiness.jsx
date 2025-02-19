@@ -4,6 +4,7 @@ import IconRight from "../../public/goGrub/Vector 4.svg";
 import IconLeft from "../../public/goGrub/Vector 3.svg";
 import Logo from "../../public/goGrub/goGrubLOGO_.svg";
 import CheckIcon from "../../public/goGrub/mdi_tick-circle-outline.svg";
+import Icon from "../../public/goGrub/Success Icon (3).svg";
 const BoostBusiness = () => {
   return (
     <div className="font-GeneralSans h-full relative">
@@ -102,7 +103,7 @@ const BoostBusiness = () => {
               <div className="">
                 <div key={index} className="flex items-start gap-4">
                   <Image
-                    src="/goGrub/Success Icon (3).svg"
+                    src={Icon}
                     alt="IconCheck"
                     className="w-6 h-6 p-0 md:w-8 md:h-8 "
                   />

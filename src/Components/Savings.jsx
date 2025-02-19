@@ -51,7 +51,7 @@ const Savings = () => {
             What We Offer
           </p>
 
-          <div className=" space-y-[20px] lg:space-y-[40px]">
+          <div className=" space-y-[20px] lg:space-y-[40px] my-[40px]">
             <div className="">
               <div className=" flex items-center gap-[16px]">
                 <FaCheckCircle size={24} className=" text-[#FF4F00]" />
