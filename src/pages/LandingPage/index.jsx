@@ -8,7 +8,7 @@ import HowItWorks from "@/Components/HowItWorks";
 import Navbar from "@/Components/Navbar";
 import OrderingSolution from "@/Components/OrderingSolution";
 import Savings from "@/Components/Savings";
-// import Head from "next/head";
+import Head from "next/head";
 import React from "react";
 
 export const openGraphImage = { images: ["./opengraph-logo.jpeg"] };
