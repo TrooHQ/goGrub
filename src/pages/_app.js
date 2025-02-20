@@ -4,12 +4,12 @@ import Head from "next/head";
 export const openGraphImage = { images: ["./opengraph-logo.jpeg"] };
 
 export const metadata = {
-  title: "GoGrub.co",
+  title: "GoGrub",
   description:
     "Discover how our business solutions can help you save costs, improve efficiency, and streamline operations. Get started today!",
   openGraph: {
     ...openGraphImage,
-    title: "GoGrub.co",
+    title: "GoGrub",
     description:
       "Discover how our business solutions can help you save costs, improve efficiency, and streamline operations. Get started today!",
   },
