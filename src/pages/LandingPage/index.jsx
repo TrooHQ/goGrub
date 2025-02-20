@@ -11,7 +11,7 @@ import Savings from "@/Components/Savings";
 // import Head from "next/head";
 import React from "react";
 
-export const openGraphImage = { images: ["../opengraph-logo.jpeg"] };
+export const openGraphImage = { images: ["./../opengraph-logo.jpeg"] };
 
 export const metadata = {
   title: "GoGrub.co",
