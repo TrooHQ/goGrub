@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }) {
         <meta name="author" content="GoGrub" />
         <link rel="canonical" href="https://www.gogrub.co" />
 
-        <link rel="icon" href="/opengraph-logo.jpeg" />
+        <link rel="icon" href="/goGrub/GoGrubLOGOicon.svg" />
 
         <meta
           property="og:title"
