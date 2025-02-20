@@ -28,7 +28,7 @@ export const metadata = {
 const LandingPage = () => {
   return (
     <div className="bg-[#FFF5F1] font-DMSans">
-      {/* <Head>
+      <Head>
         <title>
           Online for ordering solution for food vendors, cloud kitchens and
           independent restaurants.
@@ -54,7 +54,10 @@ const LandingPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.gogrub.co" />
-        <meta property="og:image" content="https://www.gogrub.co/favicon.svg" />
+        <meta
+          property="og:image"
+          content="https://www.gogrub.co/opengraph-logo.jpeg"
+        />
 
         <meta
           name="twitter:title"
@@ -77,13 +80,13 @@ const LandingPage = () => {
               "@type": "Organization",
               name: "GroGrub",
               url: "https://www.gogrub.co",
-              logo: "https://www.gogrub.co/favicon.svg",
+              logo: "https://www.gogrub.co/opengraph-logo.jpeg",
               description:
                 "Your own branded site to easily manage orders, menu and customers—all in one place",
             }),
           }}
         />
-      </Head> */}
+      </Head>
       <Navbar />
       <HeroSection />
       <BoostBusiness />
