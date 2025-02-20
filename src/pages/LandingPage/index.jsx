@@ -11,7 +11,10 @@ import Savings from "@/Components/Savings";
 import Head from "next/head";
 import React from "react";
 
-export const openGraphImage = { images: ["./opengraph-logo.jpeg"] };
+// export const openGraphImage = { images: ["./opengraph-logo.jpeg"] };
+export const openGraphImage = {
+  images: ["https://www.gogrubapp.netlify.app/opengraph-logo.jpeg"],
+};
 
 export const metadata = {
   title: "GoGrub",
