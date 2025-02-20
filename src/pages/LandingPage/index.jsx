@@ -11,7 +11,7 @@ import Savings from "@/Components/Savings";
 // import Head from "next/head";
 import React from "react";
 
-export const openGraphImage = { images: ["../opengraph-logo.svg"] };
+export const openGraphImage = { images: ["../opengraph-logo.jpg"] };
 
 export const metadata = {
   title:
