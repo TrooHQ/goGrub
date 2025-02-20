@@ -1,4 +1,4 @@
-import Benefits from "@/Components/Benefits";
+// import Benefits from "@/Components/Benefits";
 import BoostBusiness from "@/Components/BoostBusiness";
 import Faq from "@/Components/Faq";
 import Footer from "@/Components/Footer";
@@ -40,12 +40,8 @@ const LandingPage = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.gogrub.co" />
-        <meta
-          property="og:image"
-          content="https://www.gogrub.co/og-image.jpg"
-        />
+        <meta property="og:image" content="https://www.gogrub.co/favicon.svg" />
 
-        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
           content="Your own branded site to easily manage orders, menu and customers—all in one place"
@@ -67,7 +63,7 @@ const LandingPage = () => {
               "@type": "Organization",
               name: "GroGrub",
               url: "https://www.gogrub.co",
-              logo: "https://www.gogrub.co/logo.png",
+              logo: "https://www.gogrub.co/favicon.svg",
               description:
                 "Your own branded site to easily manage orders, menu and customers—all in one place",
             }),
