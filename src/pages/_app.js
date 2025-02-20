@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 
-export const openGraphImage = { images: ["./opengraph-logo.jpg"] };
+export const openGraphImage = { images: ["./opengraph-logo.jpeg"] };
 
 export const metadata = {
   title:

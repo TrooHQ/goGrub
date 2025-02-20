@@ -11,17 +11,15 @@ import Savings from "@/Components/Savings";
 // import Head from "next/head";
 import React from "react";
 
-export const openGraphImage = { images: ["../opengraph-logo.jpg"] };
+export const openGraphImage = { images: ["../opengraph-logo.jpeg"] };
 
 export const metadata = {
-  title:
-    "Online for ordering solution for food vendors, cloud kitchens and independent restaurants.",
+  title: "GoGrub.co",
   description:
     "Discover how our business solutions can help you save costs, improve efficiency, and streamline operations. Get started today!",
   openGraph: {
     ...openGraphImage,
-    title:
-      "Online for ordering solution for food vendors, cloud kitchens and independent restaurants.",
+    title: "GoGrub.co",
     description:
       "Discover how our business solutions can help you save costs, improve efficiency, and streamline operations. Get started today!",
   },
