@@ -8,13 +8,29 @@ import HowItWorks from "@/Components/HowItWorks";
 import Navbar from "@/Components/Navbar";
 import OrderingSolution from "@/Components/OrderingSolution";
 import Savings from "@/Components/Savings";
-import Head from "next/head";
+// import Head from "next/head";
 import React from "react";
+
+export const openGraphImage = { images: ["../opengraph-logo.svg"] };
+
+export const metadata = {
+  title:
+    "Online for ordering solution for food vendors, cloud kitchens and independent restaurants.",
+  description:
+    "Discover how our business solutions can help you save costs, improve efficiency, and streamline operations. Get started today!",
+  openGraph: {
+    ...openGraphImage,
+    title:
+      "Online for ordering solution for food vendors, cloud kitchens and independent restaurants.",
+    description:
+      "Discover how our business solutions can help you save costs, improve efficiency, and streamline operations. Get started today!",
+  },
+};
 
 const LandingPage = () => {
   return (
     <div className="bg-[#FFF5F1] font-DMSans">
-      <Head>
+      {/* <Head>
         <title>
           Online for ordering solution for food vendors, cloud kitchens and
           independent restaurants.
@@ -69,7 +85,7 @@ const LandingPage = () => {
             }),
           }}
         />
-      </Head>
+      </Head> */}
       <Navbar />
       <HeroSection />
       <BoostBusiness />
