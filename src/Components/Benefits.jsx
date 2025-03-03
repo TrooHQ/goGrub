@@ -18,7 +18,7 @@ const Benefits = () => {
               Benefits
             </p>
             <p className="max-w-[708px] w-full text-[#112] font-[600] text-[30px] lg:text-[40px]">
-              Why Choose Grubly?
+              Why Choose GoGrub?
             </p>
           </div>
           <div className="grid md:grid-cols-2 place-items-center lg:grid-cols-3 items-center gap-[20px] mt-[40px]">

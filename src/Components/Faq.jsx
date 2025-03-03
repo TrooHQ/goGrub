@@ -4,17 +4,17 @@ import { BiSolidChevronDownCircle } from "react-icons/bi";
 const Faq = () => {
   const faqs = [
     {
-      question: "How does Grubly work?",
+      question: "How does GoGrub work?",
       answer:
         "GoGrub is an online platform that helps restaurants manage orders, menus, and customers from social platforms and their own sites.",
     },
     {
-      question: "Do I need to sign a contract to use Grubly?",
+      question: "Do I need to sign a contract to use GoGrub?",
       answer:
         "The free trial gives you access to all GoGrub features for a limited time without any charges. You can cancel anytime during the trial period.",
     },
     {
-      question: "What payment methods does Grubly accept?",
+      question: "What payment methods does GoGrub accept?",
       answer: "No, there are no setup fees for using GoGrub.",
     },
     {
@@ -23,22 +23,22 @@ const Faq = () => {
         "GoGrub supports cash payments and online payments with various payment gateways. You can choose the one that suits you best.",
     },
     {
-      question: "Can Grubly integrate with my existing POS system?",
+      question: "Can GoGrub integrate with my existing POS system?",
       answer:
         "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
     },
     {
-      question: "What kind of support does Grubly offer?",
+      question: "What kind of support does GoGrub offer?",
       answer:
         "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
     },
     {
-      question: "How can Grubly help me grow my restaurant?",
+      question: "How can GoGrub help me grow my restaurant?",
       answer:
         "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
     },
     {
-      question: "How do I get started with Grubly?",
+      question: "How do I get started with GoGrub?",
       answer:
         "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
     },

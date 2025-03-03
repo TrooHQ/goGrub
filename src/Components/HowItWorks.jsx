@@ -7,7 +7,7 @@ const HowItWorks = () => {
       <div className=" max-w-[1200px] mx-[10px] lg:mx-auto py-[10%] relative">
         <div className="max-w-[708px] text-start text-[#FFFFFF]">
           <p className=" text-[16px] font-[500] font-GeneralSans">
-            How Grubly Makes It Easy
+            How GoGrub Makes It Easy
           </p>
           {/* <p className="max-w-[708px] w-full  font-[800] text-[30px] lg:text-[48px] font-gilroy">
             How GoGrub Makes It Easy
