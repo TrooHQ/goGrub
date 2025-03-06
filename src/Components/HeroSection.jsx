@@ -13,9 +13,9 @@ const HeroSection = () => {
 
   return (
     <div className="bg-[#FFF5F1] font-gilroy">
-      <div className="max-w-6xl 2xl:max-w-[1400px] mx-[10px] lg:ml-auto lg:mx-0  px-[10px] lg:px-0 pt-[50px] sm:pt-0">
+      <div className="  max-w-6xl xl:max-w-7xl 2xl:max-w-[1400px] mx-[10px] lg:ml-auto lg:mx-0 px-[10px] lg:pl-[40px] lg:px-0 pt-[50px] sm:pt-0">
         <div className="grid gap-[20px] place-items-center lg:flex items-center lg:justify-between">
-          <div className="max-w-[700px] ">
+          <div className="max-w-[700px]">
             <p className="text-[16px] font-[300] text-[#111122] bg-[#D9D9D93B] py-[9px] px-[22px] max-w-[325px] rounded-[4px]">
               Food vendors, Caterers & Restaurants
             </p>
@@ -53,7 +53,7 @@ const HeroSection = () => {
 
               <div>
                 <Link href="https://trootab.com/business-profile?coming-from=goGrub">
-                  <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500]  transition font-gilroy">
+                  <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] transition font-gilroy">
                     Start your free trial
                   </p>
                 </Link>
@@ -67,6 +67,7 @@ const HeroSection = () => {
               alt="Image"
               width={500}
               height={500}
+              sizes="(max-width: 1300px) 100vw, 1300px"
             />
           </div>
         </div>
