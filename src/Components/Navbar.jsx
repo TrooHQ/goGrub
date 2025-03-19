@@ -85,7 +85,7 @@ const Navbar = () => {
           <div className="mt-4 text-center">
             <Link href="https://trootab.com/business-profile?coming-from=goGrub">
               <p className="bg-primary text-white px-6 py-2 rounded-md font-[500] font-GeneralSans hover:bg-opacity-90 transition">
-                Start your free trial
+                Get Started
               </p>
             </Link>
           </div>
