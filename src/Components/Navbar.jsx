@@ -48,7 +48,7 @@ const Navbar = () => {
 
         <Link href="https://trootab.com/business-profile?coming-from=goGrub">
           <p className="hidden font-GeneralSans lg:block bg-primary text-white px-6 py-2 rounded-md font-[500] hover:bg-opacity-90 transition">
-            Start your free trial
+            Get Started
           </p>
         </Link>
 

@@ -54,7 +54,7 @@ const HeroSection = () => {
               <div>
                 <Link href="https://trootab.com/business-profile?coming-from=goGrub">
                   <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] transition font-gilroy">
-                    Start your free trial
+                    Get Started
                   </p>
                 </Link>
               </div>
