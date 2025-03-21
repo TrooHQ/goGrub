@@ -9,9 +9,6 @@ const HowItWorks = () => {
           <p className=" text-[16px] font-[500] font-GeneralSans">
             How GoGrub Makes It Easy
           </p>
-          {/* <p className="max-w-[708px] w-full  font-[800] text-[30px] lg:text-[48px] font-gilroy">
-            How GoGrub Makes It Easy
-          </p> */}
         </div>
 
         <div className="mt-[24px] md:mt-[40px] bg-[#FFFFFF] p-[30px] lg:p-[60px] rounded-[16px] ">
