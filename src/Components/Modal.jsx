@@ -1,5 +1,6 @@
 import React from "react";
 import { useModal } from "./ModalContext";
+import Link from "next/link";
 
 const Modal = () => {
   const { isOpen, closeModal } = useModal();
@@ -39,7 +40,7 @@ const Modal = () => {
         </div>
 
         <div className="text-center mt-[50px] cursor-pointer  w-full border border-[#5955B3] bg-[#0D0D0D] px-[38px] py-[10px] rounded-[5px] text-[#ffffff] text-[16px] font-[500]">
-          Request Demo
+          <Link href="/business-information">Request Demo</Link>
         </div>
       </div>
     </div>
