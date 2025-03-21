@@ -8,12 +8,15 @@ const MakeCommitment = () => {
   return (
     <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px]">
       <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-screen">
-        <Image
-          src="/goGrub/troo logo.svg"
-          alt="Troo Logo"
-          width={150}
-          height={50}
-        />
+        <Link href="/">
+          {" "}
+          <Image
+            src="/goGrub/troo logo.svg"
+            alt="Troo Logo"
+            width={150}
+            height={50}
+          />
+        </Link>
         <p className="mt-[100px] font-gilroy font-[700] text-[#FFFFFF] text-[30px] lg:text-[54px]">
           Start your <br /> journey with us.
         </p>
@@ -35,7 +38,10 @@ const MakeCommitment = () => {
 
         <div className="mt-[44px] space-y-[30px]">
           <div className="">
-            <Link href="https://trootab.com/business-profile" target="blank">
+            <Link
+              href="https://trootab.com/business-profile?coming-from=goGrub"
+              target="blank"
+            >
               <div className=" p-[30px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full bg-white flex items-center justify-between            ">
                 <div className=" flex items-center gap-[14px]">
                   <img src="/goGrub/shape2.svg" className="hidden lg:block" />
@@ -53,7 +59,10 @@ const MakeCommitment = () => {
             </Link>
           </div>
           <div className="">
-            <Link href="https://trootab.com/business-profile" target="blank">
+            <Link
+              href="https://trootab.com/business-profile?coming-from=goGrub"
+              target="blank"
+            >
               <div className=" p-[30px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full bg-white flex items-center justify-between            ">
                 <div className=" flex items-center gap-[14px]">
                   <img src="/goGrub/circle.svg" className=" hidden lg:block" />

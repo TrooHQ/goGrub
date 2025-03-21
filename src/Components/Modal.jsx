@@ -8,7 +8,7 @@ const Modal = () => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[99999]">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full text-center relative">
         <div className=" absolute top-[29px] right-[29px]">
           <img

@@ -8,12 +8,14 @@ const BusinessInformation = () => {
   return (
     <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px]">
       <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-screen">
-        <Image
-          src="/goGrub/troo logo.svg"
-          alt="Troo Logo"
-          width={150}
-          height={50}
-        />
+        <Link href="/">
+          <Image
+            src="/goGrub/troo logo.svg"
+            alt="Troo Logo"
+            width={150}
+            height={50}
+          />
+        </Link>
         <p className="mt-[100px] font-gilroy font-[700] text-[#FFFFFF] text-[30px] lg:text-[54px]">
           Start your <br /> journey with us.
         </p>
