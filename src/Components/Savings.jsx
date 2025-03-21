@@ -7,7 +7,7 @@ const Savings = () => {
   return (
     <div className="bg-[#FFF5F1]  font-gilroy">
       <div className="max-w-6xl mx-[10px] lg:mx-auto py-[10%] px-[10px] ">
-        <div className="grid gap-[20px] place-items-center lg:flex items-center lg:justify-between">
+        <div className="grid gap-[20px] place-items-start lg:flex items-center lg:justify-between">
           <div className="max-w-[628px]">
             <p className="text-[16px] md:text-[24px] font-[500] text-[#0A191E]   rounded-[4px] font-GeneralSans">
               Focus on what's important— your business
@@ -42,7 +42,7 @@ const Savings = () => {
         </div>
       </div>
 
-      <div className=" grid lg:flex items-start  2xl:justify-between mx-[10px] md:mx-0">
+      <div className=" grid lg:flex items-start  2xl:justify-between mx-[10px] lg:mx-0">
         <div className=" hidden lg:block max-w-[700px] w-full">
           <Image src={Icon} alt="" />
         </div>
