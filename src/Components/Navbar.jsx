@@ -49,14 +49,11 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* <Link href="https://trootab.com/business-profile?coming-from=goGrub"> */}
-        <p
-          className=" cursor-pointer hidden font-GeneralSans lg:block bg-primary text-white px-6 py-2 rounded-md font-[500] hover:bg-opacity-90 transition"
-          onClick={openModal}
-        >
-          Get Started
-        </p>
-        {/* </Link> */}
+        <Link href="https://trootab.com//business-information">
+          <p className=" cursor-pointer hidden font-GeneralSans lg:block bg-primary text-white px-6 py-2 rounded-md font-[500] hover:bg-opacity-90 transition">
+            Get Started
+          </p>
+        </Link>
 
         <button
           className="lg:hidden text-2xl text-[#171717]"
@@ -89,14 +86,11 @@ const Navbar = () => {
           </ul>
 
           <div className="mt-4 text-center">
-            {/* <Link href="https://trootab.com/business-profile?coming-from=goGrub"> */}
-            <p
-              className=" cursor-pointer bg-primary text-white px-6 py-2 rounded-md font-[500] font-GeneralSans hover:bg-opacity-90 transition"
-              onClick={openModal}
-            >
-              Get Started
-            </p>
-            {/* </Link> */}
+            <Link href="https://trootab.com//business-information">
+              <p className=" cursor-pointer bg-primary text-white px-6 py-2 rounded-md font-[500] font-GeneralSans hover:bg-opacity-90 transition">
+                Get Started
+              </p>
+            </Link>
           </div>
         </div>
       )}

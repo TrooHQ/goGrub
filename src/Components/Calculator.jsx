@@ -41,8 +41,6 @@ const Calculator = () => {
             <input
               type="text"
               className="p-[10px] rounded-[5px] border border-[#0D0D0D] max-w-[66px] text-center"
-              readOnly
-              value={20}
             />{" "}
             and a commission of 20%.
           </p>
