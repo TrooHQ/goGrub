@@ -6,41 +6,42 @@ const Faq = () => {
     {
       question: "How does GoGrub work?",
       answer:
-        "GoGrub is an online platform that helps restaurants manage orders, menus, and customers from social platforms and their own sites.",
+        "GoGrub is an online ordering platform that helps restaurants, food vendors, and cafes manage orders efficiently. Customers can browse your menu, place orders for pickup or delivery, and pay online—all from one seamless platform. You receive and manage these orders in real-time, ensuring a smooth operation.",
     },
     {
       question: "Do I need to sign a contract to use GoGrub?",
       answer:
-        "The free trial gives you access to all GoGrub features for a limited time without any charges. You can cancel anytime during the trial period.",
+        "No, you don’t need to sign a long-term contract. GoGrub offers a flexible model that allows you to start and stop at any time, giving you full control over your business.",
     },
     {
       question: "What payment methods does GoGrub accept?",
-      answer: "No, there are no setup fees for using GoGrub.",
+      answer:
+        "GoGrub supports multiple payment methods, including debit/credit cards, bank transfers, and mobile payment solutions, ensuring a seamless checkout experience for your customers.",
     },
     {
       question: "Are there any commissions or hidden fees?",
       answer:
-        "GoGrub supports cash payments and online payments with various payment gateways. You can choose the one that suits you best.",
+        "No hidden fees! GoGrub operates on a transparent pricing model with no hefty commissions eating into your profits. You get to keep more of what you earn.",
     },
     {
       question: "Can GoGrub integrate with my existing POS system?",
       answer:
-        "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
+        "Yes! GoGrub is designed to integrate with various POS systems, allowing for smooth order processing without disrupting your current operations.",
     },
     {
       question: "What kind of support does GoGrub offer?",
       answer:
-        "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
+        "We provide 24/7 customer support via chat, email, and phone to assist with any technical or operational issues. Our team is always ready to help you get the most out of GoGrub.",
     },
     {
       question: "How can GoGrub help me grow my restaurant?",
       answer:
-        "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
+        "GoGrub boosts your restaurant’s online visibility, helps streamline orders, and enhances customer experience. With powerful analytics, automated marketing tools, and a smooth ordering process, you can attract more customers and increase sales effortlessly",
     },
     {
       question: "How do I get started with GoGrub?",
       answer:
-        "Yes, you can fully customize your branded mobile site to reflect your restaurant's unique identity.",
+        "Getting started is easy! Simply sign up, set up your menu, and start accepting orders. Our team is available to guide you through the onboarding process and ensure a smooth setup.",
     },
   ];
 
