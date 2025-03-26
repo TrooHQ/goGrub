@@ -85,19 +85,19 @@ const MakeCommitment = () => {
                     ? "/goGrub/stateOn.svg"
                     : "/goGrub/stateOff.svg"
                 }
-                className="w-[33px] h-[33px] mt-[15px]"
+                className="w-[23px] h-[23px] mt-[15px]"
               />
               <div className="w-full space-y-[13px]">
-                <div className="w-full flex items-center justify-between">
-                  <p className="font-[700] text-[24px] text-[#414141]">
+                <div className="w-full grid md:flex items-center md:justify-between">
+                  <p className="font-[700] text-[18px] md:text-[24px] text-[#414141]">
                     Quarterly Plan
                   </p>
                   <p className="font-[700] text-[24px] lg:text-[42px] text-[#414141]">
                     <span className="font-[400]">₦ </span>7,500
                   </p>
                 </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-[400] text-[24px] text-[#414141]">
+                <div className=" grid md:flex items-center md:justify-between">
+                  <p className="font-[400] text-[18px] md:text-[24px] text-[#414141]">
                     ₦ 2,500 Billed Quarterly
                   </p>
                   <p className="font-[600] text-[#606060] text-[14px]">
@@ -132,19 +132,19 @@ const MakeCommitment = () => {
                     ? "/goGrub/stateOn.svg"
                     : "/goGrub/stateOff.svg"
                 }
-                className="w-[33px] h-[33px] mt-[15px]"
+                className="w-[23px] h-[23px] mt-[15px]"
               />
               <div className="w-full space-y-[13px]">
-                <div className="w-full flex items-center justify-between">
-                  <p className="font-[700] text-[24px] text-[#414141]">
+                <div className="w-full grid md:flex items-center md:justify-between">
+                  <p className="font-[700] text-[18px] md:text-[24px] text-[#414141]">
                     Yearly Plan
                   </p>
                   <p className="font-[700] text-[24px] lg:text-[42px] text-[#414141]">
                     <span className="font-[400]">₦ </span>27,500
                   </p>
                 </div>
-                <div className="flex items-center justify-between">
-                  <p className="font-[400] text-[24px] text-[#414141]">
+                <div className=" grid md:flex items-center md:justify-between">
+                  <p className="font-[400] text-[18px] md:text-[24px] text-[#414141]">
                     ₦ 2,500 Billed Biannually
                   </p>
                   <p className="font-[600] text-[#606060] text-[14px]">
@@ -183,7 +183,7 @@ const MakeCommitment = () => {
         <div className="mt-[50px]">
           <Link href="/make-commitment">
             <button
-              className="w-full max-w-[212px] bg-[#FF4F00] px-[38px] py-[30px] rounded-[10px] text-white text-[16px] font-[500]"
+              className="w-full max-w-[212px] bg-[#FF4F00] px-[10px] py-[20px] md:px-[38px] md:py-[30px] rounded-[10px] text-white text-[16px] font-[500]"
               disabled={!selectedPlan}
             >
               Continue
