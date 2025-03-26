@@ -21,7 +21,7 @@ const Calculator = () => {
   return (
     <div className="max-w-[1200px] mx-[10px] lg:mx-auto py-[64px] px-[10px] lg:px-[56px] font-GeneralSans bg-[#FFFFFF]">
       <div className=" space-y-[53px]">
-        <div className="text-start max-w-[650px]">
+        <div className="text-start md:text-center mx-auto max-w-[650px] ">
           <p className="font-gilroy text-[28px] lg:text-[48px] text-[#FF4F00] font-[800]">
             Save with GoGrub
           </p>
@@ -31,7 +31,7 @@ const Calculator = () => {
           </p>
         </div>
 
-        <div className="space-y-[16px] grid gap-[20px] place-items-start lg:flex lg:items-end lg:justify-between">
+        <div className="space-y-[16px] grid gap-[20px] place-items-start md:place-items-center lg:flex lg:items-end lg:justify-between">
           <div className=" font-[600] text-[#0A191E] text-[16px] space-y-[24px] max-w-[514px] w-full">
             <p className=" font-[700] text-[24px] text-[#0A191E] font-gilroy">
               Calculate
