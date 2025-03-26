@@ -39,7 +39,7 @@ const MakeCommitment = () => {
         <div className="mt-[44px] space-y-[30px]">
           <div className="">
             <Link
-              href="https://trootab.com/business-profile?coming-from=goGrub"
+              href="https://trootab.com/business-profile?coming-from=gogrub"
               target="blank"
             >
               <div className=" p-[30px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full bg-white flex items-center justify-between            ">
@@ -60,7 +60,7 @@ const MakeCommitment = () => {
           </div>
           <div className="">
             <Link
-              href="https://trootab.com/business-profile?coming-from=goGrub"
+              href="https://trootab.com/business-profile?coming-from=gogrub"
               target="blank"
             >
               <div className=" p-[30px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full bg-white flex items-center justify-between            ">
