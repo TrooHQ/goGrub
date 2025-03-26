@@ -181,7 +181,7 @@ const MakeCommitment = () => {
         </div>
 
         <div className="mt-[50px]">
-          <Link href="/make-commitment">
+          <Link href="https://trootab.com/business-profile?coming-from=gogrub">
             <button
               className="w-full max-w-[212px] bg-[#FF4F00] px-[10px] py-[20px] md:px-[38px] md:py-[30px] rounded-[10px] text-white text-[16px] font-[500]"
               disabled={!selectedPlan}
