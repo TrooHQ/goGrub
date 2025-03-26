@@ -20,7 +20,8 @@ const BusinessInformation = () => {
           Start your <br /> journey with us.
         </p>
         <p className="absolute bottom-10 lg:bottom-20 font-[500] text-[18px] lg:text-[22px] text-[#FFFFFF]">
-          "Note: A 5% transaction fee applies for standalone GoGrub users."
+          Manage online food ordering for restaurants including cloud kitchens
+          and food vendors
         </p>
       </div>
 

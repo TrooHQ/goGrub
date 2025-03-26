@@ -3,13 +3,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from "next/image";
-import { useModal } from "./ModalContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-
-  const { openModal } = useModal();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
