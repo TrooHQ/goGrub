@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { useModal } from "./ModalContext";
+import Link from "next/link";
 
 const Calculator = () => {
-  const { openModal } = useModal();
-
   const [monthlyOrders, setMonthlyOrders] = useState("");
   const [averagePrice, setAveragePrice] = useState("");
   const [commission, setCommission] = useState(20);
   const [monthlyProfit, setMonthlyProfit] = useState(0);
+  const [monthlyProfit5Percent, setMonthlyProfit5Percent] = useState(0);
 
   useEffect(() => {
     const orders = parseFloat(monthlyOrders) || 0;
     const price = parseFloat(averagePrice) || 0;
     const comm = parseFloat(commission) || 0;
 
-    const profit = orders * price * ((100 - comm) / 100);
-    setMonthlyProfit(profit.toFixed(2));
+    const profit = (orders * price * comm) / 100;
+    setMonthlyProfit(profit);
+
+    const profit5Percent = (orders * price * 5) / 100;
+    setMonthlyProfit5Percent(profit5Percent);
   }, [monthlyOrders, averagePrice, commission]);
 
   return (
@@ -62,23 +64,31 @@ const Calculator = () => {
                 value={commission}
                 onChange={(e) => setCommission(e.target.value)}
                 className="py-[10px] px-[20px] rounded-[4px] border border-[#121212] w-full"
+                readOnly
               />
             </div>
           </div>
           <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] max-w-[518px] h-[448px] w-full flex flex-col items-center text-center justify-between">
             <div className=" ">
               <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[32px] font-gilroy">
-                Monthly Profit
+                Monthly Profit (Competitors - 20% Commission)
               </p>
               <p className=" font-[700] text-[#0A191E] text-[32px] lg:text-[64px] font-gilroy">
                 &#8358; {monthlyProfit}
               </p>
+              <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[32px] font-gilroy mt-[16px]">
+                Monthly Profit (GoGrub - 5% Commission)
+              </p>
+              <p className=" font-[700] text-[#0A191E] text-[32px] lg:text-[64px] font-gilroy">
+                &#8358; {monthlyProfit5Percent}
+              </p>
             </div>
-            <div
-              className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]"
-              // onClick={openModal}
-            >
-              See Pricing Plans
+            <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[32px] font-gilroy">
+              Difference: &#8358;{" "}
+              {(monthlyProfit - monthlyProfit5Percent).toLocaleString()}
+            </p>
+            <div className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]">
+              <Link href="/business-information">See Pricing Plans</Link>
             </div>
           </div>
         </div>
