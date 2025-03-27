@@ -5,6 +5,27 @@ import React, { useState } from "react";
 
 const BusinessInformation = () => {
   const [businessType, setBusinessType] = useState("");
+  const [monthlySales, setMonthlySales] = useState("");
+
+  const handleBusinessTypeChange = (e) => {
+    const value = e.target.value;
+    setBusinessType(value);
+    updateLocalStorage("businessType", value);
+  };
+
+  const handleMonthlySalesChange = (e) => {
+    const value = e.target.value;
+    setMonthlySales(value);
+    updateLocalStorage("monthlySales", value);
+  };
+
+  const updateLocalStorage = (key, value) => {
+    const storedData = JSON.parse(localStorage.getItem("businessInfo")) || {};
+    storedData[key] = value;
+    localStorage.setItem("businessInfo", JSON.stringify(storedData));
+  };
+
+  const isFormValid = businessType && monthlySales;
 
   return (
     <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px]">
@@ -44,7 +65,7 @@ const BusinessInformation = () => {
             </label>
             <select
               value={businessType}
-              onChange={(e) => setBusinessType(e.target.value)}
+              onChange={handleBusinessTypeChange}
               className="py-[30px] px-[24px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full bg-white"
             >
               <option value="" disabled>
@@ -63,6 +84,8 @@ const BusinessInformation = () => {
             </label>
             <input
               type="text"
+              value={monthlySales}
+              onChange={handleMonthlySalesChange}
               placeholder="Enter Monthly Average Sales"
               className="py-[30px] px-[24px] rounded-[10px] border border-[#929292] placeholder:text-[16px] placeholder:font-[400] placeholder:text-[#929292] w-full"
             />
@@ -70,8 +93,13 @@ const BusinessInformation = () => {
         </div>
 
         <div className="mt-[50px]">
-          <Link href="/make-commitment">
-            <button className="w-full max-w-[212px] bg-[#FF4F00] px-[38px] py-[30px] rounded-[10px] text-white text-[16px] font-[500]">
+          <Link href={isFormValid ? "/make-commitment" : "#"}>
+            <button
+              className={`w-full max-w-[212px] px-[38px] py-[30px] rounded-[10px] text-white text-[16px] font-[500] ${
+                isFormValid ? "bg-[#FF4F00]" : "bg-gray-400 cursor-not-allowed"
+              }`}
+              disabled={!isFormValid}
+            >
               Continue
             </button>
           </Link>

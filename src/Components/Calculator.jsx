@@ -21,8 +21,6 @@ const Calculator = () => {
     setMonthlyProfit5Percent(profit5Percent.toLocaleString().toString());
   }, [monthlyOrders, averagePrice, commission]);
 
-  console.log(monthlyProfit - monthlyProfit5Percent);
-
   return (
     <div className="max-w-[1200px] mx-[10px] lg:mx-auto py-[64px] px-[10px] lg:px-[56px] font-GeneralSans bg-[#FFFFFF]">
       <div className=" space-y-[53px]">

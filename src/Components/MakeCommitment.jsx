@@ -6,8 +6,8 @@ import axios from "axios";
 
 const MakeCommitment = () => {
   const [selectedPlan, setSelectedPlan] = useState("");
-  const [openModal, setOpenModal] = useState(null);
   const [plans, setPlans] = useState([]);
+  const [openFeatures, setOpenFeatures] = useState(null); // State to track open features
 
   const features = {
     quarterly: [
@@ -29,16 +29,19 @@ const MakeCommitment = () => {
     ],
   };
 
+  const updateLocalStorage = (key, value) => {
+    const storedData = JSON.parse(localStorage.getItem("businessInfo")) || {};
+    storedData[key] = value;
+    localStorage.setItem("businessInfo", JSON.stringify(storedData));
+  };
+
   const handlePlanSelect = (plan) => {
     setSelectedPlan(plan);
+    updateLocalStorage("selectedPlan", plan);
   };
 
-  const handleOpenModal = (plan) => {
-    setOpenModal(plan);
-  };
-
-  const handleCloseModal = () => {
-    setOpenModal(null);
+  const handleToggleFeatures = (plan) => {
+    setOpenFeatures((prev) => (prev === plan ? null : plan));
   };
 
   const handleSubmit = async () => {
@@ -65,6 +68,7 @@ const MakeCommitment = () => {
       alert("An error occurred. Please try again.");
     }
   };
+
   useEffect(() => {
     const fetchPlans = async () => {
       try {
@@ -80,10 +84,9 @@ const MakeCommitment = () => {
     fetchPlans();
   }, []);
 
-  console.log(plans);
   return (
-    <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px] ">
-      <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-[1000px]">
+    <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px] transition-all duration-500 ease-in-out">
+      <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-[1000px] transition-all duration-500 ease-in-out">
         <Link href="/">
           <Image
             src="/goGrub/gogrubLogoWhite_.svg"
@@ -92,21 +95,21 @@ const MakeCommitment = () => {
             height={50}
           />
         </Link>
-        <p className="mt-[100px] font-gilroy font-[700] text-[#FFFFFF] text-[30px] lg:text-[54px]">
+        <p className="mt-[100px] font-gilroy font-[700] text-[#FFFFFF] text-[30px] lg:text-[54px] transition-all duration-500 ease-in-out">
           Start your <br /> journey with us.
         </p>
-        <p className="absolute bottom-10 lg:bottom-20 font-[500] text-[18px] lg:text-[22px] text-[#FFFFFF]">
+        <p className="absolute bottom-10 lg:bottom-20 font-[500] text-[18px] lg:text-[22px] text-[#FFFFFF] transition-all duration-500 ease-in-out">
           Manage online food ordering for restaurants including cloud kitchens
           and food vendors
         </p>
       </div>
 
-      <div className="font-GeneralSans max-w-[700px] w-full">
+      <div className="font-GeneralSans max-w-[700px] w-full transition-all duration-500 ease-in-out">
         <div className="space-y-[28px]">
-          <p className="font-[600] text-[#414141] text-[28px] lg:text-[36px]">
+          <p className="font-[600] text-[#414141] text-[28px] lg:text-[36px] transition-all duration-500 ease-in-out">
             Make a Commitment
           </p>
-          <p className="font-[400] text-[18px] lg:text-[24px] text-[#414141]">
+          <p className="font-[400] text-[18px] lg:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
             Get your own branded site to easily manage orders, menu and
             customers — all in one place.
           </p>
@@ -120,105 +123,137 @@ const MakeCommitment = () => {
                 selectedPlan === plan.name
                   ? "border-[#FF4F00]"
                   : "border-[#929292]"
-              } text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer`}
+              } text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer transition-all duration-500 ease-in-out`}
               onClick={() => handlePlanSelect(plan.name)}
             >
-              <div className="flex items-start gap-[24px]">
+              <div className="flex items-start gap-[24px] mb-[30px]">
                 <img
                   src={
                     selectedPlan === plan.name
                       ? "/goGrub/stateOn.svg"
                       : "/goGrub/stateOff.svg"
                   }
-                  className="w-[23px] h-[23px] mt-[15px]"
+                  className="w-[23px] h-[23px] mt-[15px] transition-all duration-500 ease-in-out"
                 />
                 <div className="w-full space-y-[13px]">
                   <div className="w-full grid md:flex items-center md:justify-between">
-                    <p className=" capitalize font-[700] text-[18px] md:text-[24px] text-[#414141]">
+                    <p className=" capitalize font-[700] text-[18px] md:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
                       {plan.name}
                     </p>
-                    <p className="font-[700] text-[14px] lg:text-[18px] text-[#414141]">
+                    <p className="font-[700] text-[14px] lg:text-[18px] text-[#414141] transition-all duration-500 ease-in-out">
                       <span className="font-[400]">₦ </span>
                       {plan.price}
                     </p>
                   </div>
                   <div className=" grid md:flex items-center md:justify-between">
-                    <p className=" capitalize font-[400] text-[18px] md:text-[24px] text-[#414141]">
+                    <p className=" capitalize font-[400] text-[18px] md:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
                       Billed {plan.billingCycle}
                     </p>
-                    <p className=" font-[600] text-[#929292] text-[14px] line-through">
+                    <p className=" font-[600] text-[#929292] text-[14px] line-through transition-all duration-500 ease-in-out">
                       {plan.discount || "10,000"}
                     </p>
                   </div>
                   <p
-                    className="font-[600] text-[18px] text-[#FF4F00] pt-[40px] cursor-pointer"
+                    className="font-[600] text-[18px] text-[#FF4F00] pt-[40px] cursor-pointer transition-all duration-500 ease-in-out"
                     onClick={(e) => {
                       e.stopPropagation();
-                      handleOpenModal(plan.name);
+                      handleToggleFeatures(plan.name);
                     }}
                   >
-                    View Features
+                    {openFeatures === plan.name
+                      ? "Hide Features"
+                      : "View Features"}
                   </p>
                 </div>
               </div>
+
+              {openFeatures === plan.name && (
+                <div className="transition-all duration-500 ease-in-out"></div>
+              )}
+
+              {openFeatures === plan.name && plan.name.includes("yearly") && (
+                <div className="border-t border-[#E7E7E7] pt-[30px] font-GeneralSans transition-all duration-500 ease-in-out">
+                  <h2 className="text-[20px] font-[400] text-[#0D0D0D] transition-all duration-500 ease-in-out">
+                    Features
+                  </h2>
+                  <ul className="mt-[10px] space-y-[10px]">
+                    {features.yearly?.map((feature, index) => (
+                      <li
+                        key={index}
+                        className="  flex items-center gap-[10px] transition-all duration-500 ease-in-out"
+                      >
+                        <div className="w-[17px] h-[17px] rounded-full bg-[#D9D9D9] transition-all duration-500 ease-in-out"></div>
+                        <p className="font-[400] text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
+                          {feature}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {openFeatures === plan.name &&
+                plan.name.includes("quarterly") && (
+                  <div className="border-t border-[#E7E7E7] pt-[30px] font-GeneralSans transition-all duration-500 ease-in-out">
+                    <h2 className="text-[20px] font-[400] text-[#0D0D0D] transition-all duration-500 ease-in-out">
+                      Features
+                    </h2>
+                    <ul className="mt-[10px] space-y-[10px]">
+                      {features.quarterly?.map((feature, index) => (
+                        <li
+                          key={index}
+                          className="  flex items-center gap-[10px] transition-all duration-500 ease-in-out"
+                        >
+                          <div className="w-[17px] h-[17px] rounded-full bg-[#D9D9D9] transition-all duration-500 ease-in-out"></div>
+                          <p className="font-[400] text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
+                            {feature}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
             </div>
           ))}
         </div>
 
-        <div className="mt-[50px] flex items-center gap-[10px]">
+        <div className="mt-[50px] flex items-center gap-[10px] transition-all duration-500 ease-in-out">
           <input
             type="checkbox"
             id="terms"
-            className="w-[20px] h-[20px] border border-[#929292] rounded"
+            className="w-[20px] h-[20px] border border-[#929292] rounded transition-all duration-500 ease-in-out"
           />
           <label
             htmlFor="terms"
-            className="text-[18px] font-[400] text-[#414141]"
+            className="text-[18px] font-[400] text-[#414141] transition-all duration-500 ease-in-out"
           >
             I have read and agree to the{" "}
-            <span className="text-[#FF4F00]">terms of service</span>
+            <span className="text-[#FF4F00] transition-all duration-500 ease-in-out">
+              terms of service
+            </span>
           </label>
         </div>
 
-        <div className="mt-[50px]">
-          <Link href="https://trootab.com/business-profile?coming-from=gogrub">
-            <button
-              className="w-full max-w-[212px] bg-[#FF4F00] px-[10px] py-[20px] md:px-[38px] md:py-[30px] rounded-[10px] text-white text-[16px] font-[500]"
-              disabled={!selectedPlan}
-            >
-              Continue
-            </button>
-          </Link>
+        <div className="mt-[50px] transition-all duration-500 ease-in-out">
+          <button
+            className="w-full max-w-[212px] bg-[#FF4F00] px-[10px] py-[20px] md:px-[38px] md:py-[30px] rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out"
+            disabled={!selectedPlan}
+            onClick={() => {
+              if (!selectedPlan) {
+                alert("Please select a plan before proceeding.");
+                return;
+              }
+
+              const businessInfo =
+                JSON.parse(localStorage.getItem("businessInfo")) || {};
+              const queryParams = new URLSearchParams(businessInfo).toString();
+
+              window.location.href = `https://trootab.com/business-profile?coming-from=gogrub&${queryParams}`;
+            }}
+          >
+            Submit
+          </button>
         </div>
       </div>
-
-      {openModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-[30px] md:px-[50px] md:py-[50px] border border-[#E7E7E7] rounded-[10px] max-w-[600px] w-full relative">
-            <div className=" absolute top-[29px] right-[29px]">
-              <img
-                src="/goGrub/CloseIcon.svg"
-                alt="CloseIcon"
-                onClick={handleCloseModal}
-                className=" w-[14px] h-[14px] cursor-pointer"
-              />
-            </div>
-            <h2 className="text-[28px] font-[500] text-[#0D0D0D] text-center border-b border-[#E7E7E7] py-[20px]">
-              Features
-            </h2>
-            <div className=" mt-[36px] space-y-[19px]">
-              {features[openModal]?.map((feature, index) => (
-                <div key={index} className="flex items-center gap-[10px]">
-                  <div className="w-[17px] h-[17px] rounded-full bg-[#D9D9D9]"></div>
-                  <p className="font-[400] text-[20px] text-[#414141]">
-                    {feature}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
