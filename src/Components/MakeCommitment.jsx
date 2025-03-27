@@ -7,7 +7,7 @@ import axios from "axios";
 const MakeCommitment = () => {
   const [selectedPlan, setSelectedPlan] = useState("");
   const [plans, setPlans] = useState([]);
-  const [openFeatures, setOpenFeatures] = useState(null); // State to track open features
+  const [openFeatures, setOpenFeatures] = useState(null);
 
   const features = {
     quarterly: [
