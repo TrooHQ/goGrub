@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -5,20 +6,22 @@ const Calculator = () => {
   const [monthlyOrders, setMonthlyOrders] = useState("");
   const [averagePrice, setAveragePrice] = useState("");
   const [commission, setCommission] = useState(20);
-  const [monthlyProfit, setMonthlyProfit] = useState(0);
-  const [monthlyProfit5Percent, setMonthlyProfit5Percent] = useState(0);
+  const [monthlyProfit, setMonthlyProfit] = useState("0");
+  const [monthlyProfit5Percent, setMonthlyProfit5Percent] = useState("0");
 
   useEffect(() => {
     const orders = parseFloat(monthlyOrders) || 0;
     const price = parseFloat(averagePrice) || 0;
     const comm = parseFloat(commission) || 0;
 
-    const profit = (orders * price * comm) / 100;
-    setMonthlyProfit(profit);
+    const profit = orders * price - (orders * price * comm) / 100;
+    setMonthlyProfit(profit.toLocaleString().toString());
 
-    const profit5Percent = (orders * price * 5) / 100;
-    setMonthlyProfit5Percent(profit5Percent);
+    const profit5Percent = orders * price - (orders * price * 5) / 100;
+    setMonthlyProfit5Percent(profit5Percent.toLocaleString().toString());
   }, [monthlyOrders, averagePrice, commission]);
+
+  console.log(monthlyProfit - monthlyProfit5Percent);
 
   return (
     <div className="max-w-[1200px] mx-[10px] lg:mx-auto py-[64px] px-[10px] lg:px-[56px] font-GeneralSans bg-[#FFFFFF]">
@@ -68,27 +71,46 @@ const Calculator = () => {
               />
             </div>
           </div>
-          <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] max-w-[518px] h-[448px] w-full flex flex-col items-center text-center justify-between">
-            <div className=" ">
-              <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[32px] font-gilroy">
-                Monthly Profit (Competitors - 20% Commission)
+          <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-center justify-between">
+            <div className=" max-w-[400px] mx-auto text-center w-full space-y-[26px]">
+              <div className=" space-y-16px">
+                <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[24px] font-gilroy">
+                  Monthly Profit with GoGrub at 5% Commission
+                </p>
+                <p className=" font-[700] text-[#FF4F00] text-[32px] lg:text-[64px] font-gilroy">
+                  &#8358;{" "}
+                  {parseFloat(
+                    monthlyProfit5Percent.replace(/,/g, "")
+                  ).toLocaleString()}
+                </p>
+              </div>
+              <div className=" py-[20px] px-[10px] bg-[#FFFFFF] rounded-[8px] ">
+                <p className=" font-[500] text-[#0A191E] text-[14px] lg:text-[16px] font-gilroy ">
+                  Monthly Profit with competitors at 20% <br />
+                  <span className=" font-[600]">
+                    &#8358;{" "}
+                    {parseFloat(
+                      monthlyProfit.replace(/,/g, "")
+                    ).toLocaleString()}
+                  </span>
+                </p>
+              </div>
+
+              <p className=" font-[500] text-[#0A191E] text-[14px] lg:text-[16px] font-gilroy ">
+                Save
+                <span className=" font-[600] text-[#FF4F00]">
+                  {" "}
+                  &#8358;
+                  {(
+                    parseFloat(monthlyProfit5Percent.replace(/,/g, "")) -
+                    parseFloat(monthlyProfit.replace(/,/g, ""))
+                  ).toLocaleString()}{" "}
+                </span>{" "}
+                <span className=" font-[600] text-[#0A191E]">using GoGrub</span>
               </p>
-              <p className=" font-[700] text-[#0A191E] text-[32px] lg:text-[64px] font-gilroy">
-                &#8358; {monthlyProfit}
-              </p>
-              <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[32px] font-gilroy mt-[16px]">
-                Monthly Profit (GoGrub - 5% Commission)
-              </p>
-              <p className=" font-[700] text-[#0A191E] text-[32px] lg:text-[64px] font-gilroy">
-                &#8358; {monthlyProfit5Percent}
-              </p>
-            </div>
-            <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[32px] font-gilroy">
-              Difference: &#8358;{" "}
-              {(monthlyProfit - monthlyProfit5Percent).toLocaleString()}
-            </p>
-            <div className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]">
-              <Link href="/business-information">See Pricing Plans</Link>
+              <div className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]">
+                <Link href="/business-information">See Pricing Plans</Link>
+              </div>
             </div>
           </div>
         </div>

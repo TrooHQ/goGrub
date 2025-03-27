@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { TbCircleChevronRight } from "react-icons/tb";
 import { BiSolidChevronDownCircle } from "react-icons/bi";

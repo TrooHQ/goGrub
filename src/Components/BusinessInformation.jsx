@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -10,7 +11,7 @@ const BusinessInformation = () => {
       <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-screen">
         <Link href="/">
           <Image
-            src="/goGrub/troo logo.svg"
+            src="/goGrub/gogrubLogoWhite_.svg"
             alt="Troo Logo"
             width={150}
             height={50}

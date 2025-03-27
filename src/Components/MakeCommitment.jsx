@@ -1,10 +1,13 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const MakeCommitment = () => {
   const [selectedPlan, setSelectedPlan] = useState("");
   const [openModal, setOpenModal] = useState(null);
+  const [plans, setPlans] = useState([]);
 
   const features = {
     quarterly: [
@@ -38,12 +41,52 @@ const MakeCommitment = () => {
     setOpenModal(null);
   };
 
+  const handleSubmit = async () => {
+    if (!selectedPlan) {
+      alert("Please select a plan before proceeding.");
+      return;
+    }
+
+    try {
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/commitment`,
+        { plan: selectedPlan },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      alert("Commitment submitted successfully!");
+      console.log(response.data);
+    } catch (error) {
+      console.error("Error submitting commitment:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+  useEffect(() => {
+    const fetchPlans = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
+        );
+        setPlans(response.data.data);
+      } catch (error) {
+        console.error("Error fetching plans data:", error);
+      }
+    };
+
+    fetchPlans();
+  }, []);
+
+  console.log(plans);
   return (
     <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px] ">
       <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-[1000px]">
         <Link href="/">
           <Image
-            src="/goGrub/troo logo.svg"
+            src="/goGrub/gogrubLogoWhite_.svg"
             alt="Troo Logo"
             width={150}
             height={50}
@@ -70,99 +113,56 @@ const MakeCommitment = () => {
         </div>
 
         <div className="mt-[44px] space-y-[30px]">
-          <div
-            className={`p-[30px] rounded-[10px] border ${
-              selectedPlan === "quarterly"
-                ? "border-[#FF4F00]"
-                : "border-[#929292]"
-            } text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer`}
-            onClick={() => handlePlanSelect("quarterly")}
-          >
-            <div className="flex items-start gap-[24px]">
-              <img
-                src={
-                  selectedPlan === "quarterly"
-                    ? "/goGrub/stateOn.svg"
-                    : "/goGrub/stateOff.svg"
-                }
-                className="w-[23px] h-[23px] mt-[15px]"
-              />
-              <div className="w-full space-y-[13px]">
-                <div className="w-full grid md:flex items-center md:justify-between">
-                  <p className="font-[700] text-[18px] md:text-[24px] text-[#414141]">
-                    Quarterly Plan
-                  </p>
-                  <p className="font-[700] text-[24px] lg:text-[42px] text-[#414141]">
-                    <span className="font-[400]">₦ </span>7,500
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`p-[30px] rounded-[10px] border ${
+                selectedPlan === plan.name
+                  ? "border-[#FF4F00]"
+                  : "border-[#929292]"
+              } text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer`}
+              onClick={() => handlePlanSelect(plan.name)}
+            >
+              <div className="flex items-start gap-[24px]">
+                <img
+                  src={
+                    selectedPlan === plan.name
+                      ? "/goGrub/stateOn.svg"
+                      : "/goGrub/stateOff.svg"
+                  }
+                  className="w-[23px] h-[23px] mt-[15px]"
+                />
+                <div className="w-full space-y-[13px]">
+                  <div className="w-full grid md:flex items-center md:justify-between">
+                    <p className=" capitalize font-[700] text-[18px] md:text-[24px] text-[#414141]">
+                      {plan.name}
+                    </p>
+                    <p className="font-[700] text-[14px] lg:text-[18px] text-[#414141]">
+                      <span className="font-[400]">₦ </span>
+                      {plan.price}
+                    </p>
+                  </div>
+                  <div className=" grid md:flex items-center md:justify-between">
+                    <p className=" capitalize font-[400] text-[18px] md:text-[24px] text-[#414141]">
+                      Billed {plan.billingCycle}
+                    </p>
+                    <p className=" font-[600] text-[#929292] text-[14px] line-through">
+                      {plan.discount || "10,000"}
+                    </p>
+                  </div>
+                  <p
+                    className="font-[600] text-[18px] text-[#FF4F00] pt-[40px] cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleOpenModal(plan.name);
+                    }}
+                  >
+                    View Features
                   </p>
                 </div>
-                <div className=" grid md:flex items-center md:justify-between">
-                  <p className="font-[400] text-[18px] md:text-[24px] text-[#414141]">
-                    ₦ 2,500 Billed Quarterly
-                  </p>
-                  <p className="font-[600] text-[#606060] text-[14px]">
-                    10,000
-                  </p>
-                </div>
-                <p
-                  className="font-[600] text-[18px] text-[#FF4F00] pt-[40px] cursor-pointer"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleOpenModal("quarterly");
-                  }}
-                >
-                  View Features
-                </p>
               </div>
             </div>
-          </div>
-
-          <div
-            className={`p-[30px] rounded-[10px] border ${
-              selectedPlan === "yearly"
-                ? "border-[#FF4F00]"
-                : "border-[#929292]"
-            } text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer`}
-            onClick={() => handlePlanSelect("yearly")}
-          >
-            <div className="flex items-start gap-[24px]">
-              <img
-                src={
-                  selectedPlan === "yearly"
-                    ? "/goGrub/stateOn.svg"
-                    : "/goGrub/stateOff.svg"
-                }
-                className="w-[23px] h-[23px] mt-[15px]"
-              />
-              <div className="w-full space-y-[13px]">
-                <div className="w-full grid md:flex items-center md:justify-between">
-                  <p className="font-[700] text-[18px] md:text-[24px] text-[#414141]">
-                    Yearly Plan
-                  </p>
-                  <p className="font-[700] text-[24px] lg:text-[42px] text-[#414141]">
-                    <span className="font-[400]">₦ </span>27,500
-                  </p>
-                </div>
-                <div className=" grid md:flex items-center md:justify-between">
-                  <p className="font-[400] text-[18px] md:text-[24px] text-[#414141]">
-                    ₦ 2,500 Billed Biannually
-                  </p>
-                  <p className="font-[600] text-[#606060] text-[14px]">
-                    30,000
-                  </p>
-                </div>
-                <p
-                  className="font-[600] text-[18px] text-[#FF4F00] pt-[40px] cursor-pointer"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleOpenModal("yearly");
-                  }}
-                >
-                  View Features
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="mt-[50px] flex items-center gap-[10px]">
