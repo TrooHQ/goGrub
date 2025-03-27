@@ -6,7 +6,7 @@ const Calculator = () => {
 
   const [monthlyOrders, setMonthlyOrders] = useState("");
   const [averagePrice, setAveragePrice] = useState("");
-  const [commission, setCommission] = useState("");
+  const [commission, setCommission] = useState(20);
   const [monthlyProfit, setMonthlyProfit] = useState(0);
 
   useEffect(() => {
@@ -21,13 +21,14 @@ const Calculator = () => {
   return (
     <div className="max-w-[1200px] mx-[10px] lg:mx-auto py-[64px] px-[10px] lg:px-[56px] font-GeneralSans bg-[#FFFFFF]">
       <div className=" space-y-[53px]">
-        <div className="text-start md:text-center mx-auto max-w-[650px] ">
+        <div className="text-start md:text-center mx-auto max-w-[950px] ">
           <p className="font-gilroy text-[28px] lg:text-[48px] text-[#FF4F00] font-[800]">
+            See How Much You Can <br />
             Save with GoGrub
           </p>
           <p className=" text-[14px] lg:text-[24px] font-[500] text-[#000000]">
-            Use the calculator to compute and display your potential monthly
-            extra profit with GoGrub.
+            Find out how much more you keep when you switch to our transparent
+            pricing model compared to competitors charging 20% per transaction!
           </p>
         </div>
 
@@ -75,7 +76,7 @@ const Calculator = () => {
             </div>
             <div
               className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]"
-              onClick={openModal}
+              // onClick={openModal}
             >
               See Pricing Plans
             </div>

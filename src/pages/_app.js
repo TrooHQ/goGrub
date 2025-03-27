@@ -48,7 +48,6 @@ export default function App({ Component, pageProps }) {
           content="https://www.gogrub.co/opengraph-logo.jpeg"
         />
 
-        {/* Twitter Meta Tags */}
         <meta
           name="twitter:title"
           content="GoGrub - Your Online Ordering Solution"
