@@ -155,7 +155,8 @@ const MakeCommitment = () => {
                       Billed {plan.billingCycle}
                     </p>
                     <p className=" font-[600] text-[#929292] text-[14px] line-through transition-all duration-500 ease-in-out">
-                      {plan.discount || "10,000"}
+                      {plan.discount ||
+                        (plan.name.includes("yearly") ? "30,000" : "10,000")}
                     </p>
                   </div>
                   <p
