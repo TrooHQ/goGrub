@@ -241,7 +241,7 @@ const MakeCommitment = () => {
 
         <div className="mt-[50px] transition-all duration-500 ease-in-out">
           <button
-            className="w-full max-w-[212px] bg-[#FF4F00] px-[10px] py-[20px] md:px-[38px] md:py-[30px] rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out"
+            className="w-full max-w-[212px] bg-[#FF4F00]  px-6 py-2 rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out"
             disabled={!selectedPlan}
             onClick={() => {
               if (!selectedPlan) {
