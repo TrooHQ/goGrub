@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import BaseUrl from "./Constants";
 
 const MakeCommitment = () => {
   const [selectedPlan, setSelectedPlan] = useState("");
@@ -44,36 +45,36 @@ const MakeCommitment = () => {
     setOpenFeatures((prev) => (prev === plan ? null : plan));
   };
 
-  const handleSubmit = async () => {
-    if (!selectedPlan) {
-      alert("Please select a plan before proceeding.");
-      return;
-    }
+  // const handleSubmit = async () => {
+  //   if (!selectedPlan) {
+  //     alert("Please select a plan before proceeding.");
+  //     return;
+  //   }
 
-    try {
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/commitment`,
-        { plan: selectedPlan },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+  //   try {
+  //     const response = await axios.post(
+  //       `${BaseUrl}/commitment`,
+  //       { plan: selectedPlan },
+  //       {
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //       }
+  //     );
 
-      alert("Commitment submitted successfully!");
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error submitting commitment:", error);
-      alert("An error occurred. Please try again.");
-    }
-  };
+  //     alert("Commitment submitted successfully!");
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.error("Error submitting commitment:", error);
+  //     alert("An error occurred. Please try again.");
+  //   }
+  // };
 
   useEffect(() => {
     const fetchPlans = async () => {
       try {
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
+          `${BaseUrl}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
         );
         setPlans(response.data.data);
       } catch (error) {
