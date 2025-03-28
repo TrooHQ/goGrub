@@ -1,3 +1,3 @@
-const BaseUrl = "https://workandshop.vercel.app/api/";
+const BaseUrl = "https://troox-backend-new.vercel.app/api";
 
 export default BaseUrl;
