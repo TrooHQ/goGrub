@@ -83,7 +83,7 @@ const BusinessInformation = () => {
               Monthly Average Sales
             </label>
             <input
-              type="text"
+              type="number"
               value={monthlySales}
               onChange={handleMonthlySalesChange}
               placeholder="Enter Monthly Average Sales"
