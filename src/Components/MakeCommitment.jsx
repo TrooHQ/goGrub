@@ -85,7 +85,11 @@ const MakeCommitment = () => {
     fetchPlans();
   }, []);
 
-  return (
+  return plans.length === 0 ? (
+    <div className="flex justify-center items-center h-screen">
+      <p className="text-[24px] font-[500] text-[#414141]">Loading plans...</p>
+    </div>
+  ) : (
     <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px] transition-all duration-500 ease-in-out">
       <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-[1000px] transition-all duration-500 ease-in-out">
         <Link href="/">
