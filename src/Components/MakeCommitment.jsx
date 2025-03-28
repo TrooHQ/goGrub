@@ -74,7 +74,7 @@ const MakeCommitment = () => {
     const fetchPlans = async () => {
       try {
         const response = await axios.get(
-          `${BaseUrl}plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
+          `${BaseUrl}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
         );
         setPlans(response.data.data);
       } catch (error) {
