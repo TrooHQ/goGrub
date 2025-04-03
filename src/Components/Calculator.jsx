@@ -14,10 +14,10 @@ const Calculator = () => {
     const price = parseFloat(averagePrice) || 0;
     const comm = parseFloat(commission) || 0;
 
-    const profit = orders * price - (orders * price * comm) / 100;
+    const profit = (orders * price * comm) / 100;
     setMonthlyProfit(profit.toLocaleString().toString());
 
-    const profit5Percent = orders * price - (orders * price * 5) / 100;
+    const profit5Percent = (orders * price * 5) / 100;
     setMonthlyProfit5Percent(profit5Percent.toLocaleString().toString());
   }, [monthlyOrders, averagePrice, commission]);
 
@@ -69,7 +69,7 @@ const Calculator = () => {
               />
             </div>
           </div>
-          <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-center justify-between">
+          {/* <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-center justify-between">
             <div className=" max-w-[400px] mx-auto text-center w-full space-y-[26px]">
               <div className=" space-y-16px">
                 <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[24px] font-gilroy">
@@ -106,6 +106,54 @@ const Calculator = () => {
                 </span>{" "}
                 <span className=" font-[600] text-[#0A191E]">using GoGrub</span>
               </p>
+              <div className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]">
+                <Link href="/business-information">See Pricing Plans</Link>
+              </div>
+            </div>
+          </div> */}
+          <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-start justify-between">
+            <div className=" max-w-[400px] mx-auto w-full space-y-[26px]">
+              <div className=" space-y-[30px] text-start">
+                <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[24px] font-gilroy">
+                  Commission based on orders
+                </p>
+                <div className=" bg-white border border-[#FF4F00] rounded-full py-[6px] px-[9px] w-full  flex items-center gap-[9px]">
+                  <div className=" py-[9px] bg-[#FF4F00] rounded-full max-w-[205px]  text-white text-center w-full">
+                    <p className=" font-DMSans text-[16px] font-[700]">
+                      &#8358;{" "}
+                      {parseFloat(
+                        monthlyProfit5Percent.replace(/,/g, "")
+                      ).toLocaleString()}
+                    </p>
+                    <p className=" font-[400] text-[14px]"> with GoGrub 5% </p>
+                  </div>
+                  <div className=" py-[9px] bg-[#606060] rounded-full max-w-[205px]  text-white text-center w-full">
+                    <p className=" font-DMSans text-[16px] font-[700]">
+                      &#8358;{" "}
+                      {parseFloat(
+                        monthlyProfit.replace(/,/g, "")
+                      ).toLocaleString()}
+                    </p>
+                    <p className=" font-[400] text-[14px]"> with others 20% </p>
+                  </div>
+                </div>
+              </div>
+              <div className=" ">
+                <p className=" font-[700] text-[#0A191E] text-[14px] lg:text-[24px] font-gilroy ">
+                  Save
+                </p>
+                <p className=" font-[700] text-[#FF4F00] text-[44px] lg:text-[64px]">
+                  &#8358;{" "}
+                  {(
+                    parseFloat(monthlyProfit.replace(/,/g, "")) -
+                    parseFloat(monthlyProfit5Percent.replace(/,/g, ""))
+                  ).toLocaleString()}
+                  <span className=" ml-[10px] font-[400] text-[16px] text-[#0A191E]">
+                    using GoGrub
+                  </span>
+                </p>
+              </div>
+
               <div className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]">
                 <Link href="/business-information">See Pricing Plans</Link>
               </div>
