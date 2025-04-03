@@ -36,7 +36,7 @@ const Calculator = () => {
         </div>
 
         <div className="space-y-[16px] grid gap-[20px] place-items-start md:place-items-center lg:flex lg:items-end lg:justify-between">
-          <div className=" font-[600] text-[#0A191E] text-[16px] space-y-[24px] max-w-[514px] w-full">
+          <div className=" font-[600] text-[#0A191E] text-[16px] space-y-[24px] lg:max-w-[514px] w-full">
             <p className=" font-[700] text-[24px] text-[#0A191E] font-gilroy">
               Calculate
             </p>
@@ -58,7 +58,7 @@ const Calculator = () => {
                 className="py-[10px] px-[20px] rounded-[4px] border border-[#121212] w-full"
               />
             </div>
-            <div className="space-y-[16px] ">
+            <div className="space-y-[16px]  hidden">
               <p>Commission (%)</p>
               <input
                 type="number"
@@ -111,14 +111,14 @@ const Calculator = () => {
               </div>
             </div>
           </div> */}
-          <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-start justify-between">
-            <div className=" max-w-[400px] mx-auto w-full space-y-[26px]">
+          <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] lg:max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-start justify-between">
+            <div className=" lg:max-w-[400px] mx-auto w-full space-y-[26px]">
               <div className=" space-y-[30px] text-start">
                 <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[24px] font-gilroy">
                   Commission based on orders
                 </p>
                 <div className=" bg-white border border-[#FF4F00] rounded-full py-[6px] px-[9px] w-full  flex items-center gap-[9px]">
-                  <div className=" py-[9px] bg-[#FF4F00] rounded-full max-w-[205px]  text-white text-center w-full">
+                  <div className=" py-[9px] bg-[#FF4F00] rounded-full lg:max-w-[205px]  text-white text-center w-full">
                     <p className=" font-DMSans text-[16px] font-[700]">
                       &#8358;{" "}
                       {parseFloat(
@@ -127,7 +127,7 @@ const Calculator = () => {
                     </p>
                     <p className=" font-[400] text-[14px]"> with GoGrub 5% </p>
                   </div>
-                  <div className=" py-[9px] bg-[#606060] rounded-full max-w-[205px]  text-white text-center w-full">
+                  <div className=" py-[9px] bg-[#606060] rounded-full lg:max-w-[205px]  text-white text-center w-full">
                     <p className=" font-DMSans text-[16px] font-[700]">
                       &#8358;{" "}
                       {parseFloat(
