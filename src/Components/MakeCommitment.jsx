@@ -145,18 +145,20 @@ const MakeCommitment = () => {
                     <p className=" capitalize font-[700] text-[18px] md:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
                       {plan.name}
                     </p>
-                    <p className="font-[700] text-[14px] lg:text-[18px] text-[#414141] transition-all duration-500 ease-in-out">
+                    <p className="font-[700] text-[14px] lg:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
                       <span className="font-[400]">₦ </span>
-                      {plan.price}
+                      {Number(plan.price).toLocaleString()}
                     </p>
                   </div>
                   <div className=" grid md:flex items-center md:justify-between">
                     <p className=" capitalize font-[400] text-[18px] md:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
                       Billed {plan.billingCycle}
                     </p>
-                    <p className=" font-[600] text-[#929292] text-[14px] line-through transition-all duration-500 ease-in-out">
-                      {plan.discount ||
-                        (plan.name.includes("yearly") ? "30,000" : "10,000")}
+                    <p className=" font-[600] text-[#E10101] text-[14px] lg:text-[18px] line-through transition-all duration-500 ease-in-out">
+                      {Number(
+                        plan.discount ||
+                          (plan.name.includes("yearly") ? "30000" : "10000")
+                      ).toLocaleString()}
                     </p>
                   </div>
                   <p

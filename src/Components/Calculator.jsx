@@ -36,81 +36,44 @@ const Calculator = () => {
         </div>
 
         <div className="space-y-[16px] grid gap-[20px] place-items-start md:place-items-center lg:flex lg:items-end lg:justify-between">
-          <div className=" font-[600] text-[#0A191E] text-[16px] space-y-[24px] lg:max-w-[514px] w-full">
+          <div className=" font-[600] text-[#0A191E] text-[16px] space-y-[24px] lg:space-y-[56px] lg:max-w-[514px] w-full">
             <p className=" font-[700] text-[24px] text-[#0A191E] font-gilroy">
               Calculate
             </p>
-            <div className="space-y-[16px] ">
-              <p className=" ">Monthly Orders</p>
-              <input
-                type="number"
-                value={monthlyOrders}
-                onChange={(e) => setMonthlyOrders(e.target.value)}
-                className="py-[10px] px-[20px] rounded-[4px] border border-[#121212] w-full"
-              />
-            </div>
-            <div className="space-y-[16px] ">
-              <p>Average Price per Order</p>
-              <input
-                type="number"
-                value={averagePrice}
-                onChange={(e) => setAveragePrice(e.target.value)}
-                className="py-[10px] px-[20px] rounded-[4px] border border-[#121212] w-full"
-              />
-            </div>
-            <div className="space-y-[16px]  hidden">
-              <p>Commission (%)</p>
-              <input
-                type="number"
-                value={commission}
-                onChange={(e) => setCommission(e.target.value)}
-                className="py-[10px] px-[20px] rounded-[4px] border border-[#121212] w-full"
-                readOnly
-              />
+            <div className="space-y-[24px]">
+              <div className="space-y-[16px] ">
+                <p className=" ">Monthly Orders</p>
+                <input
+                  value={monthlyOrders}
+                  onChange={(e) =>
+                    setMonthlyOrders(e.target.value.replace(/[^0-9]/g, ""))
+                  }
+                  className="py-[20px] px-[20px] rounded-[16px] shadow-md shadow-[#FF4F0030] w-full focus:outline-none focus:border-[#FF4F0030] focus:ring-1 focus:ring-[#FF4F0030]"
+                />
+              </div>
+              <div className="space-y-[16px] ">
+                <p>Average Price per Order</p>
+                <input
+                  value={averagePrice}
+                  onChange={(e) =>
+                    setAveragePrice(e.target.value.replace(/[^0-9]/g, ""))
+                  }
+                  className="py-[20px] px-[20px] rounded-[16px] shadow-md shadow-[#FF4F0030] w-full focus:outline-none focus:border-[#FF4F0030] focus:ring-1 focus:ring-[#FF4F0030]"
+                />
+              </div>
+              <div className="space-y-[16px]  hidden">
+                <p>Commission (%)</p>
+                <input
+                  value={commission}
+                  onChange={(e) =>
+                    setCommission(e.target.value.replace(/[^0-9]/g, ""))
+                  }
+                  className="py-[20px] px-[20px] rounded-[4px] shadow-md w-full focus:outline-none focus:border-[#FF4F0030] focus:ring-1 focus:ring-[#FF4F0030]"
+                  readOnly
+                />
+              </div>
             </div>
           </div>
-          {/* <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-center justify-between">
-            <div className=" max-w-[400px] mx-auto text-center w-full space-y-[26px]">
-              <div className=" space-y-16px">
-                <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[24px] font-gilroy">
-                  Monthly Profit with GoGrub at 5% Commission
-                </p>
-                <p className=" font-[700] text-[#FF4F00] text-[32px] lg:text-[64px] font-gilroy">
-                  &#8358;{" "}
-                  {parseFloat(
-                    monthlyProfit5Percent.replace(/,/g, "")
-                  ).toLocaleString()}
-                </p>
-              </div>
-              <div className=" py-[20px] px-[10px] bg-[#FFFFFF] rounded-[8px] ">
-                <p className=" font-[500] text-[#0A191E] text-[14px] lg:text-[16px] font-gilroy ">
-                  Monthly Profit with competitors at 20% <br />
-                  <span className=" font-[600]">
-                    &#8358;{" "}
-                    {parseFloat(
-                      monthlyProfit.replace(/,/g, "")
-                    ).toLocaleString()}
-                  </span>
-                </p>
-              </div>
-
-              <p className=" font-[500] text-[#0A191E] text-[14px] lg:text-[16px] font-gilroy ">
-                Save
-                <span className=" font-[600] text-[#FF4F00]">
-                  {" "}
-                  &#8358;
-                  {(
-                    parseFloat(monthlyProfit5Percent.replace(/,/g, "")) -
-                    parseFloat(monthlyProfit.replace(/,/g, ""))
-                  ).toLocaleString()}{" "}
-                </span>{" "}
-                <span className=" font-[600] text-[#0A191E]">using GoGrub</span>
-              </p>
-              <div className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]">
-                <Link href="/business-information">See Pricing Plans</Link>
-              </div>
-            </div>
-          </div> */}
           <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] lg:max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-start justify-between">
             <div className=" lg:max-w-[400px] mx-auto w-full space-y-[26px]">
               <div className=" space-y-[30px] text-start">
@@ -127,7 +90,7 @@ const Calculator = () => {
                     </p>
                     <p className=" font-[400] text-[14px]"> with GoGrub 5% </p>
                   </div>
-                  <div className=" py-[9px] bg-[#606060] rounded-full lg:max-w-[205px]  text-white text-center w-full">
+                  <div className=" py-[9px] bg-[#606060] rounded-full max-w-[205px]  text-white text-center w-full">
                     <p className=" font-DMSans text-[16px] font-[700]">
                       &#8358;{" "}
                       {parseFloat(
