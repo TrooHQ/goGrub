@@ -53,7 +53,7 @@ const HeroSection = () => {
               </div>
 
               <div>
-                <Link href="https://trootab.com/business-profile?coming-from=gogrub">
+                <Link href="https://gogrub-client.netlify.app/business-profile?coming-from=gogrub">
                   <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] transition font-gilroy">
                     Get Started
                   </p>

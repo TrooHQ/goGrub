@@ -255,7 +255,7 @@ const MakeCommitment = () => {
                 JSON.parse(localStorage.getItem("businessInfo")) || {};
               const queryParams = new URLSearchParams(businessInfo).toString();
 
-              window.location.href = `https://trootab.com/business-profile?coming-from=gogrub&${queryParams}`;
+              window.location.href = `https://gogrub-client.netlify.app/business-profile?coming-from=gogrub&${queryParams}`;
             }}
           >
             Submit
