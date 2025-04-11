@@ -30,8 +30,13 @@ const Calculator = () => {
             Save with GoGrub
           </p>
           <p className=" text-[14px] lg:text-[24px] font-[500] text-[#000000]">
-            Find out how much more you keep when you switch to our transparent
-            pricing model compared to competitors charging 20% per transaction!
+            Find out how much more you keep when you switch to{" "}
+            <span className=" font-[700] text-[#FF4F00]">
+              our transparent pricing model of 5%
+            </span>{" "}
+            compared to competitors charging{" "}
+            <span className=" font-[700] text-[#0A191E]">20%</span> per
+            transaction!
           </p>
         </div>
 
@@ -74,34 +79,9 @@ const Calculator = () => {
               </div>
             </div>
           </div>
-          <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] lg:max-w-[518px] min-h-[448px] w-full flex flex-col items-center text-start justify-between">
-            <div className=" lg:max-w-[400px] mx-auto w-full space-y-[26px]">
-              <div className=" space-y-[30px] text-start">
-                <p className=" font-[700] text-[#0A191E] text-[16px] lg:text-[24px] font-gilroy">
-                  Commission based on orders
-                </p>
-                <div className=" bg-white border border-[#FF4F00] rounded-full py-[6px] px-[9px] w-full  flex items-center gap-[9px]">
-                  <div className=" py-[9px] bg-[#FF4F00] rounded-full lg:max-w-[205px]  text-white text-center w-full">
-                    <p className=" font-DMSans text-[16px] font-[700]">
-                      &#8358;{" "}
-                      {parseFloat(
-                        monthlyProfit5Percent.replace(/,/g, "")
-                      ).toLocaleString()}
-                    </p>
-                    <p className=" font-[400] text-[14px]"> with GoGrub 5% </p>
-                  </div>
-                  <div className=" py-[9px] bg-[#606060] rounded-full max-w-[205px]  text-white text-center w-full">
-                    <p className=" font-DMSans text-[16px] font-[700]">
-                      &#8358;{" "}
-                      {parseFloat(
-                        monthlyProfit.replace(/,/g, "")
-                      ).toLocaleString()}
-                    </p>
-                    <p className=" font-[400] text-[14px]"> with others 20% </p>
-                  </div>
-                </div>
-              </div>
-              <div className=" ">
+          <div className=" p-[40px] bg-[#FFF5F0] rounded-[24px] lg:max-w-[518px] min-h-[448px] w-full flex flex-col items-end text-start justify-end">
+            <div className=" lg:max-w-[400px] mx-auto w-full space-y-[66px] ">
+              <div className=" text-center space-y-[33px]">
                 <p className=" font-[700] text-[#0A191E] text-[14px] lg:text-[24px] font-gilroy ">
                   Save
                 </p>
@@ -111,13 +91,10 @@ const Calculator = () => {
                     parseFloat(monthlyProfit.replace(/,/g, "")) -
                     parseFloat(monthlyProfit5Percent.replace(/,/g, ""))
                   ).toLocaleString()}
-                  <span className=" ml-[10px] font-[400] text-[16px] text-[#0A191E]">
-                    using GoGrub
-                  </span>
                 </p>
               </div>
 
-              <div className=" w-full text-center  cursor-pointer  bg-[#ffffff] border border-primary px-[38px] py-[10px] rounded-[8px] text-primary text-[16px] font-[700]">
+              <div className=" w-full text-center  cursor-pointer  text-[#ffffff] border border-primary bg-primary px-[38px] py-[10px] rounded-[8px]  text-[16px] font-[700]">
                 <Link href="/business-information">See Pricing Plans</Link>
               </div>
             </div>
