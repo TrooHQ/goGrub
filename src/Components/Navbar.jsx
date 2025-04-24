@@ -46,9 +46,9 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <Link href="/business-information">
+        <Link href="https://gogrub-client.netlify.app/" target="blank">
           <p className=" cursor-pointer hidden font-GeneralSans lg:block bg-primary text-white px-6 py-2 rounded-md font-[500] hover:bg-opacity-90 transition">
-            Get Started
+            Login
           </p>
         </Link>
 
@@ -83,9 +83,9 @@ const Navbar = () => {
           </ul>
 
           <div className="mt-4 text-center">
-            <Link href="/business-information">
+            <Link href="https://gogrub-client.netlify.app/" target="blank">
               <p className=" cursor-pointer bg-primary text-white px-6 py-2 rounded-md font-[500] font-GeneralSans hover:bg-opacity-90 transition">
-                Get Started
+                Login
               </p>
             </Link>
           </div>
