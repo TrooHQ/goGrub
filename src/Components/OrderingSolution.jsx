@@ -46,7 +46,7 @@ const OrderingSolution = () => {
   ];
 
   return (
-    <div className="bg-[#FFF5F1] " id="features">
+    <div className="bg-[#FFFFFF] " id="features">
       <div className=" font-DMSans max-w-6xl mx-[10px] lg:mx-auto py-[10%] relative ">
         <div className="max-w-[628px] text-start">
           <p className="text-[#414141] text-[16px] lg:text-[24px] font-[500]  font-GeneralSans">

@@ -24,9 +24,11 @@ const LandingPage = () => {
         <HowItWorks />
         <OrderingSolution />
         <GetStarted />
-        <Calculator />
-        <Faq />
-        <Footer />
+        <div className=" bg-white">
+          <Calculator />
+          <Faq />
+          <Footer />
+        </div>
       </div>
     </ModalProvider>
   );

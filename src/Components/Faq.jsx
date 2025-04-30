@@ -54,52 +54,54 @@ const Faq = () => {
 
   return (
     <div
-      className="max-w-6xl mx-[10px] lg:mx-auto px-[10px] mb-[200px] mt-[50px] lg:mt-[100px]"
+      className=" bg-white w-full mb-[200px] mt-[50px] lg:mt-[100px]"
       id="faq"
     >
-      <div className="max-w-[900px] mx-auto">
-        <p className="font-[800] text-[30px] text-[#0A191E] lg:text-[64px] text-center mb-[40px]">
-          Frequently Asked Questions
-        </p>
-        <div className="space-y-[16px]">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`bg-[#FFFFFF]  shadow-md rounded-[16px] py-[24px] lg:py-[44px] px-[40px] cursor-pointer ${
-                openIndex === index ? "border-[2px] border-[#FF4F00]" : ""
-              }`}
-              onClick={() => toggleFaq(index)}
-            >
-              <div className="flex justify-between items-center text-[#FF4F00]x">
-                <p
-                  className={`font-[500] text-[18px] lg:text-[22px] ${
-                    openIndex == index ? " text-[#FF4F00]" : " text-[#000000]"
-                  }`}
-                >
-                  {" "}
-                  {faq.question}
-                </p>
-                <span className=" ">
-                  {openIndex === index ? (
-                    <BiSolidChevronDownCircle
-                      size={30}
-                      className=" text-[#FF4F00]"
-                    />
-                  ) : (
-                    <TbCircleChevronRight
-                      size={30}
-                      className=" text-[#FF4F00]"
-                    />
-                  )}
-                </span>
+      <div className="max-w-6xl mx-[10px] lg:mx-auto px-[10px] ">
+        <div className="max-w-[900px] mx-auto">
+          <p className="font-[800] text-[30px] text-[#0A191E] lg:text-[64px] text-center mb-[40px]">
+            Frequently Asked Questions
+          </p>
+          <div className="space-y-[16px]">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className={`bg-[#FFFFFF]  shadow-md rounded-[16px] py-[24px] lg:py-[44px] px-[40px] cursor-pointer ${
+                  openIndex === index ? "border-[2px] border-[#FF4F00]" : ""
+                }`}
+                onClick={() => toggleFaq(index)}
+              >
+                <div className="flex justify-between items-center text-[#FF4F00]x">
+                  <p
+                    className={`font-[500] text-[18px] lg:text-[22px] ${
+                      openIndex == index ? " text-[#FF4F00]" : " text-[#000000]"
+                    }`}
+                  >
+                    {" "}
+                    {faq.question}
+                  </p>
+                  <span className=" ">
+                    {openIndex === index ? (
+                      <BiSolidChevronDownCircle
+                        size={30}
+                        className=" text-[#FF4F00]"
+                      />
+                    ) : (
+                      <TbCircleChevronRight
+                        size={30}
+                        className=" text-[#FF4F00]"
+                      />
+                    )}
+                  </span>
+                </div>
+                {openIndex === index && (
+                  <p className="mt-[8px] text-[16px] lg:text-[18px] text-[#696969]">
+                    {faq.answer}
+                  </p>
+                )}
               </div>
-              {openIndex === index && (
-                <p className="mt-[8px] text-[16px] lg:text-[18px] text-[#696969]">
-                  {faq.answer}
-                </p>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

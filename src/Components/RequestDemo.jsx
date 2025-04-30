@@ -129,8 +129,18 @@ const RequestDemo = () => {
                   <option value="" disabled>
                     Which best describes?
                   </option>
-                  <option value="olive-garden">The Olive Garden</option>
-                  <option value="cheesecake-factory">Cheesecake Factory</option>
+                  <option value="looking-for-solution">
+                    I’m exploring solutions for my business{" "}
+                  </option>
+                  <option value="already-using-gogrub">
+                    {" "}
+                    ⁠I already use GoGrub{" "}
+                  </option>
+
+                  <option value="visit-order">
+                    {" "}
+                    ⁠I visit or order from businesses using GoGrub
+                  </option>
                 </select>
                 <select
                   className="py-4 px-6 rounded-lg bg-transparent border border-[#929292] placeholder:text-base placeholder:font-normal placeholder:text-[#929292] w-full appearance-none cursor-pointer"
@@ -139,8 +149,10 @@ const RequestDemo = () => {
                   <option value="" disabled>
                     How did you find out about us?
                   </option>
-                  <option value="olive-garden">The Olive Garden</option>
-                  <option value="cheesecake-factory">Cheesecake Factory</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="tiktok">Tiktok</option>
+                  <option value="twitter">Twitter (X)</option>
                 </select>
                 <div className="mt-[50px] flex items-center gap-[10px] transition-all duration-500 ease-in-out">
                   <input
