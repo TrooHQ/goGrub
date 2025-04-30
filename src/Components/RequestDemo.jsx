@@ -84,7 +84,7 @@ const RequestDemo = () => {
                     value={selectedCountry}
                     onChange={(e) => setSelectedCountry(e.target.value)}
                   >
-                    <option value="" disabled>
+                    <option value="nigeria" disabled>
                       Select Country
                     </option>
                     <option value="nigeria">Nigeria</option>

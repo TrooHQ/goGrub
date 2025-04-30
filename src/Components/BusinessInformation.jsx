@@ -93,7 +93,7 @@ const BusinessInformation = () => {
         </div>
 
         <div className="mt-[50px]">
-          <Link href={isFormValid ? "/make-commitment" : "#"}>
+          <Link href={isFormValid ? "/pricing-plan" : "#"}>
             <button
               className={`w-full max-w-[212px] px-6 py-[13px] rounded-[10px] text-white text-[16px] font-[500] ${
                 isFormValid ? "bg-[#FF4F00]" : "bg-gray-400 cursor-not-allowed"
