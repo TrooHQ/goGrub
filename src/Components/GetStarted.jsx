@@ -2,6 +2,7 @@ import React from "react";
 import Icon1 from "../../public/goGrub/bi_menu-up.svg";
 import Icon2 from "../../public/goGrub/ic_sharp-restaurant-menu.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const GetStarted = () => {
   return (
@@ -23,9 +24,11 @@ const GetStarted = () => {
           </p>
 
           <div className="mt-[60px]">
-            <p className="bg-primary text-[16px] inline text-white px-[38px] py-[10px] rounded-[8px] font-[500]  transition ">
-              Request a demo
-            </p>
+            <Link href="/request-demo">
+              <p className="bg-primary text-[16px] inline text-white px-[38px] py-[10px] rounded-[8px] font-[500]  transition ">
+                Request a demo
+              </p>
+            </Link>
           </div>
         </div>
         <Image

@@ -40,7 +40,7 @@ const Modal = () => {
         </div>
 
         <div className="text-center mt-[50px] cursor-pointer  w-full border border-[#5955B3] bg-[#0D0D0D] px-[38px] py-[10px] rounded-[5px] text-[#ffffff] text-[16px] font-[500]">
-          <Link href="/business-information">Request Demo</Link>
+          <Link href="/request-demo">Request Demo</Link>
         </div>
       </div>
     </div>
