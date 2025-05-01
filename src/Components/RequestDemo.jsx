@@ -5,19 +5,25 @@ import Icon from "../../public/goGrub/GoGrubLOGOicon.svg";
 import { IoChevronDown } from "react-icons/io5";
 
 import React, { useState } from "react";
+import TextInput from "./TextInput";
 const RequestDemo = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedDescription, setSelectedDescription] = useState("");
   const [selectedSource, setSelectedSource] = useState("");
   const [agreed, setAgreed] = useState(false);
 
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [restaurantName, setRestaurantName] = useState("");
+
   return (
     <div className="bg-[#FFF5F0] relative">
-      <div className="absolute bottom-0 left-0">
+      <div className="absolute bottom-0 left-0 hidden lg:block">
         <Image src={Icon} alt="" className="max-w-[400px] w-full" />
       </div>
 
-      <div className="absolute bottom-0 right-0">
+      <div className="absolute bottom-0 right-0 hidden lg:block">
         <Image
           src={Icon}
           alt=""
@@ -25,7 +31,7 @@ const RequestDemo = () => {
         />
       </div>
 
-      <div className="transition-all duration-500 ease-in-out p-[20px] z-50">
+      <div className="transition-all duration-500 ease-in-out p-[20px] ">
         <div className="font-GeneralSans w-full transition-all duration-500 ease-in-out">
           <div className="flex items-center justify-between">
             <Link href="/">
@@ -45,7 +51,7 @@ const RequestDemo = () => {
             </button>
           </div>
 
-          <div className="max-w-[800px] mx-auto">
+          <div className="max-w-[800px] mx-auto ">
             <div className="space-y-[28px] text-center">
               <p className="font-[600] text-[#414141] text-[28px] lg:text-[36px] transition-all duration-500 ease-in-out">
                 Get a free Gogrub Demo
@@ -55,27 +61,33 @@ const RequestDemo = () => {
               </p>
             </div>
 
-            <div className="p-[24px] w-full text-center max-w-[515px] mx-auto border rounded-[8px] border-[#FF4F001F] mt-[24px]">
+            <div className="p-[24px] w-full text-center max-w-[515px] mx-auto border rounded-[8px] border-[#FF4F001F] mt-[24px] ">
               <div className="space-y-[20px]">
-                <input
-                  type="text"
+                <TextInput
                   placeholder="First & Last name"
-                  className="py-[16px] px-[24px] rounded-[8px] bg-transparent border border-[#929292] placeholder:text-[16px] placeholder:font-[400] placeholder:text-[#929292] w-full"
+                  value={name}
+                  onChange={setName}
+                  validationType="name"
                 />
-                <input
-                  type="text"
+
+                <TextInput
                   placeholder="Email"
-                  className="py-[16px] px-[24px] rounded-[8px] bg-transparent border border-[#929292] placeholder:text-[16px] placeholder:font-[400] placeholder:text-[#929292] w-full"
+                  value={email}
+                  onChange={setEmail}
+                  validationType="email"
                 />
-                <input
-                  type="text"
+
+                <TextInput
                   placeholder="Phone Number"
-                  className="py-[16px] px-[24px] rounded-[8px] bg-transparent border border-[#929292] placeholder:text-[16px] placeholder:font-[400] placeholder:text-[#929292] w-full"
+                  value={phone}
+                  onChange={setPhone}
+                  validationType="phone"
                 />
-                <input
-                  type="text"
+                <TextInput
                   placeholder="Restaurant Name"
-                  className="py-[16px] px-[24px] rounded-[8px] bg-transparent border border-[#929292] placeholder:text-[16px] placeholder:font-[400] placeholder:text-[#929292] w-full"
+                  value={restaurantName}
+                  onChange={setRestaurantName}
+                  validationType="name"
                 />
 
                 <div className="relative w-full">
@@ -178,13 +190,15 @@ const RequestDemo = () => {
               </div>
             </div>
 
-            <div className="mt-[18px] max-w-[322px] mx-auto text-center">
+            <div className="mt-[18px] max-w-[322px] mx-auto text-center ">
               <p className="font-[400] text-[#121212] text-[16px]">
                 Already use Gogrub at your restaurant?{" "}
               </p>
-              <p className="font-[500] text-[16px] text-[#FF4F00] underline">
-                Login to Gogrub
-              </p>
+              <Link href="https://gogrub-client.netlify.app/" target="blank">
+                <p className="font-[500] text-[16px] text-[#FF4F00] underline">
+                  Login to Gogrub
+                </p>
+              </Link>
             </div>
           </div>
         </div>
