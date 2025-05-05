@@ -4,11 +4,11 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BaseUrl from "./Constants";
+import Icon from "../../public/goGrub/GoGrub LOGO icon.svg";
+
 const MakeCommitment = () => {
-  const [selectedPlan, setSelectedPlan] = useState("");
   const [plans, setPlans] = useState([]);
-  const [openFeatures, setOpenFeatures] = useState(null);
-  const [agreed, setAgreed] = useState(false);
+
   const features = {
     // quarterly: [
     //   "Branded Online Store",
@@ -29,21 +29,6 @@ const MakeCommitment = () => {
     ],
   };
 
-  const updateLocalStorage = (key, value) => {
-    const storedData = JSON.parse(localStorage.getItem("businessInfo")) || {};
-    storedData[key] = value;
-    localStorage.setItem("businessInfo", JSON.stringify(storedData));
-  };
-
-  const handlePlanSelect = (plan) => {
-    setSelectedPlan(plan);
-    updateLocalStorage("selectedPlan", plan);
-  };
-
-  const handleToggleFeatures = (plan) => {
-    setOpenFeatures((prev) => (prev === plan ? null : plan));
-  };
-
   useEffect(() => {
     const fetchPlans = async () => {
       try {
@@ -59,44 +44,50 @@ const MakeCommitment = () => {
     fetchPlans();
   }, []);
 
-  const isFormValid = selectedPlan && agreed;
-
   return plans.length === 0 ? (
     <div className="flex justify-center items-center h-screen">
       <p className="text-[24px] font-[500] text-[#414141]">Loading plans...</p>
     </div>
   ) : (
-    <div className="m-[20px] lg:m-[50px]  transition-all duration-500 ease-in-out">
-      <div className="font-GeneralSans w-full transition-all duration-500 ease-in-out">
-        <div className="">
-          <Link href="/">
-            <Image
-              src="/goGrub/gogrubBlack.svg"
-              alt="Troo Logo"
-              width={150}
-              height={50}
-            />
-          </Link>
+    <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px] transition-all duration-500 ease-in-out">
+      <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-screen">
+        <div className="absolute bottom-20 right-0 hidden lg:block">
+          <Image
+            src={Icon}
+            alt=""
+            className="max-w-[400px] w-full  opacity-90"
+          />
         </div>
 
-        <div className=" max-w-[800px] mx-auto">
-          <div className="space-y-[28px] text-center">
-            <p className="font-[600] text-[#414141] text-[28px] lg:text-[36px] transition-all duration-500 ease-in-out">
-              See Commitment Options
-            </p>
-            <p className="font-[400] text-[18px] lg:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
-              Get your own branded site to easily manage orders, menu and
-              customers — all in one place.
-            </p>
-          </div>
+        <Link href="/">
+          <Image
+            src="/goGrub/gogrubLogoWhite_.svg"
+            alt="Troo Logo"
+            width={150}
+            height={50}
+          />
+        </Link>
 
-          <div className="mt-[44px] place-items-center grid md:flex items-start gap-[40px]">
-            <div className=" max-w-[343px] w-full space-y-[20px]">
+        <p className="mt-[100px] font-gilroy font-[700] text-[#FFFFFF] text-[30px] lg:text-[54px]">
+          Start your <br /> journey with us.
+        </p>
+        <p className="absolute bottom-10 lg:bottom-20 font-[500] text-[18px] lg:text-[22px] text-[#FFFFFF]">
+          Manage online food ordering for restaurants including cloud kitchens
+          and food vendors
+        </p>
+      </div>
+      <div className="font-GeneralSans w-full transition-all duration-500 ease-in-out">
+        <div className=" max-w-[800px] mx-auto">
+          <p className="font-[600] text-center lg:text-left text-[#414141] text-[28px] lg:text-[36px] transition-all duration-500 ease-in-out">
+            See Commitment Options
+          </p>
+
+          <div className="my-[44px] space-y-[20px] ">
+            <div className=" grid place-items-center lg:place-items-start lg:grid-cols-2 gap-[10px] items-center">
               {plans.map((plan, index) => (
                 <div
                   key={index}
-                  className={` py-[28px] px-[30px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer transition-all duration-500 ease-in-out`}
-                  // onClick={() => handlePlanSelect(plan.name)}
+                  className={`max-w-[343px]  py-[28px] px-[30px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full bg-white  transition-all duration-500 ease-in-out`}
                 >
                   <div className="flex items-start gap-[24px] mb-[30px]">
                     <div className="w-full space-y-[24px] text-center">
@@ -118,63 +109,38 @@ const MakeCommitment = () => {
                       </p>
                     </div>
                   </div>
-
-                  {openFeatures === plan.name && (
-                    <div className="transition-all duration-500 ease-in-out"></div>
-                  )}
-
-                  {openFeatures === plan.name &&
-                    plan.name.includes("yearly") && (
-                      <div className="border-t border-[#E7E7E7] pt-[30px] font-GeneralSans transition-all duration-500 ease-in-out">
-                        <h2 className="text-[20px] font-[400] text-[#0D0D0D] transition-all duration-500 ease-in-out">
-                          Features
-                        </h2>
-                        <ul className="mt-[10px] space-y-[10px]">
-                          {features.yearly?.map((feature, index) => (
-                            <li
-                              key={index}
-                              className="  flex items-center gap-[10px] transition-all duration-500 ease-in-out"
-                            >
-                              <div className="w-[17px] h-[17px] rounded-full bg-[#D9D9D9] transition-all duration-500 ease-in-out"></div>
-                              <p className="font-[400] text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
-                                {feature}
-                              </p>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
                 </div>
               ))}
             </div>
-
-            <div className="max-w-[423px]  w-full font-GeneralSans transition-all duration-500 ease-in-out">
-              <h2 className="text-[24px] font-[500] text-[#0D0D0D] transition-all duration-500 ease-in-out">
-                Features Included In Every Plan
-              </h2>
-              <ul className="mt-[10px] space-y-[10px]">
-                {features.yearly?.map((feature, index) => (
-                  <li
-                    key={index}
-                    className="  flex items-start gap-[10px] transition-all duration-500 ease-in-out"
-                  >
-                    <Image
-                      src="/goGrub/lets-icons_check-fill.svg"
-                      width={24}
-                      height={24}
-                      alt=""
-                      className=" object-cover"
-                    />
-                    <p className=" font-GeneralSans font-[400] text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
-                      {feature}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
 
-          <div className="mt-[50px] transition-all duration-500 ease-in-out text-center">
+          <div className="place-items-center  space-y-[24px]">
+            <h2 className="text-[24px]  font-[500] text-[#0D0D0D] transition-all duration-500 ease-in-out">
+              Features Included In Every Plan
+            </h2>
+
+            <ul className=" space-y-[10px] grid place-items-start lg:place-items-start lg:grid-cols-2 items-start">
+              {features.yearly?.map((feature, index) => (
+                <li
+                  key={index}
+                  className="  flex items-start gap-[10px] transition-all duration-500 ease-in-out"
+                >
+                  <Image
+                    src="/goGrub/lets-icons_check-fill.svg"
+                    width={24}
+                    height={24}
+                    alt=""
+                    className=" object-cover"
+                  />
+                  <p className=" font-GeneralSans font-[400] text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
+                    {feature}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-[50px] transition-all duration-500 ease-in-out text-start">
             <button
               className={`w-full max-w-[212px] bg-[#FF4F00]   px-[24px] py-[13px] rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out                 `}
               onClick={() => {
