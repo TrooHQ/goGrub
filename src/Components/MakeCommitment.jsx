@@ -6,6 +6,16 @@ import axios from "axios";
 import BaseUrl from "./Constants";
 import Icon from "../../public/goGrub/GoGrub LOGO icon.svg";
 
+// interface Plan {
+//   _id: string;
+//   name: string;
+//   price: number;
+//   billingCycle: string;
+//   discount?: string;
+//   prevPrice: number;
+//   billingFrequencyAmount: number;
+//   billingCycleInMonths: number;
+// }
 const MakeCommitment = () => {
   const [plans, setPlans] = useState([]);
 
@@ -87,27 +97,26 @@ const MakeCommitment = () => {
               {plans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`max-w-[343px]  py-[28px] px-[30px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full bg-white  transition-all duration-500 ease-in-out`}
+                  className={` space-y-[24px] text-center max-w-[343px]  py-[16px] px-[30px] rounded-[10px] border border-[#929292] text-[16px] font-[400] text-[#414141] w-full h-full bg-white  transition-all duration-500 ease-in-out`}
                 >
-                  <div className="flex items-start gap-[24px] mb-[30px]">
-                    <div className="w-full space-y-[24px] text-center">
-                      <div className=" text-center">
-                        <p className=" capitalize font-[600] text-[18px] md:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
-                          {plan.name}
-                        </p>
-                        <p className="font-[400] text-[14px] lg:text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
-                          Pay ₦{Number(plan.price).toLocaleString()} Every{" "}
-                          {plan.name.includes("yearly") ? "6" : "4"} months
-                        </p>
-                      </div>
-                      <p className=" font-[600] text-[#414141] text-[14px] lg:text-[32px] transition-all duration-500 ease-in-out">
-                        ₦
-                        {Number(
-                          plan.discount ||
-                            (plan.name.includes("yearly") ? "30000" : "10000")
-                        ).toLocaleString()}
+                  <div className=" text-center space-y-[8px]">
+                    <p className=" capitalize font-[600] text-[18px] md:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
+                      {plan.name}
+                    </p>
+                    <p className="font-[400] text-[14px] lg:text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
+                      Pay ₦{plan.billingFrequencyAmount.toLocaleString()} Every{" "}
+                      {plan.billingCycleInMonths} months
+                    </p>
+                  </div>
+                  <div className=" space-y-[8px]">
+                    <p className=" font-[600] text-[#414141] text-[14px] lg:text-[32px] transition-all duration-500 ease-in-out">
+                      ₦{plan.price.toLocaleString()}
+                    </p>
+                    {plan.name !== "quarterly plan" && (
+                      <p className=" font-[400] line-through text-[#FF4F00] text-[14px] lg:text-[24px] transition-all duration-500 ease-in-out">
+                        ₦{plan.prevPrice.toLocaleString()}
                       </p>
-                    </div>
+                    )}
                   </div>
                 </div>
               ))}
