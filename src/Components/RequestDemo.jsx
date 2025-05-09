@@ -160,8 +160,10 @@ const RequestDemo = () => {
                     </option>
                     <option value="facebook">Facebook</option>
                     <option value="instagram">Instagram</option>
+                    <option value="linkedin">LinkedIn</option>
                     <option value="tiktok">Tiktok</option>
                     <option value="twitter">Twitter (X)</option>
+                    <option value="friend">From a colleague/friend</option>
                   </select>
                   <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
                     <IoChevronDown size={20} color="#929292" />
