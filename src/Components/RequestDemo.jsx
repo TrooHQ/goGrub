@@ -91,7 +91,7 @@ const RequestDemo = () => {
       </div>
 
       <div className="transition-all duration-500 ease-in-out p-[20px]">
-        <div className="font-GeneralSans w-full">
+        <div className="w-full font-GeneralSans">
           <div className="flex items-center justify-between">
             <Link href="/">
               <Image
@@ -180,7 +180,7 @@ const RequestDemo = () => {
                       </option>
                     ))}
                   </select>
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <div className="absolute transform -translate-y-1/2 pointer-events-none right-4 top-1/2">
                     <IoChevronDown size={20} color="#929292" />
                   </div>
                 </div>
@@ -192,7 +192,7 @@ const RequestDemo = () => {
                     value={selectedDescription}
                     onChange={(e) => setSelectedDescription(e.target.value)}
                   >
-                    <option value="">Which best describes?</option>
+                    <option value="">Which best describes you?</option>
                     <option value="exploring">
                       I'm exploring solutions for my business
                     </option>
@@ -201,7 +201,7 @@ const RequestDemo = () => {
                       I visit or order from businesses using GoGrub
                     </option>
                   </select>
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <div className="absolute transform -translate-y-1/2 pointer-events-none right-4 top-1/2">
                     <IoChevronDown size={20} color="#929292" />
                   </div>
                 </div>
@@ -221,7 +221,7 @@ const RequestDemo = () => {
                     <option value="twitter">Twitter (X)</option>
                     <option value="friend">From a colleague/friend</option>
                   </select>
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <div className="absolute transform -translate-y-1/2 pointer-events-none right-4 top-1/2">
                     <IoChevronDown size={20} color="#929292" />
                   </div>
                 </div>
@@ -255,18 +255,17 @@ const RequestDemo = () => {
                   !selectedDescription ||
                   !selectedSource
                 }
-                className={`text-center mt-[40px] w-full px-[38px] py-[12px] rounded-[8px] text-[16px] font-[500] ${
-                  !name ||
-                  loading ||
-                  !email ||
-                  !phoneNumber ||
-                  !businessName ||
-                  !selectedCountry ||
-                  !selectedDescription ||
-                  !selectedSource
+                className={`text-center mt-[40px] w-full px-[38px] py-[12px] rounded-[8px] text-[16px] font-[500] ${!name ||
+                    loading ||
+                    !email ||
+                    !phoneNumber ||
+                    !businessName ||
+                    !selectedCountry ||
+                    !selectedDescription ||
+                    !selectedSource
                     ? "bg-gray-400 text-white cursor-not-allowed"
                     : "bg-[#303030] text-white hover:bg-[#1a1a1a] cursor-pointer"
-                }`}
+                  }`}
               >
                 Get a Demo
               </button>
