@@ -32,7 +32,7 @@ const RequestDemo = () => {
       </div>
 
       <div className="transition-all duration-500 ease-in-out p-[20px] ">
-        <div className="font-GeneralSans w-full transition-all duration-500 ease-in-out">
+        <div className="w-full transition-all duration-500 ease-in-out font-GeneralSans">
           <div className="flex items-center justify-between">
             <Link href="/">
               <Image
@@ -120,7 +120,7 @@ const RequestDemo = () => {
                     <option value="malawi">Malawi</option>
                     <option value="zambia">Zambia</option>
                   </select>
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <div className="absolute transform -translate-y-1/2 pointer-events-none right-4 top-1/2">
                     <IoChevronDown size={20} color="#929292" />
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const RequestDemo = () => {
                     onChange={(e) => setSelectedDescription(e.target.value)}
                   >
                     <option value="" disabled>
-                      Which best describes?
+                      Which best describes you?
                     </option>
                     <option value="looking-for-solution">
                       I'm exploring solutions for my business
@@ -144,7 +144,7 @@ const RequestDemo = () => {
                       I visit or order from businesses using GoGrub
                     </option>
                   </select>
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <div className="absolute transform -translate-y-1/2 pointer-events-none right-4 top-1/2">
                     <IoChevronDown size={20} color="#929292" />
                   </div>
                 </div>
@@ -165,7 +165,7 @@ const RequestDemo = () => {
                     <option value="twitter">Twitter (X)</option>
                     <option value="friend">From a colleague/friend</option>
                   </select>
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                  <div className="absolute transform -translate-y-1/2 pointer-events-none right-4 top-1/2">
                     <IoChevronDown size={20} color="#929292" />
                   </div>
                 </div>
