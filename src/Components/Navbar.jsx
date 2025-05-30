@@ -15,7 +15,7 @@ const Navbar = () => {
     { path: "#features", label: "Features" },
     { path: "#how-it-works", label: "How It Works" },
     { path: "#faq", label: "FAQ" },
-    { path: "#contact", label: "Contact Us" },
+    { path: "/request-demo", label: "Contact Us" },
   ];
 
   return (
@@ -82,7 +82,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-center max-w-[60%] mx-auto">
             <Link href="https://gogrub-client.netlify.app/" target="blank">
               <p className=" cursor-pointer bg-primary text-white px-6 py-2 rounded-md font-[500] font-GeneralSans hover:bg-opacity-90 transition">
                 Login

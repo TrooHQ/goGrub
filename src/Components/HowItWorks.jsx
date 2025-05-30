@@ -6,7 +6,10 @@ const HowItWorks = () => {
     <div className=" bg-[#FF4F00]" id="how-it-works">
       <div className=" max-w-[1200px] mx-[10px] lg:mx-auto py-[10%] relative">
         <div className="max-w-[708px] text-start text-[#FFFFFF]">
-          <p className=" text-[16px] font-[500] font-GeneralSans">
+          <p className=" text-[16px] md:text-[32px] font-[400] font-GeneralSans">
+            How It Works
+          </p>
+          <p className=" text-[20px] md:text-[48px] font-[600] font-gilroy">
             How GoGrub Makes It Easy
           </p>
         </div>
@@ -22,13 +25,13 @@ const HowItWorks = () => {
               },
 
               {
-                step: "2",
+                step: "3",
                 title: "Manage Orders",
                 description:
                   "Receive and manage orders in real-time from all platforms.",
               },
               {
-                step: "3",
+                step: "2",
                 title: "Integrate Social Media",
                 description:
                   "Connect your Instagram, Facebook, WhatsApp, Twitter, and TikTok accounts to accept orders.",
