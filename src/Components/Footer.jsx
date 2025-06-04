@@ -1,6 +1,11 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 const Footer = () => {
+
+  const router = useRouter();
+
   return (
     <div className=" bg-footer py-[10px]">
       <div className="mx-[10px] md:mx-[40px] 2xl:mx-[158px] mt-[83px] mb-[55px]   ">
@@ -40,9 +45,9 @@ const Footer = () => {
 
             <div className="   space-y-[16px] px-[16px] h-full">
               <p className=" text-[16px] font-[700] text-white">Company</p>
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">About us</p>
+              <p className=" font-[500] text-[14px] text-[#B6B6B6] cursor-pointer" onClick={() => router.push('#about')}>About us</p>
 
-              <p className=" font-[500] text-[14px] text-[#B6B6B6]">
+              <p className=" font-[500] text-[14px] text-[#B6B6B6] cursor-pointer" onClick={() => router.push('/request-demo')}>
                 Contact us
               </p>
             </div>

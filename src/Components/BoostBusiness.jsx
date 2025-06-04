@@ -19,7 +19,7 @@ const BoostBusiness = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="relative z-10 pb-[100px]">
-        <div className="bg-black  bg-opacity-20  py-[40px] mb-[100px]">
+        <div className="bg-black  bg-opacity-20  py-[40px] mb-[100px]" id="about">
           <div className="max-w-6xl mx-[10px] sm:mx-auto">
             <div className="grid gap-[20px] md:flex items-start md:justify-center">
               <div className="max-w-[384px] w-full flex items-start justify-start md:justify-center">
