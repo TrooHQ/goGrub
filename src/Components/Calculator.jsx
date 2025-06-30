@@ -113,7 +113,7 @@ const Calculator = () => {
                       </p>
                     ) : (
                       <p className={`font-[700] text-[#FF4F00] text-[24px] lg:text-[44px] font-gilroy transition-all duration-300 text-ellipsis overflow-x-hidden w-full`} style={{ fontSize: `${baseTextSize}px` }}>
-                        &#8358; {monthlyTotal.toLocaleString("en-US")}
+                        ₦{monthlyTotal.toLocaleString("en-US")}
                       </p>
                     )}
                   </div>
