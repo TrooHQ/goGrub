@@ -9,6 +9,7 @@ import axios from "axios";
 import BaseUrl from "./Constants";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaCircleCheck } from "react-icons/fa6";
 
 const RequestDemo = () => {
   const [agreed, setAgreed] = useState(false);
@@ -20,6 +21,7 @@ const RequestDemo = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedDescription, setSelectedDescription] = useState("");
   const [selectedSource, setSelectedSource] = useState("");
+  const [showModal, setShowModal] = useState(false)
 
   const handleSubmit = async () => {
     if (
@@ -58,7 +60,8 @@ const RequestDemo = () => {
         }
       );
 
-      toast.success(response.data.message);
+      // toast.success(response.data.message);
+      setShowModal(true);
       setisLoading(false);
       setName("");
       setEmail("");
@@ -76,7 +79,7 @@ const RequestDemo = () => {
   };
 
   return (
-    <div className="bg-[#FFF5F0] relative">
+    <div className="bg-[#FFF5F0] relative overflow-x-hidden">
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="absolute bottom-0 left-0 hidden lg:block">
         <Image src={Icon} alt="" className="max-w-[400px] w-full" />
@@ -256,15 +259,15 @@ const RequestDemo = () => {
                   !selectedSource
                 }
                 className={`text-center mt-[40px] w-full px-[38px] py-[12px] rounded-[8px] text-[16px] font-[500] ${!name ||
-                    loading ||
-                    !email ||
-                    !phoneNumber ||
-                    !businessName ||
-                    !selectedCountry ||
-                    !selectedDescription ||
-                    !selectedSource
-                    ? "bg-gray-400 text-white cursor-not-allowed"
-                    : "bg-[#303030] text-white hover:bg-[#1a1a1a] cursor-pointer"
+                  loading ||
+                  !email ||
+                  !phoneNumber ||
+                  !businessName ||
+                  !selectedCountry ||
+                  !selectedDescription ||
+                  !selectedSource
+                  ? "bg-gray-400 text-white cursor-not-allowed"
+                  : "bg-[#303030] text-white hover:bg-[#1a1a1a] cursor-pointer"
                   }`}
               >
                 Get a Demo
@@ -284,6 +287,22 @@ const RequestDemo = () => {
           </div>
         </div>
       </div>
+
+      {showModal && <div className="fixed inset-0 bg-[#0f0f0fcf] w-screen h-screen top-0 left-0">
+        <div className="flex items-center justify-center w-full h-full">
+          <div className="w-[90%] md:w-[60%] lg:w-[35%] bg-white p-4 lg:p-8 rounded-[16px] shadow-lg flex flex-col items-center space-y-5">
+            <FaCircleCheck className="text-green-700 size-12" />
+
+            <h3 className="text-2xl font-semibold">Demo Request Sent Successfully</h3>
+            <p className="">We would get in touch with you shortly</p>
+
+            <button
+              className="w-full px-4 py-2 text-white transition-colors bg-black rounded-md hover:bg-gray-800"
+              onClick={() => window.location.href = '/'}>Go Back Home</button>
+          </div>
+        </div>
+
+      </div>}
     </div>
   );
 };
