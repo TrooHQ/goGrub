@@ -32,7 +32,7 @@ const HeroSection = () => {
                     with
                   </p>
 
-                  <div className=" " style={{ display: "inline-block" }}>
+                  <div className="" style={{ display: "inline-block" }}>
                     <span className="text-[48px] lg:text-[64px] font-[800] text-[#606060]">
                       <Typewriter
                         words={socials.map((social) => social.name)}
@@ -53,7 +53,8 @@ const HeroSection = () => {
               </div>
 
               <div>
-                <Link href="https://gogrub-client.netlify.app/business-profile?coming-from=gogrub">
+                {/* <Link href="https://gogrub-client.netlify.app/business-profile?coming-from=gogrub"> */}
+                <Link href="https://gogrub-client.netlify.app/business-profile">
                   <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] transition font-gilroy">
                     Get Started
                   </p>
