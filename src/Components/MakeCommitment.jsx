@@ -159,7 +159,7 @@ const MakeCommitment = () => {
                   businessInfo
                 ).toString();
 
-                window.location.href = `https://gogrub-client.netlify.app/business-profile?coming-from=gogrub&${queryParams}`;
+                window.location.href = `https://admin.gogrub.co/business-profile?coming-from=gogrub&${queryParams}`;
               }}
             >
               Get Started

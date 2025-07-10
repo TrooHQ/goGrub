@@ -126,11 +126,10 @@ const MakeCommitment = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`p-[30px] rounded-[10px] border ${
-                selectedPlan === plan.name
+              className={`p-[30px] rounded-[10px] border ${selectedPlan === plan.name
                   ? "border-[#FF4F00]"
                   : "border-[#929292]"
-              } text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer transition-all duration-500 ease-in-out`}
+                } text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer transition-all duration-500 ease-in-out`}
               onClick={() => handlePlanSelect(plan.name)}
             >
               <div className="flex items-start gap-[24px] mb-[30px]">
@@ -159,7 +158,7 @@ const MakeCommitment = () => {
                     <p className=" font-[600] text-[#E10101] text-[14px] lg:text-[18px] line-through transition-all duration-500 ease-in-out">
                       {Number(
                         plan.discount ||
-                          (plan.name.includes("yearly") ? "30000" : "10000")
+                        (plan.name.includes("yearly") ? "30000" : "10000")
                       ).toLocaleString()}
                     </p>
                   </div>
@@ -247,9 +246,8 @@ const MakeCommitment = () => {
 
         <div className="mt-[50px] transition-all duration-500 ease-in-out">
           <button
-            className={`w-full max-w-[212px]   px-6 py-2 rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out ${
-              isFormValid ? "bg-[#FF4F00]" : "bg-gray-400 cursor-not-allowed"
-            }`}
+            className={`w-full max-w-[212px]   px-6 py-2 rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out ${isFormValid ? "bg-[#FF4F00]" : "bg-gray-400 cursor-not-allowed"
+              }`}
             disabled={!isFormValid}
             onClick={() => {
               if (!selectedPlan) {
@@ -261,7 +259,7 @@ const MakeCommitment = () => {
                 JSON.parse(localStorage.getItem("businessInfo")) || {};
               const queryParams = new URLSearchParams(businessInfo).toString();
 
-              window.location.href = `https://gogrub-client.netlify.app/business-profile?coming-from=gogrub&${queryParams}`;
+              window.location.href = `https://admin.gogrub.co/business-profile?coming-from=gogrub&${queryParams}`;
             }}
           >
             Submit
