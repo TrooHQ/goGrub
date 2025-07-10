@@ -46,7 +46,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <Link href="https://gogrub-client.netlify.app/" target="blank">
+        <Link href="https://admin.gogrub.co/" target="blank">
           <p className=" cursor-pointer hidden font-GeneralSans lg:block bg-primary text-white px-6 py-2 rounded-md font-[500] hover:bg-opacity-90 transition">
             Login
           </p>
@@ -69,11 +69,10 @@ const Navbar = () => {
               <li key={path}>
                 <Link
                   href={path}
-                  className={`block text-[16px] ${
-                    router.pathname === path
+                  className={`block text-[16px] ${router.pathname === path
                       ? "text-primary font-[500]"
                       : "text-[#171717] font-[300]"
-                  } hover:text-primary transition`}
+                    } hover:text-primary transition`}
                   onClick={() => setIsOpen(false)}
                 >
                   {label}
@@ -83,7 +82,7 @@ const Navbar = () => {
           </ul>
 
           <div className="mt-4 text-center max-w-[60%] mx-auto">
-            <Link href="https://gogrub-client.netlify.app/" target="blank">
+            <Link href="https://admin.gogrub.co/" target="blank">
               <p className=" cursor-pointer bg-primary text-white px-6 py-2 rounded-md font-[500] font-GeneralSans hover:bg-opacity-90 transition">
                 Login
               </p>

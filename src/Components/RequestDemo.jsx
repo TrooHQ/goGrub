@@ -105,7 +105,7 @@ const RequestDemo = () => {
               />
             </Link>
             <button className="hidden md:block w-full max-w-[212px] border border-[#FF4F00] px-[24px] py-[13px] rounded-[10px] text-[#FF4F00] text-[16px] font-[500]">
-              <Link href="https://gogrub-client.netlify.app/" target="_blank">
+              <Link href="https://admin.gogrub.co/" target="_blank">
                 Login
               </Link>
             </button>
@@ -278,7 +278,7 @@ const RequestDemo = () => {
               <p className="font-[400] text-[#121212] text-[16px]">
                 Already use Gogrub at your restaurant?
               </p>
-              <Link href="https://gogrub-client.netlify.app/" target="_blank">
+              <Link href="https://admin.gogrub.co/" target="_blank">
                 <p className="font-[500] text-[16px] text-[#FF4F00] underline">
                   Login to Gogrub
                 </p>
