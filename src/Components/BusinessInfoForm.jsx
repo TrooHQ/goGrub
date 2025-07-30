@@ -133,7 +133,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
       <CustomInput
         type="text"
         label="Category"
-        value={reg_payload?.reg_payload ?? ""}
+        value={reg_payload?.business_type ?? ""}
         required
         readOnly
         onChange={() => { }}
