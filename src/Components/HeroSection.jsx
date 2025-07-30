@@ -53,11 +53,11 @@ const HeroSection = () => {
               </div>
 
               <div>
-                <Link href="https://admin.gogrub.co/business-profile">
-                  <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] transition font-gilroy">
+                {/* <Link href="/register"> */}
+                  <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[4px] font-[500] transition font-gilroy" onClick={() => { localStorage.removeItem("reg_payload"); window.location.href = "/register"; }}>
                     Get Started
                   </p>
-                </Link>
+                {/* </Link> */}
               </div>
             </div>
           </div>
