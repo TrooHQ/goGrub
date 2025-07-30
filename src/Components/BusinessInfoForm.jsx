@@ -88,7 +88,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
     business_contract_person,
     business_address,
     business_phone_number,
-    business_type,
+    // business_type,
     password,
     confirm_password,
   ]);
