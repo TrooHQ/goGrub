@@ -58,7 +58,7 @@ const BusinessProfiles = () => {
             // `Business information saved successfully. Token: ${sampleResponse.data.email_verification_token}`
           );
 
-          window.location.href = "https://admin.gogrub.co/"
+          window.location.href = "https://admin.gogrub.co/verify-account"
         } else {
           toast.error("Error submitting business information");
         }
