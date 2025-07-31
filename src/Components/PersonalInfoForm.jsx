@@ -25,6 +25,7 @@ const PersonalInfoForm = () => {
   return (
     <div className="grid gap-5">
       <CustomInput
+        error={!reg_payload?.first_name?.trim()}
         type="text"
         label="First name"
         value={reg_payload?.first_name ?? ""}
@@ -32,6 +33,7 @@ const PersonalInfoForm = () => {
         required="true"
       />
       <CustomInput
+        error={!reg_payload?.last_name?.trim()}
         type="text"
         label="Last name"
         value={reg_payload?.last_name ?? ""}
@@ -39,6 +41,7 @@ const PersonalInfoForm = () => {
         required="true"
       />
       <CustomInput
+        error={!reg_payload?.personal_address?.trim()}
         type="text"
         label="Registered home address"
         value={reg_payload?.personal_address ?? ""}
@@ -46,6 +49,7 @@ const PersonalInfoForm = () => {
         required="true"
       />
       <CustomInput
+        error={!reg_payload?.city?.trim()}
         type="text"
         label="City"
         value={reg_payload?.city ?? ""}
@@ -53,6 +57,7 @@ const PersonalInfoForm = () => {
         required="true"
       />
       <CustomInput
+        error={!reg_payload?.state?.trim()}
         type="text"
         label="State"
         value={reg_payload?.state ?? ""}

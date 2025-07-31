@@ -34,16 +34,17 @@ const BusinessProfiles = () => {
     currentStep === 0 && setCurrentStep((prevStep) => prevStep + 1);
     if (currentStep === 1) {
       setLoading(true);
-      fetch_reg_payload();
-      // const storedPayload = JSON.parse(localStorage.getItem("reg_payload"));
+      // fetch_reg_payload();
+      const storedPayload = JSON.parse(localStorage.getItem("reg_payload"));
 
       console.log("storedPayload in handleNext", storedPayload);
 
       // Send request to sample endpoint
       try {
         const endpoint = `${SERVER_DOMAIN}/onboardGoGrubBusiness/`
-        const sampleResponse = await axios.post(endpoint, customPayload);
+        const sampleResponse = await axios.post(endpoint, storedPayload);
 
+        console.log("sampleResponse", sampleResponse)
 
         if (sampleResponse.status === 200) {
           localStorage.setItem("businessId", sampleResponse.data.business_id);
@@ -57,8 +58,7 @@ const BusinessProfiles = () => {
             `Business information saved successfully.`
             // `Business information saved successfully. Token: ${sampleResponse.data.email_verification_token}`
           );
-
-          window.location.href = "https://admin.gogrub.co/verify-account"
+          window.location.href = "https://admin.gogrub.co/verify-account?verify_email=" + sampleResponse.data.business_email;
         } else {
           toast.error("Error submitting business information");
         }
@@ -87,6 +87,8 @@ const BusinessProfiles = () => {
   ];
 
   const [isStepValid, setIsStepValid] = useState(false);
+
+  console.log("isStepValid", isStepValid);
   const renderStepContent = () => {
 
     switch (currentStep) {
@@ -158,19 +160,27 @@ const BusinessProfiles = () => {
             </button>
           </Link>
         )}
-        {currentStep < stepTitles.length - 1 ? (
-          <button
-            onClick={handleNext}
-            className="px-6 py-3 ml-auto font-semibold text-white bg-gray-800 border-2 border-gray-800 rounded"
-            disabled={!isStepValid || loading}
-          >
-            {loading
-              ? "Loading..."
-              : currentStep === 0
-                ? "Next"
-                : "Save and continue"}
-          </button>
-        ) : (
+        {/* {currentStep < stepTitles.length - 1 ? ( */}
+        <button
+          onClick={handleNext}
+          className="px-6 py-3 ml-auto font-semibold text-white bg-gray-800 border-2 border-gray-800 rounded"
+          disabled={isStepValid === false || loading}
+        >
+          {loading
+            ? "Loading..."
+            : currentStep === 0
+              ? "Next"
+              : "Save and continue"}
+        </button>
+
+      </div>
+    </div>
+  );
+};
+
+export default BusinessProfiles;
+
+{/* ) : (
           <button
             onClick={handleNext}
             className="px-6 py-3 ml-auto font-semibold text-white bg-gray-800 border-2 border-gray-800 rounded"
@@ -178,10 +188,4 @@ const BusinessProfiles = () => {
           >
             {loading ? "Loading..." : "Save and continue"}
           </button>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default BusinessProfiles;
+        )} */}

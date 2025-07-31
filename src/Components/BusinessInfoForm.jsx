@@ -11,10 +11,10 @@ const BusinessInfoForm = ({ onValidityChange }) => {
   // Load localStorage only on client side
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedPayload = JSON.parse(localStorage.getItem("reg_payload") || "{}");
+      const storedPayload = JSON.parse(localStorage.getItem("reg_payload"));
       console.log("storedPayload", storedPayload)
       setRegPayload({ ...reg_payload, ...storedPayload });
-      setImage(storedPayload.businessLogo || "");
+      setImage(storedPayload?.businessLogo || "");
     }
   }, []);
 
@@ -64,24 +64,36 @@ const BusinessInfoForm = ({ onValidityChange }) => {
     confirm_password,
   } = reg_payload;
 
-  const isFormValid = () => {
-    return (
-      business_name?.trim() &&
-      business_email?.trim() &&
-      business_contract_person?.trim() &&
-      business_address?.trim() &&
-      business_phone_number?.trim() &&
-      business_type?.trim() &&
-      password?.trim() &&
-      confirm_password?.trim() &&
-      password === confirm_password && business_logo
-    );
-  };
+  // const isFormValid = () => {
+  //   return (
+  //     business_name?.trim() &&
+  //     business_email?.trim() &&
+  //     business_contract_person?.trim() &&
+  //     business_address?.trim() &&
+  //     business_phone_number?.trim() &&
+  //     // business_type?.trim() &&
+  //     password?.trim() &&
+  //     confirm_password?.trim() &&
+  //     password === confirm_password &&
+  //     business_logo?.trim()
+  //   );
+  // };
 
 
   useEffect(() => {
-    // console.log(isFormValid())
-    onValidityChange(isFormValid());
+    // console.log("isFormValid", isFormValid())
+    onValidityChange(
+      business_name?.trim() &&
+        business_email?.trim() &&
+        business_contract_person?.trim() &&
+        business_address?.trim() &&
+        business_phone_number?.trim() &&
+        // business_type?.trim() &&
+        password?.trim() &&
+        confirm_password?.trim() &&
+        password === confirm_password &&
+        business_logo?.trim() ? true : false
+    );
   }, [
     business_name,
     business_email,
@@ -91,11 +103,13 @@ const BusinessInfoForm = ({ onValidityChange }) => {
     // business_type,
     password,
     confirm_password,
+    business_logo
   ]);
 
   return (
     <div className="grid gap-5">
       <CustomInput
+        error={!business_name?.trim()}
         type="text"
         label="Business name"
         value={reg_payload?.business_name ?? ""}
@@ -103,6 +117,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
         onChange={(val) => handleInputChange("business_name", val)}
       />
       <CustomInput
+        error={!business_email?.trim()}
         type="email"
         label="Business email"
         value={reg_payload?.business_email ?? ""}
@@ -110,6 +125,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
         onChange={(val) => handleInputChange("business_email", val)}
       />
       <CustomInput
+        error={!business_contract_person?.trim()}
         type="text"
         label="Business contact (Owner's name)"
         value={reg_payload?.business_contract_person ?? ""}
@@ -117,6 +133,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
         onChange={(val) => handleInputChange("business_contract_person", val)}
       />
       <CustomInput
+        error={!business_address?.trim()}
         type="text"
         label="Business address"
         value={reg_payload?.business_address ?? ""}
@@ -124,6 +141,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
         onChange={(val) => handleInputChange("business_address", val)}
       />
       <CustomInput
+        error={!business_phone_number?.trim()}
         type="text"
         label="Business phone number"
         value={reg_payload?.business_phone_number ?? ""}
@@ -140,6 +158,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
       // onChange={(val) => handleInputChange("businessType", val)}
       />
       <CustomInput
+        error={!business_type?.trim()}
         type="text"
         label="CAC Number"
         value={reg_payload?.cac_number ?? ""}
@@ -147,12 +166,14 @@ const BusinessInfoForm = ({ onValidityChange }) => {
         onChange={(val) => handleInputChange("cac_number", val)}
       />
       <CustomInput
+        error={!password?.trim()}
         type="password"
         label="Create Password"
         value={reg_payload?.password ?? ""}
         onChange={(val) => handleInputChange("password", val)}
       />
       <CustomInput
+        error={!confirm_password?.trim()}
         type="password"
         label="Confirm Password"
         value={reg_payload?.confirm_password ?? ""}
