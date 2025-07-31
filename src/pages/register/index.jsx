@@ -34,8 +34,8 @@ const BusinessProfiles = () => {
     currentStep === 0 && setCurrentStep((prevStep) => prevStep + 1);
     if (currentStep === 1) {
       setLoading(true);
-      // fetch_reg_payload();
-      const storedPayload = JSON.parse(localStorage.getItem("reg_payload") || "{}");
+      fetch_reg_payload();
+      // const storedPayload = JSON.parse(localStorage.getItem("reg_payload"));
 
       console.log("storedPayload in handleNext", storedPayload);
 
