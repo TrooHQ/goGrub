@@ -1,3 +1,5 @@
-const BaseUrl = "https://troox-backend-new.vercel.app/api";
+const BaseUrl = "https://troox-backend-new.onrender.com/api";
+
+
 
 export default BaseUrl;
