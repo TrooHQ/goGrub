@@ -38,12 +38,12 @@ const MakeCommitment = () => {
       "Online Payment Processing (Low Transaction Fees)",
     ],
   };
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
   useEffect(() => {
     const fetchPlans = async () => {
       try {
         const response = await axios.get(
-          `${baseUrl}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
+          `${BaseUrl}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
         );
         setPlans(response.data.data);
       } catch (error) {
@@ -55,13 +55,13 @@ const MakeCommitment = () => {
   }, []);
 
   return plans.length === 0 ? (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex justify-center items-center h-screen">
       <p className="text-[24px] font-[500] text-[#414141]">Loading plans...</p>
     </div>
   ) : (
     <div className="m-[20px] lg:m-[50px] flex flex-col lg:flex-row items-center gap-[50px] transition-all duration-500 ease-in-out">
       <div className="relative bg-[#FF4F00] p-[40px] rounded-[10px] lg:rounded-[20px] max-w-[533px] w-full hidden lg:block h-screen">
-        <div className="absolute right-0 hidden bottom-20 lg:block">
+        <div className="absolute bottom-20 right-0 hidden lg:block">
           <Image
             src={Icon}
             alt=""
@@ -86,7 +86,7 @@ const MakeCommitment = () => {
           and food vendors
         </p>
       </div>
-      <div className="w-full transition-all duration-500 ease-in-out font-GeneralSans">
+      <div className="font-GeneralSans w-full transition-all duration-500 ease-in-out">
         <div className=" max-w-[800px] mx-auto">
           <p className="font-[600] text-center lg:text-left text-[#414141] text-[28px] lg:text-[36px] transition-all duration-500 ease-in-out">
             See Commitment Options
@@ -139,7 +139,7 @@ const MakeCommitment = () => {
                     width={24}
                     height={24}
                     alt=""
-                    className="object-cover "
+                    className=" object-cover"
                   />
                   <p className=" font-GeneralSans font-[400] text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
                     {feature}
