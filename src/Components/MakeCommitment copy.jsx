@@ -74,7 +74,7 @@ const MakeCommitment = () => {
     const fetchPlans = async () => {
       try {
         const response = await axios.get(
-          `${BaseUrl}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
+          `${process.env.NEXT_PUBLIC_BASE_URL}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
         );
         setPlans(response.data.data);
       } catch (error) {
@@ -127,8 +127,8 @@ const MakeCommitment = () => {
             <div
               key={index}
               className={`p-[30px] rounded-[10px] border ${selectedPlan === plan.name
-                  ? "border-[#FF4F00]"
-                  : "border-[#929292]"
+                ? "border-[#FF4F00]"
+                : "border-[#929292]"
                 } text-[16px] font-[400] text-[#414141] w-full bg-white cursor-pointer transition-all duration-500 ease-in-out`}
               onClick={() => handlePlanSelect(plan.name)}
             >
