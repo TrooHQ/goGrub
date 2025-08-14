@@ -49,9 +49,10 @@ const RequestDemo = () => {
         find: selectedSource,
         newsletter: agreed,
       };
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/requestDemo?secretKey=trooAdminUser`,
+        `${baseUrl}/requestDemo?secretKey=trooAdminUser`,
         payload,
         {
           headers: {

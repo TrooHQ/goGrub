@@ -69,12 +69,12 @@ const MakeCommitment = () => {
   //     alert("An error occurred. Please try again.");
   //   }
   // };
-
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   useEffect(() => {
     const fetchPlans = async () => {
       try {
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BASE_URL}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
+          `${baseUrl}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
         );
         setPlans(response.data.data);
       } catch (error) {
@@ -88,7 +88,7 @@ const MakeCommitment = () => {
   const isFormValid = selectedPlan && agreed;
 
   return plans.length === 0 ? (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex items-center justify-center h-screen">
       <p className="text-[24px] font-[500] text-[#414141]">Loading plans...</p>
     </div>
   ) : (
@@ -142,7 +142,7 @@ const MakeCommitment = () => {
                   className="w-[23px] h-[23px] mt-[15px] transition-all duration-500 ease-in-out"
                 />
                 <div className="w-full space-y-[13px]">
-                  <div className="w-full grid md:flex items-center md:justify-between">
+                  <div className="grid items-center w-full md:flex md:justify-between">
                     <p className=" capitalize font-[700] text-[18px] md:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
                       {plan.name}
                     </p>
@@ -151,7 +151,7 @@ const MakeCommitment = () => {
                       {Number(plan.price).toLocaleString()}
                     </p>
                   </div>
-                  <div className=" grid md:flex items-center md:justify-between">
+                  <div className="grid items-center  md:flex md:justify-between">
                     <p className=" capitalize font-[400] text-[18px] md:text-[24px] text-[#414141] transition-all duration-500 ease-in-out">
                       Billed {plan.billingCycle}
                     </p>

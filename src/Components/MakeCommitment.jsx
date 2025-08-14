@@ -38,12 +38,12 @@ const MakeCommitment = () => {
       "Online Payment Processing (Low Transaction Fees)",
     ],
   };
-
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   useEffect(() => {
     const fetchPlans = async () => {
       try {
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BASE_URL}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
+          `${baseUrl}/plan/getPlans?secretKey=trooAdminDev&planType=gogrub`
         );
         setPlans(response.data.data);
       } catch (error) {
