@@ -51,7 +51,7 @@ const RequestDemo = () => {
       };
 
       const response = await axios.post(
-        `${BaseUrl}/requestDemo?secretKey=trooAdminUser`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/requestDemo?secretKey=trooAdminUser`,
         payload,
         {
           headers: {
