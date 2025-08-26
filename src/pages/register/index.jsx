@@ -7,7 +7,8 @@ import Link from "next/link";
 
 const BusinessProfiles = () => {
 
-  const SERVER_DOMAIN = "https://troox-backend-new.onrender.com/api";
+  // const SERVER_DOMAIN = "https://troox-backend-new.onrender.com/api";
+  const SERVER_DOMAIN = "https://gogrub-backend.onrender.com/api";
 
   // const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
