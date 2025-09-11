@@ -1,10 +1,13 @@
-import React from "react";
+'use client';
+
+import React, { useEffect, useState } from "react";
 import Icon1 from "../../public/goGrub/bi_menu-up.svg";
 import Icon2 from "../../public/goGrub/ic_sharp-restaurant-menu.svg";
 import Image from "next/image";
 import Link from "next/link";
 
 const GetStarted = () => {
+
   return (
     <div className=" bg-[#ffffff] w-full">
       <div className="max-w-6xl mx-[10px] lg:mx-auto px-[10px] font-GeneralSans">
