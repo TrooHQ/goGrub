@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import CustomInput from "./CustomInput";
 import { convertToBase64 } from "@/pages/LandingPage";
+import { FaEye } from "react-icons/fa6";
+import { FaEyeSlash } from "react-icons/fa";
 
 const BusinessInfoForm = ({ onValidityChange }) => {
   const [reg_payload, setRegPayload] = useState({ business_type: "GoGrub", country: "Nigeria" });
@@ -12,7 +14,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedPayload = JSON.parse(localStorage.getItem("reg_payload"));
-      console.log("storedPayload", storedPayload)
+      // console.log("storedPayload", storedPayload)
       setRegPayload({ ...reg_payload, ...storedPayload });
       setImage(storedPayload?.businessLogo || "");
     }
@@ -25,19 +27,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
     setRegPayload({ ...reg_payload });
   };
 
-  console.log("reg_payload", reg_payload);
-
-  // const handleInputChange = (field, value) => {
-  //   console.log(field, value);
-  //   const updatedPayload = {
-  //     ...reg_payload,
-  //     [field]: value,
-  //   };
-  //   if (typeof window !== "undefined") {
-  //     localStorage.setItem("reg_payload", JSON.stringify(updatedPayload));
-  //     setRegPayload(updatedPayload);
-  //   }
-  // };
+  // console.log("reg_payload", reg_payload);
 
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
@@ -47,7 +37,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
       setImage(base64);
       handleInputChange("business_logo", base64);
     } catch (error) {
-      console.error("Error converting file to base64:", error);
+      // console.error("Error converting file to base64:", error);
     }
   };
 
@@ -64,20 +54,8 @@ const BusinessInfoForm = ({ onValidityChange }) => {
     confirm_password,
   } = reg_payload;
 
-  // const isFormValid = () => {
-  //   return (
-  //     business_name?.trim() &&
-  //     business_email?.trim() &&
-  //     business_contract_person?.trim() &&
-  //     business_address?.trim() &&
-  //     business_phone_number?.trim() &&
-  //     // business_type?.trim() &&
-  //     password?.trim() &&
-  //     confirm_password?.trim() &&
-  //     password === confirm_password &&
-  //     business_logo?.trim()
-  //   );
-  // };
+
+  const [showPassword, setShowPassword] = useState(false);
 
 
   useEffect(() => {
@@ -165,21 +143,30 @@ const BusinessInfoForm = ({ onValidityChange }) => {
         maxLength={10}
         onChange={(val) => handleInputChange("cac_number", val)}
       />
-      <CustomInput
-        error={!password?.trim()}
-        type="password"
-        label="Create Password"
-        value={reg_payload?.password ?? ""}
-        onChange={(val) => handleInputChange("password", val)}
-      />
-      <CustomInput
-        error={!confirm_password?.trim()}
-        type="password"
-        label="Confirm Password"
-        value={reg_payload?.confirm_password ?? ""}
-        onChange={(val) => handleInputChange("confirm_password", val)}
-      />
-
+      <div className="relative w-full" onClick={() => setShowPassword(!showPassword)}>
+        <div className="absolute z-30 text-2xl text-gray-500 transform -translate-y-1/2 top-1/2 right-2">
+          {showPassword ? <FaEyeSlash /> : <FaEye />}
+        </div>
+        <CustomInput
+          error={!password?.trim()}
+          type={showPassword ? "text" : "password"}
+          label="Create Password"
+          value={reg_payload?.password ?? ""}
+          onChange={(val) => handleInputChange("password", val)}
+        />
+      </div>
+      <div className="relative w-full" onClick={() => setShowPassword(!showPassword)}>
+        <div className="absolute z-30 text-2xl text-gray-500 transform -translate-y-1/2 top-1/2 right-2">
+          {showPassword ? <FaEyeSlash /> : <FaEye />}
+        </div>
+        <CustomInput
+          error={!confirm_password?.trim()}
+          type={showPassword ? "text" : "password"}
+          label="Confirm Password"
+          value={reg_payload?.confirm_password ?? ""}
+          onChange={(val) => handleInputChange("confirm_password", val)}
+        />
+      </div>
       <p className="text-[16px] text-grey500 font-semibold">
         Add business logo
       </p>
