@@ -26,9 +26,9 @@ export default function RequestDemoForm() {
 export function LeadGenForm({ setIsOpen }) {
   return (
     <div className='fixed top-0 left-0 z-[1000] w-full h-screen bg-black/50 flex justify-center items-center'>
-      <div className='relative w-full h-[90%] mx-auto my-16 overflow-hidden font-bold text-center text-white bg-white md:w-2/3 lg:w-1/2'>
+      <div className='relative w-full h-[95%] mx-auto my-16 overflow-hidden font-bold text-center text-white bg-white md:w-2/3 lg:w-1/2'>
 
-        <IoCloseCircle onClick={() => setIsOpen(false)} className='absolute text-base text-red-500 cursor-pointer top-4 right-4' />
+        <IoCloseCircle onClick={setIsOpen} className='absolute text-2xl text-red-500 cursor-pointer top-6 right-10' />
 
         <div className="flex justify-center w-full h-full">
           <iframe
