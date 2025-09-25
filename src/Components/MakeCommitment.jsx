@@ -88,7 +88,7 @@ const MakeCommitment = () => {
                       {plan.name}
                     </p>
                     {plan.billingCycleInMonths === 12 ? <p className="font-[400] text-[14px] lg:text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
-                      Pay ₦{plan.billingFrequencyAmount.toLocaleString()} Once every{" "}
+                      Pay ₦{plan.billingFrequencyAmount.toLocaleString()} Every{" "}
                       {plan.billingCycleInMonths} months
                     </p> : <p className="font-[400] text-[14px] lg:text-[20px] text-[#414141] transition-all duration-500 ease-in-out">
                       Pay ₦{plan.billingFrequencyAmount.toLocaleString()} Every{" "}
