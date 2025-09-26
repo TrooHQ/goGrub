@@ -4,11 +4,12 @@ import { toast } from "react-toastify";
 import BusinessInfoForm from "@/Components/BusinessInfoForm";
 import PersonalInfoForm from "@/Components/PersonalInfoForm";
 import Link from "next/link";
+import BaseUrl from "../../Components/Constants";
 
 const BusinessProfiles = () => {
 
   // const SERVER_DOMAIN = "https://gogrub-backend.onrender.com/api";
-  const SERVER_DOMAIN = "https://api.gogrub.co/api/";
+  // const SERVER_DOMAIN = "https://api.gogrub.co/api/";
 
   // const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
@@ -42,7 +43,7 @@ const BusinessProfiles = () => {
 
       // Send request to sample endpoint
       try {
-        const endpoint = `${SERVER_DOMAIN}/onboardGoGrubBusiness/`
+        const endpoint = `${BaseUrl}/onboardGoGrubBusiness/`
         const sampleResponse = await axios.post(endpoint, storedPayload);
 
         console.log("sampleResponse", sampleResponse)
