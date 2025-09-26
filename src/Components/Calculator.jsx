@@ -118,9 +118,9 @@ const Calculator = () => {
                     )}
                   </div>
 
-                  <div className="w-full text-center cursor-pointer text-[#ffffff] border border-primary bg-primary px-[38px] py-[10px] rounded-[8px] text-[16px] font-[700] hover:bg-opacity-90 transition-colors">
-                    <Link href="/pricing-plan">See Pricing Plans</Link>
-                  </div>
+                  <Link href="/pricing-plan" className="w-full text-center cursor-pointer text-[#ffffff] border border-primary bg-primary px-[38px] py-[10px] rounded-[8px] text-[16px] font-[700] hover:bg-opacity-90 transition-colors">
+                    See Pricing Plans
+                  </Link>
                 </div>
               </div>
             </div>
