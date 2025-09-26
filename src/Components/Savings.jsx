@@ -22,7 +22,7 @@ const Savings = () => {
               </div>
 
               <div>
-                <Link href="https://admin.gogrub.co/business-profile?coming-from=gogrub">
+                <Link href="/register">
                   <p className="bg-primary text-[16px] inline text-white px-[27px] py-[10px] rounded-[8px] font-[500]  transition">
                     Get Started
                   </p>

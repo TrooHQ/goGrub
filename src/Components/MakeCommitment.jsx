@@ -141,7 +141,7 @@ const MakeCommitment = () => {
 
           <div className="mt-[50px] transition-all duration-500 ease-in-out text-start">
             <Link
-              href={"/request-demo"}
+              href={"/register"}
               className={`w-full max-w-[212px] bg-[#FF4F00]   px-[24px] py-[13px] rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out`}
             >
               Get Started
