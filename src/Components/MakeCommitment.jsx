@@ -140,20 +140,12 @@ const MakeCommitment = () => {
           </div>
 
           <div className="mt-[50px] transition-all duration-500 ease-in-out text-start">
-            <button
-              className={`w-full max-w-[212px] bg-[#FF4F00]   px-[24px] py-[13px] rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out                 `}
-              onClick={() => {
-                const businessInfo =
-                  JSON.parse(localStorage.getItem("businessInfo")) || {};
-                const queryParams = new URLSearchParams(
-                  businessInfo
-                ).toString();
-
-                window.location.href = `https://admin.gogrub.co/business-profile?coming-from=gogrub&${queryParams}`;
-              }}
+            <Link
+              href={"/request-demo"}
+              className={`w-full max-w-[212px] bg-[#FF4F00]   px-[24px] py-[13px] rounded-[10px] text-white text-[16px] font-[500] transition-all duration-500 ease-in-out`}
             >
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </div>
