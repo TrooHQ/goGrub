@@ -143,9 +143,9 @@ const BusinessInfoForm = ({ onValidityChange }) => {
         maxLength={10}
         onChange={(val) => handleInputChange("cac_number", val)}
       />
-      <div className="relative w-full" onClick={() => setShowPassword(!showPassword)}>
+      <div className="relative w-full">
         <div className="absolute z-30 text-2xl text-gray-500 transform -translate-y-1/2 top-1/2 right-2">
-          {showPassword ? <FaEyeSlash /> : <FaEye />}
+          <div onClick={() => setShowPassword(!showPassword)}>{showPassword ? <FaEyeSlash /> : <FaEye />}</div>
         </div>
         <CustomInput
           error={!password?.trim()}
@@ -155,9 +155,9 @@ const BusinessInfoForm = ({ onValidityChange }) => {
           onChange={(val) => handleInputChange("password", val)}
         />
       </div>
-      <div className="relative w-full" onClick={() => setShowPassword(!showPassword)}>
+      <div className="relative w-full">
         <div className="absolute z-30 text-2xl text-gray-500 transform -translate-y-1/2 top-1/2 right-2">
-          {showPassword ? <FaEyeSlash /> : <FaEye />}
+          <div onClick={() => setShowPassword(!showPassword)}>{showPassword ? <FaEyeSlash /> : <FaEye />}</div>
         </div>
         <CustomInput
           error={!confirm_password?.trim()}
