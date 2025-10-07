@@ -24,6 +24,11 @@ const BusinessInfoForm = ({ onValidityChange }) => {
     // Update the field in local storage
     reg_payload[field] = value;
     localStorage.setItem("reg_payload", JSON.stringify(reg_payload));
+
+    if (field === "password") {
+      validatePassword(value);
+    }
+
     setRegPayload({ ...reg_payload });
   };
 
@@ -55,9 +60,43 @@ const BusinessInfoForm = ({ onValidityChange }) => {
   } = reg_payload;
 
 
+  const [passwordError, setPasswordError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
+  const [passwordStrength, setPasswordStrength] = useState("");
 
+  const validatePassword = (password) => {
+    // Validation regex
+    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_\-+={}[\]|:;"'<>,.?/]).{8,}$/;
 
+    if (!regex.test(password)) {
+      setPasswordError((prev) => ({
+        ...prev,
+        password:
+          "Password must contain at least one uppercase letter, one number, one special character, and be at least 8 characters long.",
+      }));
+    } else {
+      setPasswordError((prev) => ({ ...prev, password: "" }));
+    }
+
+    // Strength logic
+    const strength = getPasswordStrength(password);
+    setPasswordStrength(strength);
+  };
+
+  const getPasswordStrength = (password) => {
+    let strength = 0;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/\d/.test(password)) strength++;
+    if (/[!@#$%^&*()_\-+={}[\]|:;"'<>,.?/]/.test(password)) strength++;
+    if (password.length >= 8) strength++;
+
+    if (strength <= 1) return "Weak";
+    if (strength === 2 || strength === 3) return "Medium";
+    return "Strong";
+  };
+
+  console.log("passwordError", passwordError)
+  console.log("passwordStrength", passwordStrength)
   useEffect(() => {
     // console.log("isFormValid", isFormValid())
     onValidityChange(
@@ -154,6 +193,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
           value={reg_payload?.password ?? ""}
           onChange={(val) => handleInputChange("password", val)}
         />
+        <span className={`absolute bottom-12 text-[12px] ${passwordStrength === "Weak" ? "text-red-500" : passwordStrength === "Medium" ? "text-yellow-500" : "text-green-500"}`}>{passwordStrength}</span>
       </div>
       <div className="relative w-full">
         <div className="absolute z-30 text-2xl text-gray-500 transform -translate-y-1/2 top-1/2 right-2">
