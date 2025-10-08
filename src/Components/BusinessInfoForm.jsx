@@ -182,7 +182,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
         maxLength={10}
         onChange={(val) => handleInputChange("cac_number", val)}
       />
-      <div className="relative w-full">
+      <div className="relative w-full my-6">
         <div className="absolute z-30 text-2xl text-gray-500 transform -translate-y-1/2 top-1/2 right-2">
           <div onClick={() => setShowPassword(!showPassword)}>{showPassword ? <FaEyeSlash /> : <FaEye />}</div>
         </div>
@@ -193,7 +193,11 @@ const BusinessInfoForm = ({ onValidityChange }) => {
           value={reg_payload?.password ?? ""}
           onChange={(val) => handleInputChange("password", val)}
         />
-        <span className={`absolute top-12 text-[12px] ${passwordStrength === "Weak" ? "text-red-500" : passwordStrength === "Medium" ? "text-yellow-500" : "text-green-500"}`}>{passwordStrength}</span>
+
+        <div className="absolute flex items-center justify-between w-full text-xs top-13">
+          <p className="text-xs font-light text-gray-400">Should contain at least one uppercase letter, one number, one special character, and be at least 8 characters long</p>
+          <p className={`text-xs ${passwordStrength === "Weak" ? "text-red-500" : passwordStrength === "Medium" ? "text-yellow-500" : "text-green-500"}`}>{passwordStrength}</p>
+        </div>
       </div>
       <div className="relative w-full">
         <div className="absolute z-30 text-2xl text-gray-500 transform -translate-y-1/2 top-1/2 right-2">
