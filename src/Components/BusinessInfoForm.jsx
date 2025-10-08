@@ -193,7 +193,7 @@ const BusinessInfoForm = ({ onValidityChange }) => {
           value={reg_payload?.password ?? ""}
           onChange={(val) => handleInputChange("password", val)}
         />
-        <span className={`absolute bottom-12 text-[12px] ${passwordStrength === "Weak" ? "text-red-500" : passwordStrength === "Medium" ? "text-yellow-500" : "text-green-500"}`}>{passwordStrength}</span>
+        <span className={`absolute top-12 text-[12px] ${passwordStrength === "Weak" ? "text-red-500" : passwordStrength === "Medium" ? "text-yellow-500" : "text-green-500"}`}>{passwordStrength}</span>
       </div>
       <div className="relative w-full">
         <div className="absolute z-30 text-2xl text-gray-500 transform -translate-y-1/2 top-1/2 right-2">
